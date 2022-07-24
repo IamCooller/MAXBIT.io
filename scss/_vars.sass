@@ -1,0 +1,167 @@
+// Colors
+$white: #fff
+$black: #000
+$blue-black: #26255F
+$purple: #760EBA
+$blue: #1BA4D8
+$blue-dark: #46B3DC
+$blue-light: #6FC1DF
+$blue-lighter: #97CEE3
+$blue-lightest: #FEBB08
+$red: #DC5224
+$red-dark: #DE704B
+$red-light: #E19075
+$red-lighter: #E3AA9C
+$grey-lightest: #807AAB
+
+
+
+// Title
+
+.title
+    display: flex
+    align-items: center
+    &-img
+        position: relative
+        margin-left: -30px
+        margin-right: 20px
+        animation: blink_title 2.5s infinite
+        &::before
+            content: ''
+            position: absolute
+            mix-blend-mode: lighten
+            filter: blur(28px)
+            transform: matrix(1, 0, 0, -1, 0, 0)
+            width: 100%
+            height: 100%
+            left: 0
+            top: 0
+            right: 0
+            bottom: 0
+
+//keyframes 
+@keyframes blink_title
+    0%
+        opacity: 1
+    50%
+        opacity: 0.5
+    100%
+        opacity: 1
+
+/* @keyframes wave
+ 0%
+ transform: rotateZ(0deg) translate3d(0,10%,0) rotateZ(0deg)
+ 100%
+ transform: rotateZ(30deg) translate3d(0,10%,0) rotateZ(-30deg) */
+
+@keyframes wave
+    0%
+        transform: scaleX(1)
+
+    50%
+        transform: scale3d(1.05, 1.05, 1.05)
+
+    to
+        transform: scaleX(1)
+
+// Text
+
+.h1
+    font-weight: 700
+    font-size: 76px
+    line-height: 100px
+
+.h2
+    font-weight: 700
+    font-size: 70px
+    line-height: 70px
+
+.h3
+    font-weight: 700
+    font-size: 54px
+    line-height: 80px
+    &-semi
+        font-weight: 600
+        font-size: 30px
+        line-height: 30px
+.h4
+    font-weight: 400
+    font-size: 30px
+    line-height: 37px
+.body
+    &-1
+        font-weight: 400
+        font-size: 22px
+        line-height: 27px
+    &-2
+        font-weight: 400
+        font-size: 18px
+        line-height: 22px
+    &-3
+        font-weight: 400
+        font-size: 14px
+        line-height: 17px
+@media (max-width: 1200px)
+    .h1
+        font-size: 64px
+        line-height: 80px
+    .h2
+        font-size: 54px
+        line-height: 80px
+
+    .h3
+        font-size: 44px
+        line-height: 50px
+    .h5
+        font-weight: 400
+        font-size: 28px
+        line-height: 34px
+    .body
+        &-3
+            font-size: 16px
+            line-height: 19px
+        &-4
+            font-weight: 400
+            font-size: 14px
+            line-height: 17px
+@media (max-width: 992px)
+    .h3
+        font-weight: 600
+        font-size: 30px
+        line-height: 30px
+@media (max-width: 768px)
+    .h3
+        font-weight: 400
+        font-size: 30px
+        line-height: 37px
+    .h4
+        font-size: 28px
+        line-height: 34px
+@media (max-width: 320px)
+    .h1
+        font-size: 44px
+        line-height: 50px
+
+    .h2
+        font-weight: 600
+        font-size: 28px
+        line-height: 30px
+
+    .h3
+        font-size: 28px
+        line-height: 34px
+
+    .h5
+        font-weight: 600
+        font-size: 20px
+        line-height: 20px
+    .body
+        &-1
+            font-size: 18px
+            line-height: 22px
+        &-2
+            font-size: 16px
+            line-height: 19px
+        &-3
+            font-size: 14px
+            line-height: 17px

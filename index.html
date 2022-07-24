@@ -1,0 +1,618 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>MAXBIT | Main</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" sizes="192x192" href="img/временное_лого_фавикон-04.svg" />
+
+    <!-- libs css -->
+
+    <link rel="stylesheet" href="libs/aos/aos.css" />
+    <link rel="stylesheet" href="libs/slick/slick.css" />
+    <link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css" />
+
+    <!-- jQeury -->
+    <script defer src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <!-- libs js -->
+
+    <script defer src="libs/charming.min.js"></script>
+    <script defer src="libs/aos/aos.js"></script>
+    <script defer src="libs/parallax/parallax.js"></script>
+    <script defer src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script defer src="libs/shadow/realshadow-min.js"></script>
+    <script defer src="libs/slick/slick.min.js"></script>
+    <script defer src="libs/jquery.waypoints.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TimelineMax.min.js"></script>
+    <!-- main js -->
+    <script defer src="js/custom.js"></script>
+
+    <!-- reset css -->
+    <link rel="stylesheet" href="scss/reset.css" />
+    <!-- main css -->
+
+    <link rel="stylesheet" href="scss/main.css" />
+    <script>
+        window.onload = function() {
+            document.body.classList.add('loaded_hiding');
+            window.setTimeout(function() {
+                document.body.classList.add('loaded');
+                document.body.classList.remove('loaded_hiding');
+            }, 500);
+        }
+    </script>
+</head>
+
+<body>
+    <!--preloader-->
+    <div class="preloader"></div>
+    <!--header-->
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper" data-aos="fade-down">
+                <a href="#" class="header-logo">
+                    <img src="img/logo.svg" alt="logo" />
+                </a>
+                <nav class="header__menu">
+                    <span class="slide2"></span>
+                    <a href="#" class="header__menu-link body-2 active">Home </a>
+                    <a href="#" class="header__menu-link body-2">Origami ® </a>
+                    <a href="#" class="header__menu-link body-2">Services</a>
+                    <a href="#" class="header__menu-link body-2">News</a>
+                    <a href="#" class="header__menu-link body-2">Partners</a>
+                    <a href="#" class="header__menu-link body-2">Contacts</a>
+                </nav>
+                <div class="header__menu_mobile">
+                    <div class="menu__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="6" width="16" height="2" rx="1" fill="white" />
+                <rect x="9" y="11" width="13" height="2" rx="1" fill="white" />
+                <rect x="2" y="16" width="20" height="2" rx="1" fill="white" />
+              </svg>
+                    </div>
+
+                    <div class="hamburger-menu">
+                        <div class="hamburger-menu_wrapper">
+                            <div class="hamburger-menu_top">
+                                <button class="hamburger-menu__close">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        x1="1"
+                        y1="-1"
+                        x2="24.4558"
+                        y2="-1"
+                        transform="matrix(0.707119 0.707095 -0.707119 0.707095 3 3)"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                      <line
+                        x1="1"
+                        y1="-1"
+                        x2="24.4558"
+                        y2="-1"
+                        transform="matrix(-0.707107 0.707107 0.707107 0.707107 21 3)"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </button>
+                            </div>
+
+                            <div class="hamburger-menu__content">
+                                <nav class="hamburger-menu__nav">
+                                    <a href="#main" class="active">Home</a>
+
+                                    <a href="#idea">Products</a>
+
+                                    <a href="#centers">Services</a>
+
+                                    <a href="#presscenter">News</a>
+
+                                    <a href="#contacts">Contacts</a>
+
+                                </nav>
+
+                                <a href="#callback__form" class="popup-modal Btn header-btn header-btn-mobile">
+                                    <p>Contact us <span></span></p>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <a href="#callback__form" class="popup-modal Btn header-btn">
+                    <p>Contact us <span></span></p>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!--main-->
+    <main class="main">
+        <section class="intro">
+            <div class="container">
+                <div class="intro__wrapper">
+                    <div class="intro__text" data-aos="fade-right">
+                        <h1 class="h1 intro-title">Driving to Evolution</h1>
+                        <p class="intro-subtitle">
+                            We empower businesses with the technology that revolutionizes the way they work, making them elevate their efficiency and become more competitive than ever.
+                        </p>
+                        <ul class="intro-list">
+                            <li>Banking</li>
+                            <li>Enterprise</li>
+                            <li>Telecommunications</li>
+                        </ul>
+                        <a href="#" class="intro-btn Btn">
+                            <p>Discover More <span></span></p>
+                        </a>
+                    </div>
+                    <div class="intro__images" id="scene_intro">
+                        <div class="intro__images-1" data-depth="0.10">
+                            <img src="img/intro/4.svg" />
+                        </div>
+                        <div class="intro__images-3" data-depth="0.30">
+                            <img src="img/intro/5.svg" />
+                        </div>
+                        <div class="intro__images-2" data-depth="0.20">
+                            <img src="img/intro/6.svg" />
+                        </div>
+
+                        <div class="intro__images-4" data-depth="0.40">
+                            <img src="img/intro/7.svg" />
+                        </div>
+                        <div class="intro__images-5" data-depth="0.50">
+                            <img src="img/intro/3.svg" />
+                        </div>
+                        <div class="intro__images-6" data-depth="0.60">
+                            <img src="img/intro/2.svg" />
+                        </div>
+                        <div class="intro__images-7" data-depth="0.70">
+                            <img src="img/intro/1.svg" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="intro__bg">
+                <span class="intro__bg-1"></span>
+                <span class="intro__bg-2"></span>
+            </div>
+        </section>
+        <section class="vantage">
+            <div class="container">
+                <div class="vantage__wrapper">
+                    <div class="vantage__item" data-aos="fade-right">
+                        <div class="parallax">
+                            <img src="img/vantage/1.svg" alt="Inclusive" class="vantage__item-img" data-depth="0.50" />
+                        </div>
+                        <div class="vantage__item_content">
+                            <div class="vantage__item-title">Inclusive</div>
+                            <p class="vantage__item-text body-1">
+                                Our integrated solutions make us your one-stop digital and IT service partner, delivering the right solution whenever you need it.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="vantage__item" data-aos="fade-left">
+                        <div class="parallax">
+                            <img src="img/vantage/2.svg" alt="Inclusive" class="vantage__item-img" data-depth="0.50" />
+                        </div>
+                        <div class="vantage__item_content">
+                            <div class="vantage__item-title">Expert-led</div>
+                            <p class="vantage__item-text body-1">
+                                Maxbit's team possess unique experiences in a wide domain of IT technologies and subjects, complementing each other to provide outstanding solutions.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="vantage__item" data-aos="fade-right">
+                        <div class="parallax">
+                            <img src="img/vantage/3.svg" alt="Inclusive" class="vantage__item-img" data-depth="0.50" />
+                        </div>
+                        <div class="vantage__item_content">
+                            <div class="vantage__item-title">Cost-effective</div>
+                            <p class="vantage__item-text body-1">
+                                There is no one way to a goal in the digital world. We always put cost effectiveness into consideration while making decisions.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="vantage__item" data-aos="fade-left">
+                        <div class="parallax">
+                            <img src="img/vantage/4.svg" alt="Inclusive" class="vantage__item-img" data-depth="0.50" />
+                        </div>
+                        <div class="vantage__item_content">
+                            <div class="vantage__item-title">Up-to-date</div>
+                            <p class="vantage__item-text body-1">
+                                We always pursue the latest technologies and methodologies, to keep you ahead with the best that can be offered anywhere.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vantage__bg">
+                <span class="vantage__bg-1"></span>
+                <span class="vantage__bg-2"></span>
+                <span class="vantage__bg-3"></span>
+                <span class="vantage__bg-4"></span>
+                <span class="vantage__bg-5"></span>
+            </div>
+            <div class="vantage-title title h3" data-aos="fade-right">
+                <div class="title-img">
+                    <img src="img/mat/1.svg" alt="WHY MAXBIT?" />
+                </div>
+                <span class="content__text"> WHY MAXBIT?</span>
+            </div>
+        </section>
+        <section class="services">
+            <div class="container">
+                <div class="services__wrapper">
+                    <div class="services__slider" data-aos="fade-left">
+                        <div class="services__slider_item">
+                            <div class="services__slider_item_icon parallax">
+                                <img src="img/services/1.png" alt="1" data-depth="0.50" />
+                            </div>
+                            <div class="services__slider_item-title">H/W</div>
+                            <p class="services__slider_item-text">
+                                Get your hardware from leading companies like Oracle, Dell, IBM and others; while guraneering safe and optimum installation and maintenance with the highest cost effectiveness.
+                            </p>
+
+                            <p class="services__slider_item-text hidden">
+                                Get your hardware from leading companies like Oracle, Dell, IBM and others; while guraneering safe and optimum installation and maintenance with the highest cost effectiveness.
+                            </p>
+                        </div>
+                        <div class="services__slider_item">
+                            <div class="services__slider_item_icon parallax">
+                                <img src="img/services/2.png" alt="1" data-depth="0.50" />
+                            </div>
+                            <div class="services__slider_item-title">Cloud</div>
+                            <p class="services__slider_item-text">
+                                Maxbit's cloud services include fully reliable and secure cloud migration, transformation and optimization; powered by the world's biggest service providers. The solutions extend to compliance, service optimization and more
+                            </p>
+
+                            <p class="services__slider_item-text hidden">
+                                Get your hardware from leading companies like Oracle, Dell, IBM and others; while guraneering safe and optimum installation and maintenance with the highest cost effectiveness.
+                            </p>
+                        </div>
+                        <div class="services__slider_item">
+                            <div class="services__slider_item_icon parallax">
+                                <img src="img/services/3.png" alt="1" data-depth="0.50" />
+                            </div>
+                            <div class="services__slider_item-title">Security</div>
+                            <p class="services__slider_item-text">
+                                Our security solutions cover a wide range of advisory and managed services, from full security assessments with world-class penetration testing to comprehensive cloud and data security.
+                            </p>
+
+                            <p class="services__slider_item-text hidden">
+                                Get your hardware from leading companies like Oracle, Dell, IBM and others; while guraneering safe and optimum installation and maintenance with the highest cost effectiveness.
+                            </p>
+                        </div>
+                        <div class="services__slider_item">
+                            <div class="services__slider_item_icon parallax">
+                                <img src="img/services/4.png" alt="1" data-depth="0.50" />
+                            </div>
+                            <div class="services__slider_item-title">Digital</div>
+                            <p class="services__slider_item-text">
+                                Transform your business digitally and take advantage of high-efficiency business process automation powered by centralised platforms
+                            </p>
+
+                            <p class="services__slider_item-text hidden">
+                                Get your hardware from leading companies like Oracle, Dell, IBM and others; while guraneering safe and optimum installation and maintenance with the highest cost effectiveness.
+                            </p>
+                        </div>
+                        <div class="services__slider_item">
+                            <div class="services__slider_item_icon parallax">
+                                <img src="img/services/5.png" alt="1" data-depth="0.50" />
+                            </div>
+                            <div class="services__slider_item-title">
+                                Systems integration
+                            </div>
+                            <p class="services__slider_item-text">
+                                We help you integrate a new system to work solely or with your existing one, whether you want Odoo, Microsoft, Salesforce, Oracle SAP, Zoho or any other platform.
+                            </p>
+
+                            <p class="services__slider_item-text hidden">
+                                Get your hardware from leading companies like Oracle, Dell, IBM and others; while guraneering safe and optimum installation and maintenance with the highest cost effectiveness.
+                            </p>
+                        </div>
+
+                        <div class="services__slider_item">
+                            <div class="services__slider_item_icon parallax">
+                                <img src="img/services/6.png" alt="1" data-depth="0.50" />
+                            </div>
+                            <div class="services__slider_item-title">Data</div>
+                            <p class="services__slider_item-text">
+                                Our data solutions stack provides every related aspect from protection, collection and processing, visualization and transformation; all enabled with the most advanced digital automation features.
+                            </p>
+
+                            <p class="services__slider_item-text hidden">
+                                Get your hardware from leading companies like Oracle, Dell, IBM and others; while guraneering safe and optimum installation and maintenance with the highest cost effectiveness.
+                            </p>
+                        </div>
+                        <div class="services__slider_item">
+                            <div class="services__slider_item_icon parallax">
+                                <img src="img/services/7.png" alt="1" data-depth="0.50" />
+                            </div>
+                            <div class="services__slider_item-title">S/W</div>
+                            <p class="services__slider_item-text">
+                                We develop websites, mobile apps, ERP solutions, custom software and more with the right technologies for each. Our software development services guarantee great user experience, performance and security.
+                            </p>
+
+                            <p class="services__slider_item-text hidden">
+                                Get your hardware from leading companies like Oracle, Dell, IBM and others; while guraneering safe and optimum installation and maintenance with the highest cost effectiveness.
+                            </p>
+                        </div>
+                        <div class="services__slider_item">
+                            <div class="services__slider_item_icon parallax">
+                                <img src="img/services/8.png" alt="1" data-depth="0.50" />
+                            </div>
+                            <div class="services__slider_item-title">Consultancy</div>
+                            <p class="services__slider_item-text">
+                                Our consultation services include GRC consultancy, business continuity and disaster recovery planning, and IT strategy; giving you a trusted technology consultancy partner in any situation.
+                            </p>
+
+                            <p class="services__slider_item-text hidden">
+                                Get your hardware from leading companies like Oracle, Dell, IBM and others; while guraneering safe and optimum installation and maintenance with the highest cost effectiveness.
+                            </p>
+                        </div>
+                        <div class="services__slider_item">
+                            <div class="services__slider_item_icon parallax">
+                                <img src="img/services/9.png" alt="1" data-depth="0.50" />
+                            </div>
+                            <div class="services__slider_item-title">Outsourcing</div>
+                            <p class="services__slider_item-text">
+                                Outsource any IT operations with the highest possible cost effectiveness and keep your business focused on what you do best.
+                            </p>
+                            <p class="services__slider_item-text hidden">
+                                Get your hardware from leading companies like Oracle, Dell, IBM and others; while guraneering safe and optimum installation and maintenance with the highest cost effectiveness.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="services__bg">
+                <span class="services__bg-1"></span>
+                <span class="services__bg-2"></span>
+                <span class="services__bg-3"></span>
+            </div>
+            <div class="services-title title h3" data-aos="fade-right">
+                <div class="title-img">
+                    <img src="img/mat/2.svg" alt="OUR SERVICES" />
+                </div>
+                <span class="content__text">OUR SERVICES</span>
+            </div>
+        </section>
+        <section class="origami">
+            <div class="container">
+                <div class="origami__wrapper" data-aos="fade-up">
+                    <div class="origami__slider">
+                        <div class="origami__slider_item">
+                            <div class="origami__slider_item_wrapper">
+                                <div class="origami__col parallax">
+                                    <img src="img/origami/stars.png" alt="12" data-depth="0.20" />
+                                    <img src="img/origami/rocket.png" alt="32" id="rocket" data-depth="0.60" />
+                                </div>
+                                <div class="origami__col">
+                                    <div class="origami__icon parallax">
+                                        <img src="img/origami/logo.svg" alt="1" data-depth="0.40" />
+                                    </div>
+                                    <div class="origami__text">
+                                        <p>
+                                            <b>Meet Origami, a platform ready to take your processes
+                          to the next level</b
+                        >
+                        With Origami, you can ditch paperwork, delays and wasted
+                        costs; all with a secure and user-friendly platform that
+                        can be easily integrated with any existing business
+                        system.
+                      </p>
+                    </div>
+                    <a href="#" class="origami-btn Btn"><p>Learn How<span></span></p></a>
+                  </div>
+                </div>
+              </div>
+              <div class="origami__slider_item">
+                <div class="origami__slider_item_wrapper">
+                  <div class="origami__col parallax">
+                    <img
+                      src="img/origami/stars.png"
+                      alt="12"
+                      data-depth="0.20"
+                    />
+                    <img
+                      src="img/origami/rocket.png"
+                      alt="32"
+                      data-depth="0.60"
+                    />
+                  </div>
+                  <div class="origami__col">
+                    <div class="origami__icon parallax">
+                      <img
+                        src="img/origami/logo.svg"
+                        alt="1"
+                        data-depth="0.40"
+                      />
+                    </div>
+                    <div class="origami__text">
+                      <p>
+                        <b
+                          >Meet Origami, a platform ready to take your processes
+                          to the next level</b
+                        >
+                        With Origami, you can ditch paperwork, delays and wasted
+                        costs; all with a secure and user-friendly platform that
+                        can be easily integrated with any existing business
+                        system.
+                      </p>
+                    </div>
+                    <a href="#" class="origami-btn Btn"><p>Learn How<span></span></p></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="origami-title title h3" data-aos="fade-right">
+          <div class="title-img">
+            <img src="img/mat/3.svg" alt="ORIGAMI" />
+          </div>
+          <span class="content__text">ORIGAMI®</span>
+        </div>
+      </section>
+      <section class="partners">
+        <div class="partners__clouds parallax">
+          <div class="partners__clouds-first" data-depth="0.3"></div>
+          <div class="partners__clouds-second" data-depth="0.5"></div>
+        </div>
+        <div class="container">
+          <div class="partners__wrapper" data-aos="fade-up">
+            <div class="partners__item">
+              <img src="img/partners/W4.svg" alt="" />
+            </div>
+            <div class="partners__item">
+              <img src="img/partners/W5.svg" alt="" />
+            </div>
+            <div class="partners__item">
+              <img src="img/partners/W6.svg" alt="" />
+            </div>
+            <div class="partners__item">
+              <img src="img/partners/Frame 7.svg" alt="" />
+            </div>
+
+            <div class="partners__item">
+              <img src="img/partners/W2.svg" alt="" />
+            </div>
+            <div class="partners__item">
+              <img src="img/partners/Frame 8.svg" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="partners-title title h3" data-aos="fade-right">
+          <div class="title-img">
+            <img src="img/mat/1.svg" alt="OUR PARTNERS" />
+          </div>
+          <span class="content__text">OUR PARTNERS</span>
+        </div>
+      </section>
+      <section class="office">
+        <div class="container">
+          <div
+            class="office__wrapper"
+            data-aos="fade-up"
+            data-svg="img/map.svg"
+          ></div>
+          <div class="office__list">
+            <div class="office__item" id="USA" location="USA">
+              <div class="office__item-title">R&D / Product management</div>
+              <div class="office__item-subtitle">in Texas, USA</div>
+              <address>Alzumorrodah Tower Floor 21</address>
+            </div>
+            <div class="office__item" id="Egupt" location="Egupt">
+              <div class="office__item-title">Development & services</div>
+              <div class="office__item-subtitle">in Cairo, Egupt</div>
+              <address>Alzumorrodah Tower Floor 21</address>
+            </div>
+            <div class="office__item" id="Kuwait" location="Kuwait">
+              <div class="office__item-title">HQ
+                in Kuwait city</div>
+              <div class="office__item-subtitle">Kuwait</div>
+              <address>Alzumorrodah Tower Floor 21</address>
+            </div>
+          </div>
+        </div>
+
+        <div class="office-title title h3" data-aos="fade-right">
+          <div class="title-img">
+            <img src="img/mat/2.svg" alt=" OUR OFFICE " />
+          </div>
+          <span class="content__text"> OUR OFFICE </span>
+        </div>
+        
+        <div class="office__bg">
+          <span class="office__bg-1"></span>
+          <span class="office__bg-2"></span>
+          <span class="office__bg-3"></span>
+        </div>
+        
+      </section>
+    </main>
+    <footer class="footer" data-aos="fade-up">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__wrapper_top">
+            <a class="footer-logo">
+              <img src="img/logo.svg" alt="footer-logo" />
+            </a>
+            <nav class="footer__nav">
+              <a href="#" class="footer__nav-link body-2 active">Home</a>
+              <a href="#" class="footer__nav-link body-2"> Origami®</a>
+              <a href="#" class="footer__nav-link body-2"> Services</a>
+              <a href="#" class="footer__nav-link body-2"> News</a>
+              <a href="#" class="footer__nav-link body-2"> Partners</a>
+              <a href="#" class="footer__nav-link body-2"> Contacts</a>
+            </nav>
+            <div class="footer__contacts">
+              <div class="footer__contacts-title body-2">Contacts</div>
+              <a href="tel:96522207227" class="footer__contacts-tel body-2"
+                >+965 2220 7227</a
+              >
+              <a href="tel:96522207337" class="footer__contacts-tel body-2"
+                >+965 2220 7337</a
+              >
+              <div class="footer__contacts_socials">
+                <a href="#"
+                  ><img src="img/socials/LinkedIN_white.svg" alt="LinkedIn"
+                /></a>
+                <a href="#"
+                  ><img src="img/socials/Gmail_white.svg" alt="Gmail"
+                /></a>
+              </div>
+            </div>
+          </div>
+          <div class="footer__wrapper_bottom">
+            Copyright 2022 «Maxbit» Co. All rights reserved. Full or partial
+            copying is forbidden.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <form id="callback__form" class="callback mfp-hide" name="form">
+        <button title="Close (Esc)" type="button" class="mfp-close">x
+        </button>
+        <div class="callback-title">
+            CONTACT US
+        </div>
+        <div class="callback-subtitle">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        </div>
+        <div class="callback__form">
+            <div class="callback__form__input">
+                <label for="name">Your name</label>
+                <input type="text" id="name" required name="name" placeholder="Enter your name">
+            </div>
+            <div class="callback__form__input">
+                <label for="email">Email</label>
+                <input type="email" required name="email" id="email" placeholder="Enter your email address">
+            </div>
+            <div class="callback__form__input">
+                <label for="phone">Your phone</label>
+                <input type="tel" required name="phone" id="phone" placeholder="Enter your phone">
+            </div>
+            <button type="submit" class="callback__form__submit Btn"><p>Send<span></span></p></button>
+
+            
+    </form>
+  </body>
+</html>

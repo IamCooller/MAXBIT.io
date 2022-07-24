@@ -1,0 +1,1511 @@
+
+@import _fonts
+@import _vars
+@import _container
+@import _mixins
+
+::-moz-selection
+	color: rgba(27, 164, 216, 1)
+	background-color: #8B00CD
+
+::selection
+	color: rgba(27, 164, 216, 1)
+	background-color: #8c00cd40
+
+body
+	font-family: 'Proxima Nova'
+	font-weight: 400
+	overflow-x: hidden
+	color: $white
+	background: $blue-black
+
+	&.scroll_disabled
+		overflow-y: hidden
+
+main
+	&.zindex
+		z-index: -1
+		position: relative
+//preloader//
+.preloader
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 99999
+	background-color: $blue-black
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 99999
+		background-image: url("../img/preload.svg")
+		background-repeat: repeat
+		background-size: cover
+		animation: preloader-move 10s infinite linear
+
+@keyframes preloader-move
+  0%,
+  100%
+  	background-position: 0
+  50%
+   	background-position: calc(100vw + 700px) calc(100vh + 700px)
+  
+
+.loaded_hiding .preloader 
+  transition: 0.3s opacity
+  opacity: 0
+
+.loaded .preloader
+      display: none
+
+//Popup
+
+.mfp-bg
+	background: rgba(38, 37, 95, 0.4)
+	backdrop-filter: blur(10px)
+	
+	&::before
+		content: ''
+		margin: -35px
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		filter: blur(10px)
+		z-index: -1
+.callback
+	background: linear-gradient(121.06deg, #421F81 0%, #2A2564 100.68%)
+	border-radius: 20px
+	width: 100%
+	max-width: 620px
+	position: relative
+	padding: 40px
+	margin: auto
+
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background: linear-gradient(231.13deg, rgba(0, 115, 255, 0.6) 3.78%, rgba(187, 109, 245, 0.6) 95.41%)
+		mix-blend-mode: lighten
+		filter: blur(30px)
+		border-radius: 20px
+		z-index: -1
+	&-title
+		font-weight: 700
+		font-size: 44px
+		line-height: 50px
+		width: 100%
+		text-align: center
+		color: $white
+		margin-bottom: 40px
+	&-subtitle
+		font-weight: 400
+		font-size: 22px
+		line-height: 26px
+		color: $white
+		margin-bottom: 54px
+		text-align: center
+	&__form
+		position: relative
+		z-index: 1
+		&__input
+			margin-bottom: 40px
+			display: flex
+			flex-direction: column
+			&:last-of-type
+				margin-bottom: 48px
+			label
+				font-weight: 400
+				font-size: 18px
+				line-height: 22px
+				color: $grey-lightest
+				margin-bottom: 18px
+			input
+				font-style: normal
+				font-weight: 400
+				font-size: 18px
+				line-height: 22px
+				color: $white
+				padding-bottom: 9px
+				border-bottom: 1px solid $grey-lightest
+				background: none
+				&::placeholder
+					color: $white
+				&:focus
+					border-bottom: 1px solid $white
+					&::placeholder
+						color: $grey-lightest
+		&__submit
+			margin: 0 auto
+			max-width: 197px
+			height: 49px
+			cursor: pointer
+	button.mfp-close
+		top: 30px
+		right: 60px
+		font-size: 0
+		&::after
+			content: ''
+			background: no-repeat url("data:image/svg+xml,%3Csvg width='26' height='25' viewBox='0 0 26 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='1' y1='-1' x2='32.9412' y2='-1' transform='matrix(0.707119 0.707095 -0.707119 0.707095 1.00008 1)' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3Cline x1='1' y1='-1' x2='32.9412' y2='-1' transform='matrix(-0.707107 0.707107 0.707107 0.707107 25.0001 1)' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A")
+			width: 26px
+			height: 25px
+			position: absolute
+			left: 0
+			top: 0
+			transform: translate(50%, 50%)
+
+//Button
+.Btn
+	width: 100%
+	max-width: 215px
+	height: 54px
+	position: relative
+	background: linear-gradient(87.73deg, #FEBB08 -27.23%, #FCEBD1 141.45%)
+	mix-blend-mode: normal
+	box-shadow: 0px 3.27604px 3.27604px rgba(0, 0, 0, 0.05), 3.27604px 0px 3.27604px rgba(0, 0, 0, 0.06)
+	border-radius: 81.901px
+	display: flex
+	justify-content: center
+	align-items: center
+	p
+		font-weight: 600
+		font-size: 24.5703px
+		line-height: 25px
+		color: $blue-black
+		transition: .4s all
+		position: relative
+		overflow: hidden
+		display: flex
+		width: 100%
+		height: 100%
+		align-items: center
+		justify-content: center
+		border-radius: 81.901px
+		z-index: 2
+		span
+			position: absolute
+			display: block
+			width: 0
+			height: 0
+			border-radius: 50%
+			background-color: $blue-black
+			transition: width 0.4s ease-in-out, height 0.4s ease-in-out
+			transform: translate(-50%, -50%)
+			z-index: -1
+	&::after
+		content: ''
+		position: absolute
+		background: linear-gradient(87.3deg, #CE9600 5.07%, #DDA40C 103.66%)
+		mix-blend-mode: normal
+		border-radius: 81.901px
+		width: 100%
+		height: 100%
+		bottom: -3.27px
+		left: 0
+		right: 0
+		z-index: -1
+	
+	&::before
+		content: ''
+		position: absolute
+		background: linear-gradient(241.28deg, rgba(255, 163, 97, 0.6) 3.79%, rgba(253, 34, 34, 0.6) 98.33%)
+		mix-blend-mode: normal
+		filter: blur(13.1042px)
+		border-radius: 81.901px
+		width: 100%
+		height: 100%
+		bottom: -7.27px
+		left: 0
+		right: 0
+		transition: .3s all ease-in-out
+		z-index: -1
+	
+
+	&:active
+		box-shadow: 0px 3.27604px 3.27604px rgba(0, 0, 0, 0.05), 3.27604px 0px 3.27604px rgba(0, 0, 0, 0.06)
+		&::after
+			background: none
+	&:hover
+		background: none
+		p
+			color: #CE9600
+			span
+				height: 500px
+				width: 225%
+		border: 1px solid
+		
+		
+		
+
+
+//Mobile menu
+
+.hamburger
+	&-menu
+		position: fixed
+		left: 0
+		right: 0
+		bottom: 0
+		top: 0
+		z-index: 999
+		display: none
+		width: 100vw
+		height: 100vh
+		background: rgba(38, 37, 95, 0.4)
+		backdrop-filter: blur(10px)
+		transform: translate(-11px, 0px)
+		&::before
+			content: ''
+			margin: -35px
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			filter: blur(50px)
+			z-index: -1
+		&_top
+			text-align: right
+		&_wrapper
+			width: 100%
+			max-width: 203px
+			height: 100vh
+			background: linear-gradient(121.06deg, #421F81 0%, #2A2564 100.68%)
+			margin-left: auto
+			padding: 20px
+			position: relative
+			&::before
+				content: ''
+				background: linear-gradient(231.13deg, rgba(0, 115, 255, 0.6) 3.78%, rgba(187, 109, 245, 0.6) 95.41%)
+				mix-blend-mode: lighten
+				filter: blur(30px)
+				width: 110%
+				height: 100%
+				position: absolute
+				right: 0
+				top: 0
+				z-index: -1
+		&__content
+			display: flex
+			flex-direction: column
+			justify-content: space-around
+			height: 100%
+			margin: auto
+		&__nav
+			display: flex
+			height: 60%
+			justify-content: space-between
+			flex-direction: column
+			text-align: center
+			a
+				font-size: 16px
+				line-height: 19px
+				color: $white
+				position: relative
+				&.active
+					font-weight: 500
+					font-size: 18px
+					line-height: 27px
+					&::after
+						content: ''
+						position: absolute
+						right: 0
+						top: 0
+						height: 39.5px
+						width: 8px
+						background: linear-gradient(0deg, #FFFFFF -68.75%, #53D0FF 175%)
+						border-radius: 6px 6px 0px 6px
+						transform: translate(22px, -10%)
+					&::before
+						content: ''
+						position: absolute
+						right: 0
+						top: 0
+						height: 40px
+						width: 10px
+						border-radius: 6px 6px 0px 6px
+						transform: translate(22px, -10%)
+						background: #00B9FF
+						mix-blend-mode: lighten
+						filter: blur(10px)
+.overflow
+	overflow: hidden
+//Header
+.header
+	background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1901 110' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_f_273_75701)'%3E%3Cellipse cx='1676.83' cy='117.051' rx='514.188' ry='64.9233' transform='rotate(10.6625 1676.83 117.051)' fill='%238B00CD' fill-opacity='0.5'/%3E%3C/g%3E%3Cg filter='url(%23filter1_f_273_75701)'%3E%3Cellipse cx='1106.28' cy='-1.06069' rx='514.188' ry='64.9233' transform='rotate(10.6625 1106.28 -1.06069)' fill='%231BA4D8' fill-opacity='0.5'/%3E%3C/g%3E%3Cg filter='url(%23filter2_f_273_75701)'%3E%3Cellipse cx='1251.51' cy='103.039' rx='514.188' ry='64.9233' transform='rotate(10.6625 1251.51 103.039)' fill='%238B00CD' fill-opacity='0.5'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_f_273_75701' x='571.37' y='-597.512' width='2210.91' height='1429.12' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='300' result='effect1_foregroundBlur_273_75701'/%3E%3C/filter%3E%3Cfilter id='filter1_f_273_75701' x='0.823242' y='-715.623' width='2210.91' height='1429.12' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='300' result='effect1_foregroundBlur_273_75701'/%3E%3C/filter%3E%3Cfilter id='filter2_f_273_75701' x='146.055' y='-611.523' width='2210.91' height='1429.12' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='300' result='effect1_foregroundBlur_273_75701'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A")
+	width: 100%
+	background-size: cover
+	&.header_fixed
+		position: fixed
+		top: 0
+		left: 0
+		background: linear-gradient(90.74deg, rgba(44, 40, 103, 0.2) 8.79%, rgba(41, 38, 99, 0.2) 101.9%)
+		box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2)
+		backdrop-filter: blur(100px)
+		z-index: 9
+		
+		&::before
+			content: ''
+			margin: -35px
+			position: absolute
+			top: 0
+			right: 0
+			background: #2e2267
+			bottom: 0
+			left: 0
+			filter: blur(100px)
+			z-index: -1
+
+	&__wrapper
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 35px 0
+	&-btn
+		width: 182px
+		height: 40px
+		p
+			font-size: 16px
+			line-height: 24px
+		&::before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			background: linear-gradient(241.28deg, rgba(255, 163, 97, 0.6) 3.79%, rgba(253, 34, 34, 0.6) 98.33%)
+			mix-blend-mode: lighten
+			filter: blur(10px)
+			border-radius: 50px
+			z-index: -1
+		&::after
+			content: none
+		
+	&__menu
+		position: relative
+		display: flex
+		justify-content: space-between
+		max-width: 613px
+		width: 100%
+		&_mobile
+			display: none
+		.slide2
+			position: absolute
+			background: linear-gradient(0deg, #FFFFFF -68.75%, #53d1ff6d 175%)
+			border-radius: 0px 0px 6px 6px
+			top: -45px
+			height: 8px
+			pointer-events: none
+			opacity: 0
+			z-index: 0
+			transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1.05)
+		.squeeze
+			transform: scale(0.9)
+		a
+			color: $white
+			position: relative
+			&.active
+				font-weight: 600
+				font-size: 20px
+				line-height: 20px
+				&::after
+					content: ''
+					background: linear-gradient(0deg, #FFFFFF -68.75%, #53D0FF 175%)
+					border-radius: 0px 0px 6px 6px
+					position: absolute
+					top: 0
+					left: 50%
+					width: 106px
+					height: 8px
+					pointer-events: none
+					transform: translate(-50%,calc(-101% - 35px))
+				&::before
+					content: ""
+					position: absolute
+					z-index: -1
+					top: 0
+					left: 50%
+					width: 110px
+					height: 10px
+					transform: translate(-50%,calc(-101% - 35px))
+					background: inherit
+					background: #00B9FF
+					mix-blend-mode: lighten
+					filter: blur(10px)
+					border-radius: 0px 0px 6px 6px
+					transition: all 0.2s
+
+//Intro///
+.intro
+	padding-top: 112px
+	padding-bottom: 391px
+	position: relative
+	&::before
+		content: ''
+		background: url('../img/intro/bg-1.png') no-repeat center center
+		position: absolute
+		width: 100%
+		height: 1500px
+		top: -180px
+		left: 0
+		background-size: cover
+		z-index: -1
+		right: 0
+	&__bg
+		&-1
+			background: linear-gradient(175.3deg, #592FA4 -40.1%, #26255F 90.46%)
+			transform: rotate(15deg)
+			width: 150%
+			height: 400px
+			position: absolute
+			display: block
+			z-index: -3
+			left: -20%
+			bottom: -255px
+			&::before
+				content: ''
+				background: rgba(38, 37, 95, 0.3)
+				filter: blur(30px)
+				width: 100%
+				height: 100%
+				position: absolute
+				top: -10px
+				left: 0
+				z-index: -3
+		&-2
+			background: linear-gradient(164.18deg, rgba(65, 73, 174, 0.3) -26.22%, rgba(98, 23, 168, 0.3) 28.55%, rgba(38, 37, 95, 0.3) 81.48%)
+			transform: rotate(30deg)
+			width: 150%
+			height: 500px
+			position: absolute
+			display: block
+			z-index: -4
+			left: -20%
+			bottom: -370px
+			&::before
+				content: ''
+				background: rgba(38, 37, 95, 0.3)
+				filter: blur(30px)
+				width: 100%
+				height: 100%
+				position: absolute
+				top: -10px
+				left: 0
+				z-index: -1
+
+	&__wrapper
+		display: grid
+		grid-template-columns: 1fr 1fr
+	&-title
+		margin-bottom: 40px
+		color: $white
+		max-width: 547px
+	&-subtitle
+		font-weight: 400
+		font-size: 28px
+		line-height: 28px
+		margin-bottom: 40px
+		max-width: 547px
+		color: $white
+	&-list
+		margin-bottom: 60px
+		li
+			position: relative
+			color: $white
+			font-weight: 400
+			font-size: 30px
+			padding-left: 72px
+			line-height: 30px
+			margin-bottom: 20px
+			&::before
+				content: ''
+				width: 42px
+				height: 42px
+				position: absolute
+				left: 0
+				top: -5px
+				background-size: cover !important
+			&:nth-of-type(1)
+				&::before
+					background: no-repeat center url("data:image/svg+xml,%3Csvg viewBox='0 0 42 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_f_273_67040)'%3E%3Crect width='14.1066' height='14.1066' rx='1.41421' transform='matrix(0.705319 0.70889 -0.705319 0.70889 21 11)' fill='url(%23paint0_linear_273_67040)' fill-opacity='0.6'/%3E%3C/g%3E%3Crect width='14.1066' height='14.1066' rx='1.41421' transform='matrix(0.705319 0.70889 -0.705319 0.70889 21.1006 11)' fill='%231BA4D8'/%3E%3Cdefs%3E%3Cfilter id='filter0_f_273_67040' x='0.321056' y='0.273693' width='41.3579' height='41.4526' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='5.65685' result='effect1_foregroundBlur_273_67040'/%3E%3C/filter%3E%3ClinearGradient id='paint0_linear_273_67040' x1='13.4355' y1='0.362147' x2='-0.716319' y2='11.7683' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%230073FF'/%3E%3Cstop offset='1' stop-color='%23BB6DF5'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A")
+			&:nth-of-type(2)
+				&::before
+					background: no-repeat center url("data:image/svg+xml,%3Csvg width='42' height='42' viewBox='0 0 42 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_f_273_67046)'%3E%3Crect width='14.1244' height='14.1244' rx='1.41421' transform='matrix(0.70622 0.707992 -0.70622 0.707992 20.9746 11)' fill='url(%23paint0_linear_273_67046)' fill-opacity='0.6'/%3E%3C/g%3E%3Crect width='14.1244' height='14.1244' rx='1.41421' transform='matrix(0.70622 0.707992 -0.70622 0.707992 21.0762 11)' fill='%23DC5224'/%3E%3Cdefs%3E%3Cfilter id='filter0_f_273_67046' x='0.271253' y='0.272717' width='41.4067' height='41.4546' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='5.65685' result='effect1_foregroundBlur_273_67046'/%3E%3C/filter%3E%3ClinearGradient id='paint0_linear_273_67046' x1='12.654' y1='0.476267' x2='7.6992' y2='16.1795' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FF5710'/%3E%3Cstop offset='1' stop-color='%23FF0037'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A")
+			&:nth-of-type(3)
+				&::before
+					background: no-repeat center url("data:image/svg+xml,%3Csvg width='42' height='42' viewBox='0 0 42 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_f_413_963)'%3E%3Crect width='14.1067' height='14.1067' rx='1.41421' transform='matrix(0.705327 0.708882 -0.705327 0.708882 21.0029 11)' fill='url(%23paint0_linear_413_963)' fill-opacity='0.6'/%3E%3C/g%3E%3Crect width='14.1067' height='14.1067' rx='1.41421' transform='matrix(0.705327 0.708882 -0.705327 0.708882 21.1025 11)' fill='%23FEBB08'/%3E%3Cdefs%3E%3Cfilter id='filter0_f_413_963' x='0.323987' y='0.273694' width='41.3579' height='41.4526' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='5.65685' result='effect1_foregroundBlur_413_963'/%3E%3C/filter%3E%3ClinearGradient id='paint0_linear_413_963' x1='13.7764' y1='0.907087' x2='-2.10031' y2='9.60712' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FFA361'/%3E%3Cstop offset='1' stop-color='%23FD2222'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A")
+	&__images
+		&-1
+			img
+				display: block
+				margin-left: auto
+		&-2
+			right: 0
+			left: auto !important
+		&-3
+			left: auto !important
+			right: 50px
+			top: -17% !important
+		&-4
+			bottom: 0px
+			left: auto !important
+			top: auto !important
+			right: 100px
+		&-5
+			top: 20% !important
+		&-6
+			left: 25% !important
+			top: 16% !important
+//////Vantage//////
+
+.vantage
+	position: relative
+	padding-bottom: 150px
+	&-title
+		position: relative
+		.title-img
+			&::before
+				background: linear-gradient(197.51deg, rgba(255, 87, 16, 0.6) 5.06%, rgba(255, 0, 55, 0.6) 97.99%)
+
+	&__bg
+		&-1
+			background: rgba(139, 0, 205, 0.7)
+			filter: blur(148.578px)
+			transform: rotate(15.6deg)
+			position: absolute
+			z-index: -1
+			width: 50%
+			height: 50%
+			top: 0
+		&-2
+			background: rgba(27, 164, 216, 0.7)
+			filter: blur(308.578px)
+			transform: rotate(30.6deg)
+			position: absolute
+			top: 50%
+			left: 0
+			z-index: -1
+			width: 30%
+			height: 40%
+		&-3
+			background: rgba(139, 0, 205, 0.7)
+			filter: blur(148.578px)
+			transform: rotate(70.6deg)
+			position: absolute
+			bottom: 0
+			right: 0
+			z-index: -1
+			width: 30%
+			height: 60%
+		&-4
+			background: rgba(27, 164, 216, 0.5)
+			filter: blur(200px)
+			position: absolute
+			bottom: 0
+			left: 0
+			z-index: -1
+			width: 30%
+			height: 30%
+		&-5
+			background: rgba(139, 0, 205, 0.5)
+			filter: blur(70px)
+			position: absolute
+			top: 0
+			left: -5px
+			z-index: -1
+			width: 250px
+			height: 250px
+	&__wrapper
+		display: grid
+		grid-gap: 120px 16px
+		grid-template-columns: repeat(2,1fr)
+		padding-bottom: 170px
+	&__item
+		display: flex
+		align-items: center
+		justify-content: space-between
+		&-img
+			width: auto
+			height: auto
+			display: block
+		.parallax
+			max-width: 210px
+			width: 100%
+		&-title
+			font-style: normal
+			font-weight: 600
+			font-size: 30px
+			line-height: 30px
+			color: $blue-lightest
+			margin-bottom: 35px
+.slick-dots
+	display: flex
+	justify-content: center
+	align-items: center
+	grid-gap: 10px
+	li
+		font-size: 0
+		background: #7F49BE
+		border-radius: 100px
+		width: 16px
+		height: 16px
+		&.slick-active
+			background: linear-gradient(209.29deg, #53D0FF 4.74%, #FFFFFF 112.65%)
+			position: relative
+			button
+				background: #53D0FF
+				mix-blend-mode: lighten
+				filter: blur(16px)
+				width: 100%
+				height: 100%
+//////services/////
+
+.services
+	background: linear-gradient(180deg, #5328A3 0%, rgba(38, 37, 95, 0) 100%)
+	padding: 100px 0
+	&__wrapper
+
+	&__slider
+		&_item
+			height: auto
+			margin: 0 20px
+			&-text
+				font-size: 20px
+				line-height: 24px
+				font-weight: 400
+				&.hidden
+					max-height: 0
+					height: auto
+					overflow: hidden
+					transition: .3s all ease-in-out
+			&_icon
+				background: rgba(255, 255, 255, 0.1)
+				mix-blend-mode: normal
+				backdrop-filter: blur(16px)
+				
+				border-radius: 20px
+				width: 100%
+				height: auto
+				img
+					width: 100%
+					height: auto
+
+			&-title
+				font-weight: 600
+				font-size: 30px
+				color: $white
+				line-height: 30px
+				text-align: center
+				margin: 40px 0 35px
+		.more_text
+			color: orange
+			cursor: pointer
+			font-size: 20px
+			line-height: 24px
+			font-weight: 400
+		.slick-dots
+			margin-top: 30px
+	&-title
+		margin-top: 62px
+		.title-img
+			&::before
+				background: linear-gradient(241.28deg, rgba(255, 163, 97, 0.6) 3.79%, rgba(253, 34, 34, 0.6) 98.33%)
+	&__bg
+		&-1
+			background: rgba(139, 0, 205, 0.5)
+			filter: blur(600px)
+			left: 30%
+			position: absolute
+			z-index: 0s
+			bottom: -20%
+			width: 30%
+			height: 30%
+			border-radius: 100%
+		&-2
+			background: rgba(27, 164, 216, 0.5)
+			filter: blur(600px)
+			left: 15%
+			position: absolute
+			z-index: 0
+			bottom: 50%
+			width: 30%
+			height: 30%
+			border-radius: 100%
+		&-3
+			background: rgba(139, 0, 205, 0.5)
+			filter: blur(600px)
+			right: 40%
+			position: absolute
+			z-index: 0
+			top: -10%
+			width: 30%
+			height: 30%
+			border-radius: 100%
+
+////Origami///
+
+.origami
+	background: linear-gradient(180deg, #760EBA 0%, rgba(38, 41, 98, 0) 100%)
+	padding-bottom: 150px
+	&__slider
+		height: fit-content
+		&_item
+			&_wrapper
+				display: grid
+				grid-template-columns: 1fr 1fr
+				min-height: 770px
+				align-content: center
+				grid-gap: 30px
+		.slick-dots
+			margin-top: 10px
+	&__text
+		margin-top: 50px
+		margin-bottom: 42px
+		p
+			font-size: 28px
+			line-height: 30px
+			color: $white
+			b
+				margin-bottom: 30px
+				display: block
+	&-title
+		margin-top: 100px
+		.title-img
+			&::before
+				background: linear-gradient(231.13deg, rgba(0, 115, 255, 0.6) 3.78%, rgba(187, 109, 245, 0.6) 95.41%)
+
+//////partners///
+
+.partners
+	background: linear-gradient(180deg, #3267B8 -3.29%, rgba(40, 36, 97, 0) 100%)
+	padding-bottom: 150px
+	position: relative
+	padding-top: 500px
+	&__clouds
+		z-index: 0
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		&-first
+			height: 100%
+			width: 250%
+			position: relative
+			&::before
+				content: ''
+				display: block
+				background: url('../img/partners/cloud2.png')
+				animation: wave 4s 0.1s infinite linear
+				background-size: auto 120%
+
+				background-repeat-x: repeat
+				position: absolute
+				left: -5%
+				top: 0
+				right: 0
+				bottom: 0
+		&-second
+			height: 100%
+			width: 250%
+			position: relative
+			&::before
+				content: ''
+				display: block
+				background-repeat-x: repeat
+				background: url('../img/partners/cloud1.png')
+				background-size: auto 120%
+				animation: wave 4s 0.1s infinite linear
+
+				position: absolute
+				left: -5%
+				top: 0
+				right: 0
+				bottom: 0
+
+	&__wrapper
+		display: grid
+		grid-template-columns: repeat(3,1fr)
+		justify-content: space-between
+		grid-gap: 59px 185px
+		align-items: center
+		position: relative
+		z-index: 1
+	&__item
+		img
+			width: 100%
+			height: auto
+	&-title
+		margin-top: 100px
+		.title-img
+			&::before
+				background: linear-gradient(197.51deg, rgba(255, 87, 16, 0.6) 5.06%, rgba(255, 0, 55, 0.6) 97.99%)
+
+///office///
+
+.office
+	padding: 123px 0 100px
+	background: linear-gradient(180deg, #471E8C 0%, rgba(38, 41, 98, 0) 100%)
+	position: relative
+	&__bg
+		&-1
+			background: #8B00CD
+			filter: blur(150px)
+			left: 0
+			right: 0
+			top: 0
+			transform: translate(50%, 100%)
+			position: absolute
+			z-index: -1
+			bottom: 0
+			width: 50%
+			height: 50%
+			border-radius: 100%
+		&-2
+			background: #1BA4D8
+			filter: blur(150px)
+			left: 0
+			right: 0
+			top: 0
+			transform: translate(30%, 30%)
+			position: absolute
+			z-index: -1
+			bottom: 0
+			width: 50%
+			height: 50%
+			border-radius: 100%
+		&-3
+			background: #8B00CD
+			filter: blur(150px)
+			left: 0
+			right: 0
+			top: 0
+			transform: translate(60%, 30%)
+			position: absolute
+			z-index: -1
+			bottom: 0
+			width: 50%
+			height: 50%
+			border-radius: 100%
+	&-title
+		margin-top: 100px
+		.title-img
+			&::before
+				background: linear-gradient(197.51deg, rgba(255, 87, 16, 0.6) 5.06%, rgba(255, 0, 55, 0.6) 97.99%)
+	&__list
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		pointer-events: none
+	&__item
+		background: rgba(255, 255, 255, 0.5)
+		backdrop-filter: blur(50px)
+		max-width: 210px
+		padding: 20px 30px
+		visibility: hidden
+		
+		transition: .3s all
+		::before
+			content: ''
+			margin: -35px
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			filter: blur(50px)
+			z-index: -1
+		border-radius: 10px
+		&-title
+			font-weight: bold
+			font-size: 20px
+			line-height: 24px
+			text-align: center
+			color: $blue-black
+			margin-bottom: 10px
+		&-subtitle
+			font-weight: 600
+			font-size: 18px
+			line-height: 22px
+			text-align: center
+			color: $blue-black
+			margin-bottom: 10px
+		address
+			font-weight: 300
+			font-size: 18px
+			line-height: 22px
+			text-align: center
+			color: $blue-black
+		&#USA
+			position: absolute
+			top: 0
+			left: 0
+			transform: translate(12%, 87%)
+		&#Egupt
+			position: absolute
+			top: 50%
+			right: 50%
+			transform: translate(-50%, -108%)
+		&#Kuwait
+			position: absolute
+			right: 50%
+			top: 0
+			transform: translate(99%, 127%)
+///Footer///
+
+.footer
+	background: linear-gradient(180deg, #471E8C 0%, rgba(38, 41, 98, 0) 100%)
+	padding: 47px 0
+	&__wrapper
+		&_top
+			display: flex
+			justify-content: space-between
+			align-items: center
+		&_bottom
+			font-weight: 400
+			font-size: 14px
+			line-height: 21px
+			color: #807AAB
+			max-width: 322px
+			width: 100%
+			margin-top: -38px
+	&-logo
+		width: 100%
+		max-width: 130px
+		margin-top: -100px
+	&__nav
+		display: flex
+		justify-content: space-between
+		width: 100%
+		max-width: 613px
+		&-link
+			color: $white
+			&.active
+				font-weight: 600
+				font-size: 20px
+				line-height: 20px
+	&__contacts
+		display: flex
+		flex-direction: column
+		&-title
+			color: #807AAB
+			margin-bottom: 16px
+		&-tel
+			color: $white
+			margin-bottom: 15px
+			&:last-of-type
+				margin-bottom: 20px
+		&_socials
+			display: flex
+			grid-gap: 10px
+
+///1400px///
+@media (max-width: 1400px)
+	.header
+		&__menu
+			padding: 0 64px
+
+@media (max-width:1200px)
+	.callback
+		&-title
+			font-size: 34px
+			line-height: 51px
+			margin-bottom: 30px
+		&-subtitle
+			font-size: 18px
+			line-height: 22px
+			margin-bottom: 40px
+	.title
+		&-img
+			margin-left: -150px
+	.header
+		&__menu
+			padding: 0 43px
+			a
+				font-size: 16px
+				line-height: 19px
+				&.active
+					font-size: 18px
+					line-height: 18px
+		&-btn
+			width: 128px
+			height: 30px
+			p
+				font-size: 12px
+				line-height: 18px
+	.intro
+		padding-top: 62px
+		padding-bottom: 230px
+		&-subtitle
+			font-size: 18px
+			line-height: 18px
+			margin-bottom: 25px
+			max-width: 386px
+		&-list
+			li
+				font-size: 18px
+				line-height: 18px
+				margin-bottom: 18px
+				padding-left: 45px
+				&::before
+					width: 28px
+					height: 28px
+	.vantage
+		padding-bottom: 100px
+		&__item
+			&-title
+				font-size: 22px
+				line-height: 22px
+			.parallax
+				max-width: 168px
+			&-text
+				font-size: 16px
+				line-height: 16px
+		&__wrapper
+			padding-bottom: 138px
+			grid-gap: 70px 15px
+
+	.services
+		padding: 77px 0
+		&__slider
+			&_item
+				&_icon
+					max-width: 176px
+					margin: auto
+				&-title
+					font-size: 22px
+					line-height: 34px
+					margin-top: 21px
+					margin-bottom: 28px
+				&-text,
+				.more_text
+					font-size: 16px
+					line-height: 16px
+	.origami
+		padding-bottom: 100px
+		padding-top: 52px
+		&__slider
+			&_item
+				&_wrapper
+					min-height: auto
+					padding-bottom: 54px
+		&__col.parallax
+			max-width: 274px
+		&__icon
+			max-width: 158px
+		&__text
+			margin-top: 30px
+			margin-bottom: 43px
+			p
+				font-size: 24px
+				line-height: 30px
+				b
+	.partners
+		padding-bottom: 123px
+		padding-top: 250px
+	.footer
+		&-logo
+			margin-top: 0
+		&__wrapper
+			&_bottom
+				margin-top: -25px
+				max-width: 100%
+				text-align: center
+	.office
+		&__item
+			max-width: 160px
+			&-title
+			
+				font-size: 15.3816px
+				line-height: 18px
+				margin-bottom: 7px
+			&-subtitle
+			
+				font-size: 13.8434px
+				line-height: 17px
+				margin-bottom: 7px
+			address
+				
+				font-size: 13.8434px
+				line-height: 17px
+@media (max-width: 992px)
+	.header
+		&-btn
+			p
+				font-size: 12px
+				line-height: 18px
+	.title
+		font-size: 54px
+		line-height: 80px
+	.vantage
+		&__wrapper
+			padding-bottom: 104px
+		&__item
+			.parallax
+				max-width: 140px
+			&-title
+				margin-bottom: 20px
+	.origami
+		&__text
+			p
+				font-size: 18px
+				line-height: 18px
+				b
+					font-size: 22px
+					line-height: 26px
+	.partners
+		&__wrapper
+			grid-gap: 30px 100px
+	.footer
+		.body-2
+			font-size: 16px
+			line-height: 19px
+		&__nav
+			max-width: 400px
+		&__wrapper
+			&_bottom
+				margin-top: 0
+
+@media (max-width: 768px)
+	.Btn
+		width: 179.17px
+		height: 45px
+	.title
+		font-weight: 700
+		font-size: 44px
+		line-height: 50px
+		&-img
+			margin-left: -250px
+	.header
+		&__menu
+			padding: 0 25px
+			a
+				font-size: 14px
+				line-height: 17px
+				&.active
+					font-size: 16px
+					line-height: 16px
+					&::after
+						width: 75px
+						height: 20px
+					&::before
+						width: 78px
+						height: 23px
+	.intro
+		padding-bottom: 177px
+		&::before
+			background-position: right
+		&__images
+			max-width: 420px
+			margin: auto
+		&__wrapper
+			display: flex
+			flex-direction: column-reverse
+		&-title
+			max-width: 100%
+			text-align: center
+			margin-bottom: 24px
+		&-subtitle
+			max-width: 100%
+		&-list
+			width: fit-content
+			margin: auto auto 54px auto
+		&-btn
+			margin: auto
+		&__bg
+			&-2
+				left: -40%
+				bottom: -184px
+		&__images
+			&-1
+				img
+					max-width: 250px
+					width: 100%
+			&-2
+				right: -10%
+				img
+					max-width: 140px
+			&-3
+				right: 10px
+				top: -30% !important
+				img
+					max-width: 220px
+			&-4
+				bottom: -50px
+			&-5
+				top: 30% !important
+			&-6
+				left: -10% !important
+				top: 10% !important
+				img
+					max-width: 120px
+			&-7
+				left: -50px !important
+				top: -50px !important
+				img
+					max-width: 140px
+	.vantage
+		&__item
+			flex-direction: column
+			justify-content: flex-start
+			.parallax
+				max-width: 178px
+				max-height: 178px
+				height: 100%
+			&_content
+				max-width: 273px
+				margin-top: 30px
+	.services
+		padding: 185px 0 100px 0
+		&__slider
+			&_item
+				&_icon
+					max-width: 100%
+				&-title
+					font-weight: 400
+					font-size: 30px
+					line-height: 37px
+					margin: 40px 0 28px 0
+				&-text,
+				.more_text
+					font-size: 18px
+					line-height: 18px
+	.origami
+		padding-top: 130px
+		&__slider
+			&_item
+				&_wrapper
+					grid-gap: 0
+					padding-bottom: 150px
+	.partners
+		&__wrapper
+			grid-template-columns: repeat(2,1fr)
+	.office
+		padding-top: 0
+		padding-bottom: 100px
+		svg
+			height: auto
+			margin: 50px 0
+		&-title
+			margin-top: 0
+	.footer
+		.footer .body-2
+			font-size: 14px
+			line-height: 17px
+		&__wrapper
+			&_top
+				flex-wrap: wrap
+			&_bottom
+				max-width: 219px
+				text-align: left
+				margin-top: -60px
+		&__contacts
+			margin-left: auto
+			margin-top: 24px
+	.mfp-auto-cursor .mfp-content
+		padding: 16px
+	.office
+		&__item
+			padding: 15px 23px
+			max-width: 133px
+			&-title
+				font-size: 12.818px
+				line-height: 15px
+			&-subtitle
+				font-size: 11.5362px
+				line-height: 14px
+			address
+				font-size: 11.5362px
+				line-height: 14px
+	
+@media (max-width: 550px)
+	.Btn
+		width: 159.26px
+		height: 40px
+		p
+			font-size: 18.2002px
+			line-height: 18px
+	.title
+		font-size: 28px
+		line-height: 30px
+		&-img
+			height: 21px
+			margin-left: -25%
+	.header
+		&__wrapper
+			padding: 20px 0
+		&__menu
+			display: none
+			&_mobile
+				display: flex
+		&-btn
+			display: none
+			&-mobile
+				display: flex
+				margin: 0 auto
+	.intro
+		padding-top: 0
+		padding-bottom: 66px
+		&__bg
+			&-1,
+			&-2
+				z-index: -1
+			&-2
+				height: 259px
+				transform: rotate(27.55deg)
+			&-1
+				height: 308px
+				bottom: -332px
+				transform: rotate(15.43deg)
+		&__images
+			max-width: 208px
+		&-title
+			font-size: 28px
+			line-height: 30px
+			margin-bottom: 16px
+			text-align: left
+		&-subtitle
+			font-size: 16px
+			line-height: 16px
+			margin-bottom: 16px
+		&-list
+			margin: 0 auto 26px 0
+			li
+				font-size: 16px
+				line-height: 16px
+				margin-bottom: 10px
+		&__images
+			margin-bottom: 50px
+			&-1
+				img
+					max-width: 200px
+			&-2
+				img
+					max-width: 100px
+			&-3
+				img
+					max-width: 130px
+			&-6
+				img
+					max-width: 70px
+			&-7				
+				top: -20px !important
+				img
+					max-width: 100px
+	.slick-dots
+		grid-gap: 6px
+		li
+			width: 10px
+			height: 10px
+	.vantage
+		padding-bottom: 60px
+		&__wrapper
+			padding-bottom: 50px
+			display: block
+			height: fit-content
+			.slick-dots
+				margin-top: 20px
+
+		&__item
+			padding: 0 8px
+			.parallax
+				max-width: 136px
+				max-height: 136px
+			&_content
+				margin-top: 20px
+			&-title
+				font-size: 17px
+				line-height: 17px
+	.services
+		padding: 55px 0 59px 0
+		&__slider
+			&_item
+				&-title
+					font-size: 28px
+					line-height: 34px
+					margin: 20px 0
+				&-text,
+				.more_text
+					font-size: 14px
+					line-height: 14px
+		&-title
+			margin-top: 27px
+	.origami
+		padding: 60px 0
+		&__col
+			display: flex
+			flex-direction: column
+			align-items: center
+			&.parallax
+				margin: auto
+
+		&__slider
+			&_item
+				&_wrapper
+					grid-template-columns: 1fr
+					padding-bottom: 45px
+		&__text
+			p
+				font-size: 16px
+				line-height: 16px
+				b
+					font-size: 18px
+					line-height: 18px
+		&-title
+			margin-top: 20px
+	.partners
+		&__wrapper
+			grid-gap: 21px 44px
+	.footer
+		&__nav
+			display: none
+		&__wrapper
+			&_top
+				align-items: flex-start
+			&_bottom
+				margin-top: 30px
+				max-width: 100%
+		&__contacts
+			margin-top: 0
+			&-title
+				display: none
+
+	.callback
+		max-height: 100%
+		overflow-y: scroll
+		&-title
+			font-size: 24px
+			line-height: 36px
+			margin-bottom: 21px
+		&-subtitle
+			font-size: 14px
+			line-height: 21px
+			margin-bottom: 30px
+	.office
+		&__list
+			position: relative
+			pointer-events: initial
+			height: fit-content
+			margin-bottom: 40px
+		&__item
+			position: relative !important
+			margin: 0 10px
+			left: 0 !important
+			top: 0 !important
+			right: 0 !important
+			/* transform: none !important */
+			visibility: visible !important
+			height: fit-content
+			max-width: 100%
+		.slick-dots
+			padding-top: 42px
