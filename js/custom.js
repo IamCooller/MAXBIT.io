@@ -234,76 +234,7 @@ $(function() {
 
 //Title
 
-/* {
-    const chars = ['$', '%', '#', '@', '&', '(', ')', '=', '*', '/'];
-    const charsTotal = chars.length;
-    const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-    class Entry {
-        constructor(el) {
-            this.DOM = { el: el };
-
-            this.DOM.title = { word: this.DOM.el.querySelector('.content__text') };
-            charming(this.DOM.title.word);
-            this.DOM.title.letters = Array.from(this.DOM.title.word.querySelectorAll('span'));
-            this.DOM.title.letters.forEach(letter => letter.dataset.initial = letter.innerHTML);
-            this.lettersTotal = this.DOM.title.letters.length;
-            observer.observe(this.DOM.el);
-        }
-        enter(direction = 'down') {
-            this.DOM.title.word.style.opacity = 1;
-
-            this.timeouts = [];
-            this.complete = false;
-            let cnt = 0;
-            this.DOM.title.letters.forEach((letter, pos) => {
-                const timeout = setTimeout(() => {
-                    letter.innerHTML = chars[getRandomInt(0, charsTotal - 1)];
-                    setTimeout(() => {
-                        letter.innerHTML = letter.dataset.initial;
-                        ++cnt;
-                        if (cnt === this.lettersTotal) {
-                            this.complete = true;
-                        }
-                    }, 100);
-                }, pos * 80);
-                this.timeouts.push(timeout);
-            });
-        }
-        exit(direction = 'down') {
-            this.DOM.title.word.style.opacity = 0;
-            if (this.complete) return;
-            for (let i = 0, len = this.timeouts.length; i <= len - 1; ++i) {
-                clearTimeout(this.timeouts[i]);
-            }
-        }
-
-    }
-
-    let observer;
-    let current = -1;
-    let allentries = [];
-    const sections = Array.from(document.querySelectorAll('.title'));
-
-    observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.intersectionRatio > 0.5) {
-                const newcurrent = sections.indexOf(entry.target);
-                if (newcurrent === current) return;
-                const direction = newcurrent > current;
-                if (current >= 0) {
-                    allentries[current].exit(direction ? 'down' : 'up');
-                }
-                allentries[newcurrent].enter(direction ? 'down' : 'up');
-                current = newcurrent;
-            }
-        });
-    }, { threshold: 0.5 });
-
-    sections.forEach(section => allentries.push(new Entry(section)));
-
-}
- */
 {
     const chars = ['$', '%', '#', '@', '&', '(', ')', '=', '*', '/'];
     const charsTotal = chars.length;
@@ -554,26 +485,13 @@ $('.hamburger-menu').on('click', function(e) {
 
 //Rocket animation
 
-/* $('#rocket').waypoint(function(dir) {
-    if (dir === 'down')
-        $(this).css('top', '-100px');
-    else
-        $(this)
-        .removeClass('fadeInUp')
-        .addClass('fadeOutDown');
-}, {
-    offset: '80%'
-})
-
 $('#rocket').waypoint(function(dir) {
-    if (dir === 'down')
-        $(this)
-        .removeClass('fadeInUp')
-        .addClass('fadeOutDown');
-    else
-        $(this)
-        .removeClass('fadeOutDown')
-        .addClass('fadeInUp');
+    if (dir === 'down') {
+        $('#rocket img').animate({ "top": "-=100vh" }, 2000);
+    } else {
+        $('#rocket img').animate({ "top": "0" }, 2000);
+
+    }
 }, {
-    offset: -50
-}) */
+    offset: '10%'
+})
