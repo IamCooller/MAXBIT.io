@@ -49,10 +49,7 @@ $(".header__menu a").on("mouseout", function() {
 });
 
 
-//Shadow
-$('.shadow').realshadow({
-    inset: true
-});
+
 
 
 //Sliders

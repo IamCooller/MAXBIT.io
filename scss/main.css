@@ -19,6 +19,61 @@
   src: url("../fonts/Proxima Nova Semibold.otf") format("truetype");
 }
 
+.preloader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  background-color: #26255F;
+}
+
+.preloader::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  background-image: url("../img/preload.svg");
+  background-repeat: repeat;
+  background-size: cover;
+  -webkit-animation: preloader-move 10s infinite linear;
+          animation: preloader-move 10s infinite linear;
+}
+
+@-webkit-keyframes preloader-move {
+  0%,
+  100% {
+    background-position: 0;
+  }
+  50% {
+    background-position: calc(100vw + 700px) calc(100vh + 700px);
+  }
+}
+
+@keyframes preloader-move {
+  0%,
+  100% {
+    background-position: 0;
+  }
+  50% {
+    background-position: calc(100vw + 700px) calc(100vh + 700px);
+  }
+}
+
+.loaded_hiding .preloader {
+  -webkit-transition: 0.3s opacity;
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.loaded .preloader {
+  display: none;
+}
+
 .title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -328,61 +383,6 @@ body.scroll_disabled {
 main.zindex {
   z-index: -1;
   position: relative;
-}
-
-.preloader {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 99999;
-  background-color: #26255F;
-}
-
-.preloader::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 99999;
-  background-image: url("../img/preload.svg");
-  background-repeat: repeat;
-  background-size: cover;
-  -webkit-animation: preloader-move 10s infinite linear;
-          animation: preloader-move 10s infinite linear;
-}
-
-@-webkit-keyframes preloader-move {
-  0%,
-  100% {
-    background-position: 0;
-  }
-  50% {
-    background-position: calc(100vw + 700px) calc(100vh + 700px);
-  }
-}
-
-@keyframes preloader-move {
-  0%,
-  100% {
-    background-position: 0;
-  }
-  50% {
-    background-position: calc(100vw + 700px) calc(100vh + 700px);
-  }
-}
-
-.loaded_hiding .preloader {
-  -webkit-transition: 0.3s opacity;
-  transition: 0.3s opacity;
-  opacity: 0;
-}
-
-.loaded .preloader {
-  display: none;
 }
 
 .mfp-bg {
