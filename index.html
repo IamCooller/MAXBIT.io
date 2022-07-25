@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="en" class="no-js">
 
 <head>
     <meta charset="utf-8" />
@@ -23,8 +23,10 @@
     <!-- libs js -->
 
     <script defer src="libs/charming.min.js"></script>
+    <script defer src="libs/imagesloaded.pkgd.min.js"></script>
     <script defer src="libs/aos/aos.js"></script>
     <script defer src="libs/parallax/parallax.js"></script>
+    <script defer src="libs/parallax/jquery.scrolling-parallax.js"></script>
     <script defer src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
     <script defer src="libs/shadow/realshadow-min.js"></script>
     <script defer src="libs/slick/slick.min.js"></script>
@@ -39,6 +41,15 @@
     <!-- main css -->
 
     <link rel="stylesheet" href="scss/main.css" />
+    <script>
+        document.documentElement.className = "js";
+        var supportsCssVars = function() {
+            var e, t = document.createElement("style");
+            return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
+        };
+        supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+    </script>
+
     <script>
         window.onload = function() {
             document.body.classList.add('loaded_hiding');
@@ -188,11 +199,11 @@
                 </div>
             </div>
             <div class="intro__bg">
-                <span class="intro__bg-1"></span>
-                <span class="intro__bg-2"></span>
+                <span class="intro__bg-1 parallax-intro"></span>
+                <span class="intro__bg-2 parallax-intro"></span>
             </div>
         </section>
-        <section class="vantage">
+        <section class="vantage content__section">
             <div class="container">
                 <div class="vantage__wrapper">
                     <div class="vantage__item" data-aos="fade-right">
@@ -208,7 +219,7 @@
                     </div>
                     <div class="vantage__item" data-aos="fade-left">
                         <div class="parallax">
-                            <img src="img/vantage/2.svg" alt="Inclusive" class="vantage__item-img" data-depth="0.50" />
+                            <img src="img/vantage/2.svg" alt="Inclusive" class="vantage__item-img " data-depth="0.50" />
                         </div>
                         <div class="vantage__item_content">
                             <div class="vantage__item-title">Expert-led</div>
@@ -248,14 +259,9 @@
                 <span class="vantage__bg-4"></span>
                 <span class="vantage__bg-5"></span>
             </div>
-            <div class="vantage-title title h3" data-aos="fade-right">
-                <div class="title-img">
-                    <img src="img/mat/1.svg" alt="WHY MAXBIT?" />
-                </div>
-                <span class="content__text"> WHY MAXBIT?</span>
-            </div>
+            <div class="vantage-title content__text title title-orange h3 container">WHY MAXBIT?</div>
         </section>
-        <section class="services">
+        <section class="services content__section">
             <div class="container">
                 <div class="services__wrapper">
                     <div class="services__slider" data-aos="fade-left">
@@ -386,14 +392,9 @@
                 <span class="services__bg-2"></span>
                 <span class="services__bg-3"></span>
             </div>
-            <div class="services-title title h3" data-aos="fade-right">
-                <div class="title-img">
-                    <img src="img/mat/2.svg" alt="OUR SERVICES" />
-                </div>
-                <span class="content__text">OUR SERVICES</span>
-            </div>
+            <div class="services-title content__text title title-yellow h3 container">OUR SERVICES</div>
         </section>
-        <section class="origami">
+        <section class="origami content__section">
             <div class="container">
                 <div class="origami__wrapper" data-aos="fade-up">
                     <div class="origami__slider">
@@ -409,46 +410,31 @@
                                     </div>
                                     <div class="origami__text">
                                         <p>
-                                            <b>Meet Origami, a platform ready to take your processes
-                          to the next level</b
-                        >
-                        With Origami, you can ditch paperwork, delays and wasted
-                        costs; all with a secure and user-friendly platform that
-                        can be easily integrated with any existing business
-                        system.
-                      </p>
-                    </div>
-                    <a href="#" class="origami-btn Btn"><p>Learn How<span></span></p></a>
-                  </div>
-                </div>
-              </div>
-              <div class="origami__slider_item">
-                <div class="origami__slider_item_wrapper">
-                  <div class="origami__col parallax">
-                    <img
-                      src="img/origami/stars.png"
-                      alt="12"
-                      data-depth="0.20"
-                    />
-                    <img
-                      src="img/origami/rocket.png"
-                      alt="32"
-                      data-depth="0.60"
-                    />
-                  </div>
-                  <div class="origami__col">
-                    <div class="origami__icon parallax">
-                      <img
-                        src="img/origami/logo.svg"
-                        alt="1"
-                        data-depth="0.40"
-                      />
-                    </div>
-                    <div class="origami__text">
-                      <p>
-                        <b
-                          >Meet Origami, a platform ready to take your processes
-                          to the next level</b
+                                            <strong> Origami, a platform ready to take your processes
+                          to the next level</strong> With Origami, you can ditch paperwork, delays and wasted costs; all with a secure and user-friendly platform that can be easily integrated with any existing
+                                            business system.
+                                        </p>
+                                    </div>
+                                    <a href="#" class="origami-btn Btn">
+                                        <p>Learn How<span></span></p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="origami__slider_item">
+                            <div class="origami__slider_item_wrapper">
+                                <div class="origami__col parallax">
+                                    <img src="img/origami/stars.png" alt="12" data-depth="0.20" />
+                                    <img src="img/origami/rocket.png" alt="32" data-depth="0.60" />
+                                </div>
+                                <div class="origami__col">
+                                    <div class="origami__icon parallax">
+                                        <img src="img/origami/logo.svg" alt="1" data-depth="0.40" />
+                                    </div>
+                                    <div class="origami__text">
+                                        <p>
+                                            <strong>Meet Origami, a platform ready to take your processes
+                          to the next level</strong
                         >
                         With Origami, you can ditch paperwork, delays and wasted
                         costs; all with a secure and user-friendly platform that
@@ -463,14 +449,9 @@
             </div>
           </div>
         </div>
-        <div class="origami-title title h3" data-aos="fade-right">
-          <div class="title-img">
-            <img src="img/mat/3.svg" alt="ORIGAMI" />
-          </div>
-          <span class="content__text">ORIGAMI®</span>
-        </div>
+        <div class="origami-title content__text title title-blue h3 container" >ORIGAMI®</div>
       </section>
-      <section class="partners">
+      <section class="partners content__section">
         <div class="partners__clouds parallax">
           <div class="partners__clouds-first" data-depth="0.3"></div>
           <div class="partners__clouds-second" data-depth="0.5"></div>
@@ -498,14 +479,9 @@
             </div>
           </div>
         </div>
-        <div class="partners-title title h3" data-aos="fade-right">
-          <div class="title-img">
-            <img src="img/mat/1.svg" alt="OUR PARTNERS" />
-          </div>
-          <span class="content__text">OUR PARTNERS</span>
-        </div>
+        <div class="partners-title content__text title title-orange h3 container">OUR PARTNERS</div>
       </section>
-      <section class="office">
+      <section class="office content__section">
         <div class="container">
           <div
             class="office__wrapper"
@@ -532,12 +508,7 @@
           </div>
         </div>
 
-        <div class="office-title title h3" data-aos="fade-right">
-          <div class="title-img">
-            <img src="img/mat/2.svg" alt=" OUR OFFICE " />
-          </div>
-          <span class="content__text"> OUR OFFICE </span>
-        </div>
+        <div class="office-title content__text title title-yellow h3 container">OUR OFFICE</div>
         
         <div class="office__bg">
           <span class="office__bg-1"></span>

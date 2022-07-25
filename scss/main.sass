@@ -156,16 +156,7 @@ main
 		justify-content: center
 		border-radius: 81.901px
 		z-index: 2
-		span
-			position: absolute
-			display: block
-			width: 0
-			height: 0
-			border-radius: 50%
-			background-color: $blue-black
-			transition: width 0.4s ease-in-out, height 0.4s ease-in-out
-			transform: translate(-50%, -50%)
-			z-index: -1
+		
 	&::after
 		content: ''
 		position: absolute
@@ -178,7 +169,8 @@ main
 		left: 0
 		right: 0
 		z-index: -1
-	
+		
+		transition: .3s all ease-in-out
 	&::before
 		content: ''
 		position: absolute
@@ -193,20 +185,16 @@ main
 		right: 0
 		transition: .3s all ease-in-out
 		z-index: -1
+		opacity: 0
 	
 
 	&:active
 		box-shadow: 0px 3.27604px 3.27604px rgba(0, 0, 0, 0.05), 3.27604px 0px 3.27604px rgba(0, 0, 0, 0.06)
 		&::after
-			background: none
+			opacity: 0
 	&:hover
-		background: none
-		p
-			color: #CE9600
-			span
-				height: 500px
-				width: 225%
-		border: 1px solid
+		&::before
+			opacity: 1
 		
 		
 		
@@ -534,11 +522,7 @@ main
 .vantage
 	position: relative
 	padding-bottom: 150px
-	&-title
-		position: relative
-		.title-img
-			&::before
-				background: linear-gradient(197.51deg, rgba(255, 87, 16, 0.6) 5.06%, rgba(255, 0, 55, 0.6) 97.99%)
+	
 
 	&__bg
 		&-1
@@ -636,7 +620,6 @@ main
 .services
 	background: linear-gradient(180deg, #5328A3 0%, rgba(38, 37, 95, 0) 100%)
 	padding: 100px 0
-	&__wrapper
 
 	&__slider
 		&_item
@@ -678,11 +661,7 @@ main
 			font-weight: 400
 		.slick-dots
 			margin-top: 30px
-	&-title
-		margin-top: 62px
-		.title-img
-			&::before
-				background: linear-gradient(241.28deg, rgba(255, 163, 97, 0.6) 3.79%, rgba(253, 34, 34, 0.6) 98.33%)
+	
 	&__bg
 		&-1
 			background: rgba(139, 0, 205, 0.5)
@@ -738,14 +717,10 @@ main
 			font-size: 28px
 			line-height: 30px
 			color: $white
-			b
+			strong
 				margin-bottom: 30px
 				display: block
-	&-title
-		margin-top: 100px
-		.title-img
-			&::before
-				background: linear-gradient(231.13deg, rgba(0, 115, 255, 0.6) 3.78%, rgba(187, 109, 245, 0.6) 95.41%)
+	
 
 //////partners///
 
@@ -808,11 +783,7 @@ main
 		img
 			width: 100%
 			height: auto
-	&-title
-		margin-top: 100px
-		.title-img
-			&::before
-				background: linear-gradient(197.51deg, rgba(255, 87, 16, 0.6) 5.06%, rgba(255, 0, 55, 0.6) 97.99%)
+	
 
 ///office///
 
@@ -860,11 +831,7 @@ main
 			width: 50%
 			height: 50%
 			border-radius: 100%
-	&-title
-		margin-top: 100px
-		.title-img
-			&::before
-				background: linear-gradient(197.51deg, rgba(255, 87, 16, 0.6) 5.06%, rgba(255, 0, 55, 0.6) 97.99%)
+	
 	&__list
 		position: absolute
 		width: 100%
@@ -930,6 +897,8 @@ main
 .footer
 	background: linear-gradient(180deg, #471E8C 0%, rgba(38, 41, 98, 0) 100%)
 	padding: 47px 0
+
+	
 	&__wrapper
 		&_top
 			display: flex
@@ -1073,7 +1042,6 @@ main
 			p
 				font-size: 24px
 				line-height: 30px
-				b
 	.partners
 		padding-bottom: 123px
 		padding-top: 250px
@@ -1124,7 +1092,7 @@ main
 			p
 				font-size: 18px
 				line-height: 18px
-				b
+				strong
 					font-size: 22px
 					line-height: 26px
 	.partners
@@ -1422,7 +1390,7 @@ main
 			p
 				font-size: 16px
 				line-height: 16px
-				b
+				strong
 					font-size: 18px
 					line-height: 18px
 		&-title
