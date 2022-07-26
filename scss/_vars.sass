@@ -14,6 +14,24 @@ $red-light: #E19075
 $red-lighter: #E3AA9C
 $grey-lightest: #807AAB
 
+
+//Scrollbar//
+
+::-webkit-scrollbar
+    width: 5px
+    height: 8px
+    background-color: #26255F
+
+::-webkit-scrollbar-thumb 
+    background-color: $grey-lightest
+    border-radius: 9em
+
+
+::-webkit-scrollbar-thumb:hover
+    background-color: #760EBA
+
+
+
 //preloader//
 .preloader
     position: absolute
@@ -51,10 +69,6 @@ $grey-lightest: #807AAB
     display: none
 
 // Title
-
-
-
-       
 
 .content__text
     position: absolute
@@ -109,7 +123,8 @@ $grey-lightest: #807AAB
             background-image: url('../img/mat/3.svg')
         &::before
             background-image: linear-gradient(231.13deg, rgba(0, 115, 255, 0.6) 3.78%, rgba(187, 109, 245, 0.6) 95.41%)
-           
+
+//Rocket    
 #rocket 
     width: 100%
     height: 100%

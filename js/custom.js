@@ -19,44 +19,40 @@ for (const item of ParallaxItems) {
     const parallaxInstance = new Parallax(item);
 }
 
-$('.parallax-intro').scrollingParallax({
+$('.intro__bg-1, .intro__bg-2').scrollingParallax({
     loopIt: false,
+    disableIE6: true,
     staticScrollLimit: true,
-    staticSpeed: .5,
-    bgHeight: '100%',
+    staticSpeedX: 3
+});
 
-    disableIE6Animation: true
+$('.intro__bg-3').scrollingParallax({
+    loopIt: true,
+
+    disableIE6: true,
+    bgWidth: '100%',
+    staticSpeed: 3,
 });
 
 
 
-/* 
-$(function() {
 
-    $.scrollingParallax('../img/intro/bg-2.png', {
-        loopIt: true,
-        staticScrollLimit: false,
+
+/* $(function() {
+
+    $.scrollingParallax('../img/intro/pattern.svg', {
+        loopIt: false,
+        staticScrollLimit: true,
         bgHeight: '100%',
+        bgRepeat: true,
         disableIE6: true,
-        bgWidth: 'auto',
-        staticSpeed: .20,
-    }); */
+        bgWidth: '100%',
+        staticSpeed: 1,
+    });
 
-/*  $.scrollingParallax('img/leaves-midground.png', {
-     staticSpeed : .8,
-     loopIt : true,
-     bgHeight : '200%',
-     disableIE6 : true
- });
- 
- $.scrollingParallax('img/leaves-background.png', {
-     staticSpeed : .17,
-     loopIt : true,
-     bgHeight : '280%',
-     disableIE6Animation : false
- });
-  */
-/* }); */
+}); */
+
+
 
 
 
@@ -182,6 +178,7 @@ $(window).scroll(function() {
         header.addClass('overflow')
         $('body').css({
             paddingTop: hederHeight + 'px',
+            transition: 'padding-top 0.5s ease-in-out'
         })
         $('main').css('overflow', 'hidden');
     } else {
@@ -189,6 +186,7 @@ $(window).scroll(function() {
         header.removeClass('header_fixed')
         $('body').css({
             paddingTop: 0,
+            transition: 'padding-top 0s '
         })
         $('main').css('overflow', 'initial');
     }
@@ -200,6 +198,8 @@ $(function() {
     $('.popup-modal').magnificPopup({
         type: 'inline',
         modal: true,
+        fixedContentPos: false,
+        closeOnBgClick: true,
         callbacks: {
             open: function() {
                 $('body').addClass('scroll_disabled')

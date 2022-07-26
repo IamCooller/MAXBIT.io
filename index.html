@@ -48,9 +48,6 @@
             return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
         };
         supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
-    </script>
-
-    <script>
         window.onload = function() {
             document.body.classList.add('loaded_hiding');
             window.setTimeout(function() {
@@ -199,8 +196,10 @@
                 </div>
             </div>
             <div class="intro__bg">
-                <span class="intro__bg-1 parallax-intro"></span>
-                <span class="intro__bg-2 parallax-intro"></span>
+                <span class="intro__bg-3"></span>
+
+                <span class="intro__bg-2"></span>
+                <span class="intro__bg-1"></span>
             </div>
         </section>
         <section class="vantage content__section">

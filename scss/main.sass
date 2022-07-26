@@ -403,12 +403,11 @@ main
 	position: relative
 	&::before
 		content: ''
-		background: url('../img/intro/bg-1.png') no-repeat center center
+		background: url('../img/intro/blur.svg') no-repeat center right
 		position: absolute
 		width: 100%
-		height: 1500px
+		height: 100%
 		top: -180px
-		left: 0
 		background-size: cover
 		z-index: -1
 		right: 0
@@ -420,9 +419,9 @@ main
 			height: 400px
 			position: absolute
 			display: block
-			z-index: -3
+			z-index: -3 
 			left: -20%
-			bottom: -255px
+	
 			&::before
 				content: ''
 				background: rgba(38, 37, 95, 0.3)
@@ -440,9 +439,9 @@ main
 			height: 500px
 			position: absolute
 			display: block
-			z-index: -4
+			z-index: -4 
 			left: -20%
-			bottom: -370px
+			
 			&::before
 				content: ''
 				background: rgba(38, 37, 95, 0.3)
@@ -453,7 +452,13 @@ main
 				top: -10px
 				left: 0
 				z-index: -1
-
+		&-3
+			background: url('../img/intro/pattern.svg')
+			width: 100%
+			height: 100%
+			z-index: -5
+			background-size: cover
+			background-repeat: repeat
 	&__wrapper
 		display: grid
 		grid-template-columns: 1fr 1fr
@@ -1140,9 +1145,10 @@ main
 		&__images
 			max-width: 420px
 			margin: auto
+			margin-top: 50px
 		&__wrapper
 			display: flex
-			flex-direction: column-reverse
+			flex-direction: column
 		&-title
 			max-width: 100%
 			text-align: center
@@ -1317,7 +1323,7 @@ main
 				line-height: 16px
 				margin-bottom: 10px
 		&__images
-			margin-bottom: 50px
+			
 			&-1
 				img
 					max-width: 200px
@@ -1339,6 +1345,11 @@ main
 		li
 			width: 10px
 			height: 10px
+	.origami
+		&__icon
+			margin-left: -20px
+		&__text
+			padding: 0 10px
 	.vantage
 		padding-bottom: 60px
 		&__wrapper

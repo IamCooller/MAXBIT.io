@@ -19,6 +19,21 @@
   src: url("../fonts/Proxima Nova Semibold.otf") format("truetype");
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #26255F;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #807AAB;
+  border-radius: 9em;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #760EBA;
+}
+
 .preloader {
   position: absolute;
   top: 0;
@@ -988,12 +1003,11 @@ main.zindex {
 
 .intro::before {
   content: '';
-  background: url("../img/intro/bg-1.png") no-repeat center center;
+  background: url("../img/intro/blur.svg") no-repeat center right;
   position: absolute;
   width: 100%;
-  height: 1500px;
+  height: 100%;
   top: -180px;
-  left: 0;
   background-size: cover;
   z-index: -1;
   right: 0;
@@ -1009,7 +1023,6 @@ main.zindex {
   display: block;
   z-index: -3;
   left: -20%;
-  bottom: -255px;
 }
 
 .intro__bg-1::before {
@@ -1035,7 +1048,6 @@ main.zindex {
   display: block;
   z-index: -4;
   left: -20%;
-  bottom: -370px;
 }
 
 .intro__bg-2::before {
@@ -1049,6 +1061,15 @@ main.zindex {
   top: -10px;
   left: 0;
   z-index: -1;
+}
+
+.intro__bg-3 {
+  background: url("../img/intro/pattern.svg");
+  width: 100%;
+  height: 100%;
+  z-index: -5;
+  background-size: cover;
+  background-repeat: repeat;
 }
 
 .intro__wrapper {
@@ -1967,15 +1988,16 @@ main.zindex {
   .intro__images {
     max-width: 420px;
     margin: auto;
+    margin-top: 50px;
   }
   .intro__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .intro-title {
     max-width: 100%;
@@ -2207,9 +2229,6 @@ main.zindex {
     line-height: 16px;
     margin-bottom: 10px;
   }
-  .intro__images {
-    margin-bottom: 50px;
-  }
   .intro__images-1 img {
     max-width: 200px;
   }
@@ -2234,6 +2253,12 @@ main.zindex {
   .slick-dots li {
     width: 10px;
     height: 10px;
+  }
+  .origami__icon {
+    margin-left: -20px;
+  }
+  .origami__text {
+    padding: 0 10px;
   }
   .vantage {
     padding-bottom: 60px;
