@@ -19,21 +19,36 @@ for (const item of ParallaxItems) {
     const parallaxInstance = new Parallax(item);
 }
 
-$('.intro__bg-1, .intro__bg-2').scrollingParallax({
+$('.intro__bg-1').scrollingParallax({
     loopIt: false,
+    staticScrollLimit: false,
+    bgHeight: '100%',
+    bgRepeat: false,
     disableIE6: true,
-    staticScrollLimit: true,
-    staticSpeedX: 3
+    bgWidth: '100%',
+    staticSpeed: 1.5,
+
 });
 
-$('.intro__bg-3').scrollingParallax({
+$('.intro__bg-2').scrollingParallax({
+    loopIt: false,
+    staticScrollLimit: false,
+    bgHeight: '20%',
+    bgRepeat: false,
+    disableIE6: true,
+    bgWidth: '100%',
+    staticSpeed: 1,
+
+});
+
+/* $('.intro__bg-3').scrollingParallax({
     loopIt: true,
 
     disableIE6: true,
     bgWidth: '100%',
     staticSpeed: 3,
 });
-
+ */
 
 
 
@@ -142,11 +157,6 @@ $(window).on('load resize', function() {
             slidesToScroll: 1,
             arrows: false
         });
-    } else {
-        $(".vantage__wrapper.slick-initialized").slick("unslick");
-    }
-
-    if ($(window).width() < 550) {
         $('.office__list:not(.slick-initialized)').slick({
             dots: true,
             slidesToShow: 1,
@@ -154,9 +164,48 @@ $(window).on('load resize', function() {
             slidesToScroll: 1,
             arrows: false
         });
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 1) {
+                header.addClass('header_fixed')
+                header.addClass('overflow')
+                $('body').css({
+                    paddingTop: hederHeight + 'px',
+                    transition: 'padding-top 0.5s ease-in-out'
+                })
+                $('main').css('overflow', 'hidden');
+            } else {
+                header.removeClass('overflow')
+                header.removeClass('header_fixed')
+                $('body').css({
+                    paddingTop: 0,
+                    transition: 'padding-top 0s '
+                })
+                $('main').css('overflow', 'initial');
+            }
+        })
     } else {
+        $(".vantage__wrapper.slick-initialized").slick("unslick");
         $(".office__list.slick-initialized").slick("unslick");
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 1) {
+                header.addClass('header_fixed')
+                header.addClass('overflow')
+                $('body').css({
+                    paddingTop: hederHeight + 'px',
+                })
+                $('main').css('overflow', 'hidden');
+            } else {
+                header.removeClass('overflow')
+                header.removeClass('header_fixed')
+                $('body').css({
+                    paddingTop: 0,
+                })
+                $('main').css('overflow', 'initial');
+            }
+        })
     }
+
+
 });
 
 $('.origami__slider').slick({
@@ -172,25 +221,7 @@ $('.origami__slider').slick({
 let header = $('.header')
 let hederHeight = header.height()
 
-$(window).scroll(function() {
-    if ($(this).scrollTop() > 1) {
-        header.addClass('header_fixed')
-        header.addClass('overflow')
-        $('body').css({
-            paddingTop: hederHeight + 'px',
-            transition: 'padding-top 0.5s ease-in-out'
-        })
-        $('main').css('overflow', 'hidden');
-    } else {
-        header.removeClass('overflow')
-        header.removeClass('header_fixed')
-        $('body').css({
-            paddingTop: 0,
-            transition: 'padding-top 0s '
-        })
-        $('main').css('overflow', 'initial');
-    }
-})
+
 
 //Popup
 

@@ -1018,11 +1018,13 @@ main.zindex {
   -webkit-transform: rotate(15deg);
           transform: rotate(15deg);
   width: 150%;
-  height: 400px;
+  height: calc(100vh + 250px);
   position: absolute;
   display: block;
   z-index: -3;
   left: -20%;
+  background-attachment: fixed;
+  top: 150%;
 }
 
 .intro__bg-1::before {
@@ -1048,6 +1050,8 @@ main.zindex {
   display: block;
   z-index: -4;
   left: -20%;
+  top: 150%;
+  background-attachment: fixed;
 }
 
 .intro__bg-2::before {
@@ -1070,6 +1074,10 @@ main.zindex {
   z-index: -5;
   background-size: cover;
   background-repeat: repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-attachment: fixed;
 }
 
 .intro__wrapper {

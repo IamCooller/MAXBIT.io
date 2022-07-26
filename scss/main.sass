@@ -416,12 +416,13 @@ main
 			background: linear-gradient(175.3deg, #592FA4 -40.1%, #26255F 90.46%)
 			transform: rotate(15deg)
 			width: 150%
-			height: 400px
+			height: calc(100vh + 250px)
 			position: absolute
 			display: block
 			z-index: -3 
 			left: -20%
-	
+			background-attachment: fixed
+			top: 150%
 			&::before
 				content: ''
 				background: rgba(38, 37, 95, 0.3)
@@ -441,7 +442,8 @@ main
 			display: block
 			z-index: -4 
 			left: -20%
-			
+			top: 150%
+			background-attachment: fixed
 			&::before
 				content: ''
 				background: rgba(38, 37, 95, 0.3)
@@ -459,6 +461,10 @@ main
 			z-index: -5
 			background-size: cover
 			background-repeat: repeat
+			position: absolute
+			top: 0
+			right: 0
+			background-attachment: fixed
 	&__wrapper
 		display: grid
 		grid-template-columns: 1fr 1fr
