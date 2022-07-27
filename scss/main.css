@@ -781,10 +781,15 @@ main.zindex {
 }
 
 .hamburger-menu__nav {
+  height: 60%;
+}
+
+.hamburger-menu__nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 60%;
+  height: 100%;
+  width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -799,6 +804,7 @@ main.zindex {
   font-size: 16px;
   line-height: 19px;
   color: #fff;
+  width: 100%;
   position: relative;
 }
 
@@ -818,8 +824,8 @@ main.zindex {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(-68.75%, #FFFFFF), color-stop(175%, #53D0FF));
   background: linear-gradient(0deg, #FFFFFF -68.75%, #53D0FF 175%);
   border-radius: 6px 6px 0px 6px;
-  -webkit-transform: translate(22px, -10%);
-          transform: translate(22px, -10%);
+  -webkit-transform: translate(80px, -10%);
+          transform: translate(80px, -10%);
 }
 
 .hamburger-menu__nav a.active::before {
@@ -830,8 +836,8 @@ main.zindex {
   height: 40px;
   width: 10px;
   border-radius: 6px 6px 0px 6px;
-  -webkit-transform: translate(22px, -10%);
-          transform: translate(22px, -10%);
+  -webkit-transform: translate(80px, -10%);
+          transform: translate(80px, -10%);
   background: #00B9FF;
   mix-blend-mode: lighten;
   -webkit-filter: blur(10px);
@@ -1003,11 +1009,7 @@ main.zindex {
   transition: all 0.2s;
 }
 
-.header__menu .has-child > a {
-  cursor: default;
-}
-
-.header__menu .has-child .child {
+.has-child .child {
   visibility: hidden;
   position: fixed;
   top: 0;
@@ -1024,16 +1026,38 @@ main.zindex {
   padding: 40px 0;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  z-index: 0;
+  z-index: 9999;
 }
 
 @media (max-height: 600px) {
-  .header__menu .has-child .child {
+  .has-child .child {
     padding: 10px 0;
   }
 }
 
-.header__menu .has-child .child ul.container {
+@media (max-width: 550px) {
+  .has-child .child {
+    top: -100vh;
+    padding: 16px;
+    height: 100vh;
+  }
+}
+
+.has-child .child .mobile-child {
+  padding: 0 16px;
+  text-align: right;
+}
+
+.has-child .child .child-title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 26px;
+  margin-bottom: 30px;
+  color: #fff;
+  text-align: left;
+}
+
+.has-child .child ul.container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[5];
@@ -1046,7 +1070,25 @@ main.zindex {
           justify-content: space-between;
 }
 
-.header__menu .has-child .child ul.container ul {
+@media (max-width: 720px) {
+  .has-child .child ul.container {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    max-height: 60vh;
+    overflow-y: scroll;
+    height: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .has-child .child ul.container {
+    max-height: 80vh;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.has-child .child ul.container ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1056,7 +1098,7 @@ main.zindex {
           flex-direction: column;
 }
 
-.header__menu .has-child .child ul.container ul a {
+.has-child .child ul.container ul a {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
@@ -1067,7 +1109,7 @@ main.zindex {
   padding-left: 34px;
 }
 
-.header__menu .has-child .child ul.container ul a::after {
+.has-child .child ul.container ul a::after {
   content: '';
   position: absolute;
   left: 0;
@@ -1078,7 +1120,7 @@ main.zindex {
   height: 14px;
 }
 
-.header__menu .has-child .child ul.container ul a::before {
+.has-child .child ul.container ul a::before {
   -webkit-filter: blur(7.92289px);
           filter: blur(7.92289px);
   border-radius: 0.990361px;
@@ -1094,65 +1136,91 @@ main.zindex {
   transition: .3s all ease-in-out;
 }
 
-.header__menu .has-child .child ul.container ul a.Yellow::before {
+.has-child .child ul.container ul a.Yellow::before {
   background: linear-gradient(241.28deg, rgba(255, 163, 97, 0.6) 3.79%, rgba(253, 34, 34, 0.6) 98.33%);
 }
 
-.header__menu .has-child .child ul.container ul a.Yellow::after {
+.has-child .child ul.container ul a.Yellow::after {
   background: #FEBB08;
 }
 
-.header__menu .has-child .child ul.container ul a.Blue::before {
+.has-child .child ul.container ul a.Blue::before {
   background: linear-gradient(231.13deg, rgba(0, 115, 255, 0.6) 3.78%, rgba(187, 109, 245, 0.6) 95.41%);
 }
 
-.header__menu .has-child .child ul.container ul a.Blue::after {
+.has-child .child ul.container ul a.Blue::after {
   background: #1BA4D8;
 }
 
-.header__menu .has-child .child ul.container ul a.Red::before {
+.has-child .child ul.container ul a.Red::before {
   background: linear-gradient(197.51deg, rgba(255, 87, 16, 0.6) 5.06%, rgba(255, 0, 55, 0.6) 97.99%);
 }
 
-.header__menu .has-child .child ul.container ul a.Red::after {
+.has-child .child ul.container ul a.Red::after {
   background: #DC5224;
 }
 
-.header__menu .has-child .child ul.container ul a:hover::before {
+.has-child .child ul.container ul a:hover::before {
   opacity: 1;
 }
 
 @media (max-height: 770px) {
-  .header__menu .has-child .child ul.container ul a {
+  .has-child .child ul.container ul a {
     font-size: 12px;
     line-height: 14px;
   }
-  .header__menu .has-child .child ul.container ul a::after {
+  .has-child .child ul.container ul a::after {
     width: 7px;
     height: 7px;
   }
-  .header__menu .has-child .child ul.container ul a::before {
+  .has-child .child ul.container ul a::before {
     width: 9px;
     height: 9px;
   }
 }
 
 @media (max-hight: 700px) {
-  .header__menu .has-child .child ul.container ul a {
+  .has-child .child ul.container ul a {
     font-size: 9px;
     line-height: 12px;
   }
-  .header__menu .has-child .child ul.container ul a::after {
+  .has-child .child ul.container ul a::after {
     width: 4px;
     height: 4px;
   }
-  .header__menu .has-child .child ul.container ul a::before {
+  .has-child .child ul.container ul a::before {
     width: 6px;
     height: 6px;
   }
 }
 
-.header__menu .has-child .child .single-child {
+@media (max-width: 550px) {
+  .has-child .child ul.container ul a {
+    text-align: left;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 10px;
+  }
+  .has-child .child ul.container ul a::after {
+    width: 14px;
+    height: 14px;
+  }
+  .has-child .child ul.container ul a::before {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+@media (max-width: 550px) {
+  .has-child .child ul.container ul {
+    margin-bottom: 40px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
+.has-child .child .single-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1169,13 +1237,43 @@ main.zindex {
   line-height: 20px;
   text-align: center;
   color: #fff;
+  max-height: 107px;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.header__menu .has-child .child .single-child img {
+.has-child .child .single-child img {
   margin-bottom: 10px;
+  max-height: 70px;
 }
 
-.header__menu .has-child .child .list-child {
+@media (max-width: 992px) {
+  .has-child .child .single-child {
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+@media (max-width: 550px) {
+  .has-child .child .single-child {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 20px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .has-child .child .single-child img {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+}
+
+.has-child .child .list-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1189,23 +1287,37 @@ main.zindex {
   margin-bottom: 10px;
 }
 
-.header__menu .has-child .child .list-child img {
+.has-child .child .list-child img {
   width: 100%;
   height: auto;
   max-width: 70px;
 }
 
 @media (max-height: 770px) {
-  .header__menu .has-child .child .list-child img {
+  .has-child .child .list-child img {
     max-width: 40px;
   }
 }
 
 @media (max-height: 700px) {
-  .header__menu .has-child .child .list-child {
+  .has-child .child .list-child {
     font-size: 13.9806px;
     line-height: 21px;
   }
+}
+
+@media (max-width: 550px) {
+  .has-child .child .list-child {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 36px;
+  }
+}
+
+.has-child .active-child {
+  top: 0;
+  visibility: visible;
+  left: 0;
 }
 
 .intro {

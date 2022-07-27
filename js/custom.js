@@ -160,6 +160,11 @@ $(document).ready(function() {
 
 
         })
+
+        $('.hamburger-menu__nav .has-child.mobile-child').click(function() {
+            $(this).find('.child').toggleClass('active-child')
+
+        })
     }
 })
 
