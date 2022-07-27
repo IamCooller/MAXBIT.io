@@ -22,7 +22,7 @@ for (const item of ParallaxItems) {
 $('.intro__bg-1').scrollingParallax({
     loopIt: false,
     staticScrollLimit: false,
-    bgHeight: '100%',
+    bgHeight: '20%',
     bgRepeat: false,
     disableIE6: true,
     bgWidth: '100%',
@@ -89,7 +89,7 @@ $(window).on('scroll load', function() {
     // eof
 
 // Hover menu
-$(".header__menu a").on("mouseover", function() {
+$(".header__menu a.header__menu-link").on("mouseover", function() {
     if (!$(this).hasClass("active")) {
         let position = $(this)
             .position();
@@ -111,8 +111,57 @@ $(".header__menu a").on("mouseout", function() {
 });
 
 
+//windowSize
+
+function windowSize() {
+    $('.header__menu ul .has-child .child').css({ left: -(window.screen.width - $('header .container').width()) / 2 });
+}
+$(window).on('load resize', windowSize);
+
+//Children menu
+$(document).ready(function() {
+    {
+        var Timeoutmenu;
+        $('.header__menu ul .has-child').on('mouseleave', function() {
+            Timeoutmenu = setTimeout(() => {
+                $(this).find('.child').css({
+                    visibility: 'hidden',
+                    top: -hederHeight,
+                    pointerEvents: 'none'
+                })
+            }, 1000)
+        })
+
+        $('.header__menu ul .has-child').on('mouseover', function() {
+            clearTimeout(Timeoutmenu);
+            Timeoutmenu = null;
+            $('.header__menu ul .has-child .child').css({
+                visibility: 'hidden',
+                top: -hederHeight,
+                pointerEvents: 'none'
+            })
+
+            $(this).find('.child').css({
+                visibility: 'visible',
+                top: hederHeight,
+                pointerEvents: 'initial'
+            })
 
 
+        })
+        $('.header__menu ul .has-child .child ul.container').mouseenter(function() {
+            clearTimeout(Timeoutmenu);
+            Timeoutmenu = null;
+            $(this).find('.child').css({
+                visibility: 'visible',
+                top: hederHeight,
+                pointerEvents: 'initial'
+            })
+
+
+        })
+    }
+})
 
 //Sliders
 $('.services__slider').slick({
@@ -167,14 +216,14 @@ $(window).on('load resize', function() {
         $(window).scroll(function() {
             if ($(this).scrollTop() > 1) {
                 header.addClass('header_fixed')
-                header.addClass('overflow')
+                    //header.addClass('overflow')
                 $('body').css({
                     paddingTop: hederHeight + 'px',
                     transition: 'padding-top 0.5s ease-in-out'
                 })
                 $('main').css('overflow', 'hidden');
             } else {
-                header.removeClass('overflow')
+                //header.removeClass('overflow')
                 header.removeClass('header_fixed')
                 $('body').css({
                     paddingTop: 0,
@@ -189,13 +238,20 @@ $(window).on('load resize', function() {
         $(window).scroll(function() {
             if ($(this).scrollTop() > 1) {
                 header.addClass('header_fixed')
-                header.addClass('overflow')
+                    //header.addClass('overflow')
                 $('body').css({
                     paddingTop: hederHeight + 'px',
                 })
                 $('main').css('overflow', 'hidden');
+
+                $('.header__menu ul .has-child .child').css({
+                    visibility: 'hidden',
+                    top: -hederHeight,
+                })
+
+
             } else {
-                header.removeClass('overflow')
+                //header.removeClass('overflow')
                 header.removeClass('header_fixed')
                 $('body').css({
                     paddingTop: 0,
@@ -245,7 +301,7 @@ $(function() {
 
 
 //Btn effect
-$(function() {
+/* $(function() {
     $('.Btn')
         .on('mouseenter', function(e) {
             var parentOffset = $(this).offset(),
@@ -262,7 +318,7 @@ $(function() {
         });
 
 });
-
+ */
 //Title
 
 
