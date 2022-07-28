@@ -1,0 +1,607 @@
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>MAXBIT | Main</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" sizes="192x192" href="img/временное_лого_фавикон-04.svg" />
+
+    <!-- libs css -->
+
+    <link rel="stylesheet" href="libs/aos/aos.css" />
+    <link rel="stylesheet" href="libs/slick/slick.css" />
+    <link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css" />
+
+    <!-- jQeury -->
+    <script defer src="libs/jquery-3.5.1.min.js"></script>
+
+    <!-- libs js -->
+
+    <script defer src="libs/charming.min.js"></script>
+    <script defer src="libs/imagesloaded.pkgd.min.js"></script>
+    <script defer src="libs/aos/aos.js"></script>
+    <script defer src="libs/parallax/parallax.js"></script>
+    <script defer src="libs/parallax/jquery.scrolling-parallax.js"></script>
+    <script defer src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script defer src="libs/shadow/realshadow-min.js"></script>
+    <script defer src="libs/slick/slick.min.js"></script>
+    <script defer src="libs/jquery.waypoints.js"></script>
+    <script defer src="libs/TweenMax/TimelineMax.min.js"></script>
+    <script defer src="libs/TweenMax/TweenMax.min.js"></script>
+    <!-- main js -->
+    <script defer src="js/custom.js"></script>
+
+    <!-- reset css -->
+    <link rel="stylesheet" href="scss/reset.css" />
+    <!-- main css -->
+
+    <link rel="stylesheet" href="scss/main.css" />
+    <script>
+        document.documentElement.className = "js";
+        var supportsCssVars = function() {
+            var e, t = document.createElement("style");
+            return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e
+        };
+        supportsCssVars() || alert("Please view this demo in a modern browser that supports CSS Variables.");
+        window.onload = function() {
+            document.body.classList.add('loaded_hiding');
+            window.setTimeout(function() {
+                document.body.classList.add('loaded');
+                document.body.classList.remove('loaded_hiding');
+            }, 500);
+        }
+    </script>
+</head>
+
+<body>
+    <!--preloader-->
+    <div class="preloader"></div>
+    <!--header-->
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper" data-aos="fade-down">
+                <a href="#" class="header-logo">
+                    <img src="img/logo.svg" alt="logo" />
+                </a>
+                <nav class="header__menu">
+                    <span class="slide2"></span>
+                    <ul>
+                        <li><a href="/index.html" class="header__menu-link body-2 ">Home </a></li>
+                        <li class="has-child"><a href="#" class="header__menu-link body-2 ">Origami ® </a>
+                            <div class="child">
+                                <ul class="container">
+                                    <li>
+                                        <a href="#" class="single-child">
+                                            <img src="img/menu/origami/1.svg" alt="1" /> Origami
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="single-child">
+                                            <img src="img/menu/origami/2.svg" alt="1" /> Lorem ipsum dolor 1
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="single-child">
+                                            <img src="img/menu/origami/3.svg" alt="1" /> Lorem ipsum dolor 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="single-child">
+                                            <img src="img/menu/origami/4.svg" alt="1" /> Lorem ipsum dolor 3
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="single-child">
+                                            <img src="img/menu/origami/5.svg" alt="1" /> Lorem ipsum dolor 4
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </li>
+                        <li class="has-child"><a href="#" class="header__menu-link body-2">Services</a>
+                            <div class="child">
+                                <ul class="container">
+                                    <li>
+                                        <a class="list-child">
+                                            <img src="img/menu/services/Digital.svg" alt="1" /> Digital
+                                        </a>
+                                        <ul>
+                                            <li><a href="#" class="Yellow">Origami</a></li>
+                                            <li><a href="#" class="Yellow">DMS</a></li>
+                                            <li><a href="#" class="Yellow">RPA</a></li>
+                                            <li><a href="#" class="Yellow">Analytics</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="list-child">
+                                            <img src="img/menu/services/Cloud.svg" alt="1" /> Cloud
+                                        </a>
+                                        <ul>
+                                            <li><a href="#" class="Blue">IT Managed Services</a></li>
+                                            <li><a href="#" class="Blue">Continuous Compliance</a></li>
+                                            <li><a href="#" class="Blue">Container Enablement</a></li>
+                                            <li><a href="#" class="Blue">Cloud Application Services</a></li>
+                                            <li><a href="#" class="Blue">Cloud Optimization</a></li>
+                                            <li><a href="#" class="Blue">Cloud Transformation</a></li>
+                                            <li><a href="#" class="Blue">AWS, Azure, Google</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="list-child">
+                                            <img src="img/menu/services/Data.svg" alt="1" /> Data
+                                        </a>
+                                        <ul>
+                                            <li><a href="#" class="Blue">Data Collection & Processing</a></li>
+                                            <li><a href="#" class="Blue">Analytics & Visualization</a></li>
+                                            <li><a href="#" class="Blue">Data Operations</a></li>
+                                            <li><a href="#" class="Blue">Data Tech. Transformation</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="list-child">
+                                            <img src="img/menu/services/SW.svg" alt="1" /> S/W
+                                        </a>
+                                        <ul>
+                                            <li><a href="#" class="Red">Mobile apps</a></li>
+                                            <li><a href="#" class="Red">Web development</a></li>
+                                            <li><a href="#" class="Red">Ecommerce solutions</a></li>
+                                            <li><a href="#" class="Red">ERP solutions</a></li>
+                                            <li><a href="#" class="Red">Customized development services</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li>
+                                        <a class="list-child">
+                                            <img src="img/menu/services/SI.svg" alt="1" /> System Integration
+                                        </a>
+                                        <ul>
+                                            <li><a href="#" class="Blue">Oracle</a></li>
+                                            <li><a href="#" class="Blue">SAP</a></li>
+                                            <li><a href="#" class="Blue">Microsoft</a></li>
+                                            <li><a href="#" class="Blue">CODOO</a></li>
+                                            <li><a href="#" class="Blue">Zoho</a></li>
+                                            <li><a href="#" class="Blue">OpenText</a></li>
+                                            <li><a href="#" class="Blue">Cloudera</a></li>
+                                            <li><a href="#" class="Blue">Qlik</a></li>
+                                            <li><a href="#" class="Blue">Salesforce</a></li>
+                                            <li><a href="#" class="Blue">Fortinet</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="list-child">
+                                            <img src="img/menu/services/Security.svg" alt="1" /> Security
+                                        </a>
+                                        <ul>
+                                            <li><a href="#" class="Red">Penetration Testing</a></li>
+                                            <li><a href="#" class="Red">Advisory Services</a></li>
+                                            <li><a href="#" class="Red">Managed Services</a></li>
+                                            <li><a href="#" class="Red">Compromise Assessment</a></li>
+                                            <li><a href="#" class="Red">Cloud Security</a></li>
+                                            <li><a href="#" class="Red">CISO Advisory</a></li>
+                                            <li><a href="#" class="Red">Digital Forensic</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="list-child">
+                                            <img src="img/menu/services/Outsourcing.svg" alt="1" /> Outsourcing
+                                        </a>
+                                        <ul>
+                                            <li><a href="#" class="Yellow">Onsite outsourcing</a></li>
+                                            <li><a href="#" class="Yellow">Offshore outsourcing</a></li>
+                                            <li><a href="#" class="Yellow">Hybrid model outsourcing</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="list-child">
+                                            <img src="img/menu/services/HW.svg" alt="1" /> H/W
+                                        </a>
+                                        <ul>
+                                            <li><a href="#" class="Red">Dell</a></li>
+                                            <li><a href="#" class="Red">Oracle</a></li>
+                                            <li><a href="#" class="Red">Nutanix</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a class="list-child">
+                                            <img src="img/menu/services/Consultacy.svg" alt="1" /> Consultancy
+                                        </a>
+                                        <ul>
+                                            <li><a href="#" class="Blue">GRC Consultancy</a></li>
+                                            <li><a href="#" class="Blue">Business Continuity and Disaster recovery planning</a></li>
+                                            <li><a href="#" class="Blue">IT Strategy consultancy</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#" class="header__menu-link body-2">News</a></li>
+                        <li><a href="#" class="header__menu-link body-2 active">Partners</a></li>
+                        <li><a href="#" class="header__menu-link body-2">Contacts</a></li>
+                    </ul>
+                </nav>
+                <div class="header__menu_mobile">
+                    <div class="menu__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="6" width="16" height="2" rx="1" fill="white" />
+                <rect x="9" y="11" width="13" height="2" rx="1" fill="white" />
+                <rect x="2" y="16" width="20" height="2" rx="1" fill="white" />
+              </svg>
+                    </div>
+
+                    <div class="hamburger-menu">
+                        <div class="hamburger-menu_wrapper">
+                            <div class="hamburger-menu_top">
+                                <button class="hamburger-menu__close">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <line
+                        x1="1"
+                        y1="-1"
+                        x2="24.4558"
+                        y2="-1"
+                        transform="matrix(0.707119 0.707095 -0.707119 0.707095 3 3)"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                      <line
+                        x1="1"
+                        y1="-1"
+                        x2="24.4558"
+                        y2="-1"
+                        transform="matrix(-0.707107 0.707107 0.707107 0.707107 21 3)"
+                        stroke="white"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </button>
+                            </div>
+
+                            <div class="hamburger-menu__content">
+                                <nav class="hamburger-menu__nav">
+                                    <ul>
+                                        <li><a href="/index.html" class="active">Home</a></li>
+                                        <li class="has-child mobile-child"><a>Products</a>
+                                            <div class="child">
+                                                <div class="mobile-child"><svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <line x1="1" y1="-1" x2="32.9412" y2="-1" transform="matrix(0.707119 0.707095 -0.707119 0.707095 1 1)" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                                    <line x1="1" y1="-1" x2="32.9412" y2="-1" transform="matrix(-0.707107 0.707107 0.707107 0.707107 25 1)" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="child-title">Products</div>
+                                                <ul class="container">
+                                                    <li>
+                                                        <a href="#" class="single-child">
+                                                            <img src="img/menu/origami/1.svg" alt="1" /> Origami
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="single-child">
+                                                            <img src="img/menu/origami/2.svg" alt="1" /> Lorem ipsum dolor 1
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="single-child">
+                                                            <img src="img/menu/origami/3.svg" alt="1" /> Lorem ipsum dolor 2
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="single-child">
+                                                            <img src="img/menu/origami/4.svg" alt="1" /> Lorem ipsum dolor 3
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" class="single-child">
+                                                            <img src="img/menu/origami/5.svg" alt="1" /> Lorem ipsum dolor 4
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="has-child mobile-child"><a>Services</a>
+                                            <div class="child">
+                                                <div class="mobile-child"><svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <line x1="1" y1="-1" x2="32.9412" y2="-1" transform="matrix(0.707119 0.707095 -0.707119 0.707095 1 1)" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                                    <line x1="1" y1="-1" x2="32.9412" y2="-1" transform="matrix(-0.707107 0.707107 0.707107 0.707107 25 1)" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="child-title">Services</div>
+                                                <ul class="container">
+                                                    <li>
+                                                        <a class="list-child">
+                                                            <img src="img/menu/services/Digital.svg" alt="1" /> Digital
+                                                        </a>
+                                                        <ul>
+                                                            <li><a href="#" class="Yellow">Origami</a></li>
+                                                            <li><a href="#" class="Yellow">DMS</a></li>
+                                                            <li><a href="#" class="Yellow">RPA</a></li>
+                                                            <li><a href="#" class="Yellow">Analytics</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a class="list-child">
+                                                            <img src="img/menu/services/Cloud.svg" alt="1" /> Cloud
+                                                        </a>
+                                                        <ul>
+                                                            <li><a href="#" class="Blue">IT Managed Services</a></li>
+                                                            <li><a href="#" class="Blue">Continuous Compliance</a></li>
+                                                            <li><a href="#" class="Blue">Container Enablement</a></li>
+                                                            <li><a href="#" class="Blue">Cloud Application Services</a></li>
+                                                            <li><a href="#" class="Blue">Cloud Optimization</a></li>
+                                                            <li><a href="#" class="Blue">Cloud Transformation</a></li>
+                                                            <li><a href="#" class="Blue">AWS, Azure, Google</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a class="list-child">
+                                                            <img src="img/menu/services/Data.svg" alt="1" /> Data
+                                                        </a>
+                                                        <ul>
+                                                            <li><a href="#" class="Blue">Data Collection & Processing</a></li>
+                                                            <li><a href="#" class="Blue">Analytics & Visualization</a></li>
+                                                            <li><a href="#" class="Blue">Data Operations</a></li>
+                                                            <li><a href="#" class="Blue">Data Tech. Transformation</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a class="list-child">
+                                                            <img src="img/menu/services/SW.svg" alt="1" /> S/W
+                                                        </a>
+                                                        <ul>
+                                                            <li><a href="#" class="Red">Mobile apps</a></li>
+                                                            <li><a href="#" class="Red">Web development</a></li>
+                                                            <li><a href="#" class="Red">Ecommerce solutions</a></li>
+                                                            <li><a href="#" class="Red">ERP solutions</a></li>
+                                                            <li><a href="#" class="Red">Customized development services</a></li>
+                                                        </ul>
+                                                    </li>
+
+                                                    <li>
+                                                        <a class="list-child">
+                                                            <img src="img/menu/services/SI.svg" alt="1" /> System Integration
+                                                        </a>
+                                                        <ul>
+                                                            <li><a href="#" class="Blue">Oracle</a></li>
+                                                            <li><a href="#" class="Blue">SAP</a></li>
+                                                            <li><a href="#" class="Blue">Microsoft</a></li>
+                                                            <li><a href="#" class="Blue">CODOO</a></li>
+                                                            <li><a href="#" class="Blue">Zoho</a></li>
+                                                            <li><a href="#" class="Blue">OpenText</a></li>
+                                                            <li><a href="#" class="Blue">Cloudera</a></li>
+                                                            <li><a href="#" class="Blue">Qlik</a></li>
+                                                            <li><a href="#" class="Blue">Salesforce</a></li>
+                                                            <li><a href="#" class="Blue">Fortinet</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a class="list-child">
+                                                            <img src="img/menu/services/Security.svg" alt="1" /> Security
+                                                        </a>
+                                                        <ul>
+                                                            <li><a href="#" class="Red">Penetration Testing</a></li>
+                                                            <li><a href="#" class="Red">Advisory Services</a></li>
+                                                            <li><a href="#" class="Red">Managed Services</a></li>
+                                                            <li><a href="#" class="Red">Compromise Assessment</a></li>
+                                                            <li><a href="#" class="Red">Cloud Security</a></li>
+                                                            <li><a href="#" class="Red">CISO Advisory</a></li>
+                                                            <li><a href="#" class="Red">Digital Forensic</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a class="list-child">
+                                                            <img src="img/menu/services/Outsourcing.svg" alt="1" /> Outsourcing
+                                                        </a>
+                                                        <ul>
+                                                            <li><a href="#" class="Yellow">Onsite outsourcing</a></li>
+                                                            <li><a href="#" class="Yellow">Offshore outsourcing</a></li>
+                                                            <li><a href="#" class="Yellow">Hybrid model outsourcing</a></li>
+
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a class="list-child">
+                                                            <img src="img/menu/services/HW.svg" alt="1" /> H/W
+                                                        </a>
+                                                        <ul>
+                                                            <li><a href="#" class="Red">Dell</a></li>
+                                                            <li><a href="#" class="Red">Oracle</a></li>
+                                                            <li><a href="#" class="Red">Nutanix</a></li>
+
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a class="list-child">
+                                                            <img src="img/menu/services/Consultacy.svg" alt="1" /> Consultancy
+                                                        </a>
+                                                        <ul>
+                                                            <li><a href="#" class="Blue">GRC Consultancy</a></li>
+                                                            <li><a href="#" class="Blue">Business Continuity and Disaster recovery planning</a></li>
+                                                            <li><a href="#" class="Blue">IT Strategy consultancy</a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li><a href="#presscenter">News</a></li>
+                                        <li><a href="#contacts">Contacts</a></li>
+                                    </ul>
+                                </nav>
+
+                                <a href="#callback__form" class="popup-modal Btn header-btn header-btn-mobile">
+                                    <p>Contact us <span></span></p>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <a href="#callback__form" class="popup-modal Btn header-btn">
+                    <p>Contact us <span></span></p>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!--main-->
+    <main class="main">
+        <section class="contacts " data-aos="fade-up">
+            <div class="container">
+                <div class="contacts__wrapper">
+                    <div class="contacts__item">
+                        <div class="contacts__item_content">
+                            <div class="contacts__item-title blue">
+                                R&D / Product management
+                            </div>
+                            <p class="contacts__item-address">Alzumorrodah Tower Floor 21, Texas, USA</p>
+                            <p class="contacts__item-tel">Telephone: <a href="tel:123212">123212</a></p>
+                            <p class="contacts__item-email">E-mail: <a href="mailto:dasd@das.asd">asasd@dsad.dasd</a></p>
+                        </div>
+                        <div class="contacts__item_map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d767.6916983250942!2d66.9115362!3d39.6774602!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2spl!4v1656660598140!5m2!1sru!2spl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="contacts__item">
+                        <div class="contacts__item_content">
+                            <div class="contacts__item-title red">
+                                R&D / Product management
+                            </div>
+                            <p class="contacts__item-address">Alzumorrodah Tower Floor 21, Texas, USA</p>
+                            <p class="contacts__item-tel">Telephone: <a href="tel:123212">123212</a></p>
+                            <p class="contacts__item-email">E-mail: <a href="mailto:dasd@das.asd">asasd@dsad.dasd</a></p>
+                        </div>
+                        <div class="contacts__item_map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d767.6916983250942!2d66.9115362!3d39.6774602!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2spl!4v1656660598140!5m2!1sru!2spl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                    <div class="contacts__item">
+                        <div class="contacts__item_content">
+                            <div class="contacts__item-title yellow">
+                                R&D / Product management
+                            </div>
+                            <p class="contacts__item-address">Alzumorrodah Tower Floor 21, Texas, USA</p>
+                            <p class="contacts__item-tel">Telephone: <a href="tel:123212">123212</a></p>
+                            <p class="contacts__item-email">E-mail: <a href="mailto:dasd@das.asd">asasd@dsad.dasd</a></p>
+                        </div>
+                        <div class="contacts__item_map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d767.6916983250942!2d66.9115362!3d39.6774602!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2spl!4v1656660598140!5m2!1sru!2spl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content__section">
+                <div class="contacts-title content__text title title-orange h3 container">MAXBIT CONTACTS</div>
+            </div>
+
+        </section>
+        <section class="contacts_form content__section">
+            <div class="container">
+                <form action="">
+                    <div class="contacts_form-formtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                    <div class="callback__form">
+                        <div class="callback__form__input">
+                            <label for="name">Your name</label>
+                            <input type="text" id="name" required="" name="name" placeholder="Enter your name">
+                        </div>
+                        <div class="callback__form__input">
+                            <label for="email">Email</label>
+                            <input type="email" required="" name="email" id="email" placeholder="Enter your email address">
+                        </div>
+                        <div class="callback__form__input">
+                            <label for="phone">Your phone</label>
+                            <input type="tel" required="" name="phone" id="phone" placeholder="Enter your phone">
+                        </div>
+                        <div class="callback__form__input">
+                            <label for="comment">Your comment</label>
+                            <input type="text" required="" name="comment" id="comment" placeholder="Add your comment">
+                        </div>
+                        <button type="submit" class="callback__form__submit Btn"><p>Send<span></span></p></button>
+
+                    </div>
+                </form>
+            </div>
+            <div class="contacts_form-title content__text title title-blue h3 container">LET’S STAY IN TOUCH</div>
+        </section>
+    </main>
+    <footer class="footer" data-aos="fade-up">
+        <div class="container">
+            <div class="footer__wrapper">
+                <div class="footer__wrapper_top">
+                    <a class="footer-logo">
+                        <img src="img/logo.svg" alt="footer-logo" />
+                    </a>
+                    <nav class="footer__nav">
+                        <a href="/index.html" class="footer__nav-link body-2 ">Home</a>
+                        <a href="#" class="footer__nav-link body-2"> Origami®</a>
+                        <a href="#" class="footer__nav-link body-2 active"> Services</a>
+                        <a href="#" class="footer__nav-link body-2"> News</a>
+                        <a href="#" class="footer__nav-link body-2 "> Partners</a>
+                        <a href="#" class="footer__nav-link body-2"> Contacts</a>
+                    </nav>
+                    <div class="footer__contacts">
+                        <div class="footer__contacts-title body-2">Contacts</div>
+                        <a href="tel:96522207227" class="footer__contacts-tel body-2">+965 2220 7227</a
+              >
+              <a href="tel:96522207337" class="footer__contacts-tel body-2"
+                >+965 2220 7337</a
+              >
+              <div class="footer__contacts_socials">
+                <a href="#"
+                  ><img src="img/socials/LinkedIN_white.svg" alt="LinkedIn"
+                /></a>
+                        <a href="#"><img src="img/socials/Gmail_white.svg" alt="Gmail" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__wrapper_bottom">
+                Copyright 2022 «Maxbit» Co. All rights reserved. Full or partial copying is forbidden.
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <form id="callback__form" class="callback mfp-hide" name="form">
+        <button title="Close (Esc)" type="button" class="mfp-close">x
+        </button>
+        <div class="callback-title">
+            CONTACT US
+        </div>
+        <div class="callback-subtitle">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        </div>
+        <div class="callback__form">
+            <div class="callback__form__input">
+                <label for="name">Your name</label>
+                <input type="text" id="name" required name="name" placeholder="Enter your name">
+            </div>
+            <div class="callback__form__input">
+                <label for="email">Email</label>
+                <input type="email" required name="email" id="email" placeholder="Enter your email address">
+            </div>
+            <div class="callback__form__input">
+                <label for="phone">Your phone</label>
+                <input type="tel" required name="phone" id="phone" placeholder="Enter your phone">
+            </div>
+            <button type="submit" class="callback__form__submit Btn"><p>Send<span></span></p></button>
+
+
+    </form>
+</body>
+
+</html>

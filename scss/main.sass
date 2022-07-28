@@ -724,7 +724,9 @@ main
 .vantage
 	position: relative
 	padding-bottom: 150px
-	
+	&_service
+		background: linear-gradient(180deg, #760EBA 0%, rgba(38, 41, 98, 0) 100%)
+		padding: 162px 0 255px 
 
 	&__bg
 		&-1
@@ -1147,17 +1149,270 @@ main
 ///About///
 .about
 	padding: 70px 0 100px 0
+	position: relative
+	background: url('../img/about/bg.png')
+	background-size: cover
+	@media (max-width: 550px)
+		padding-top: 0
 	&__row
 		display: flex
 		justify-content: space-between
+		padding-bottom: 100px
+		grid-gap: 86px
+		@media (max-width: 1200px)
+			padding-bottom: 60px
+		@media (max-width: 770px)
+			grid-gap: 17px
+		@media (max-width: 550px)
+			flex-direction: column
+			padding-bottom: 168px
+		img
+			width: 100%
+			height: auto
+			@media (max-width: 770px)
+				max-width: 250px
+			@media (max-width: 550px)
+				max-width: 100%
 	&__text
 		max-width: 659px
-		margin-bottom: 100px
+	
+		h3
+			font-weight: 400
+			font-size: 30px
+			line-height: 37px
+			color: $white
+			margin-bottom: 47px
+			@media (max-wdith: 1200px)
+				font-size: 28px
+				line-height: 34px
+				margin-bottom: 28px
+
 		p
 			font-weight: 400
 			font-size: 22px
 			line-height: 26px
 			color: $white
+			@media (max-width: 1200px)
+				font-weight: 400
+				font-size: 18px
+				line-height: 22px
+	&__bg
+		position: absolute
+		width: 100vw
+		height: 600px
+		top: 30%
+		left: -5vw
+		z-index: -1
+		img
+			width: 110vw
+			height: auto
+			max-width: none
+		&-2
+			position: absolute
+			top: 20%
+
+////service///
+
+.service
+	background: linear-gradient(0deg, #4119B1 -13.29%, rgba(38, 37, 95, 0) 108.7%)
+	padding: 100px 0 255px
+	@media (max-width: 770px)
+		padding: 24px 0 100px
+	&__wrapper
+		display: grid
+		grid-template-columns: 1fr 1fr
+		align-items: center
+		@media (max-width: 770px)
+			display: flex
+			flex-direction: column-reverse
+			justify-content: center
+	&__content
+		@media (max-width: 770px)
+			display: flex
+			flex-direction: column
+		.h1
+			font-weight: 700
+			font-size: 76px
+			line-height: 100px
+			color: $white
+			margin-bottom: 40px
+			@media (max-width: 1200px)
+				font-size: 54px
+				line-height: 80px
+				margin-bottom: 30px
+			@media (max-width: 770px)
+				text-align: center
+				order: 1
+		.h3
+			font-weight: 600
+			font-size: 28px
+			line-height: 30px
+			color: $white
+			margin-bottom: 40px
+			@media (max-width: 1200px)
+				font-size: 22px
+				line-height: 26px
+			@media (max-width: 770px)
+				order: 3
+		.text
+			font-weight: 400
+			font-size: 22px
+			line-height: 26px
+			color: $white
+			margin-bottom: 68px
+			@media (max-width: 770px)
+				order: 4
+	&-btn
+		@media (max-width: 770px)
+			order: 2
+			margin: 0 auto 55px
+
+.include
+	background: linear-gradient(180deg, #5328A3 0%, rgba(38, 37, 95, 0) 100%)
+	padding: 88px 0 255px
+	@media (max-width: 992px)
+		padding: 48px 0 150px
+	
+	&__wrapper
+		display: grid
+		grid-template-columns: repeat(3,1fr)
+		grid-gap: 40px
+		@media (max-width: 770px)
+			grid-row-gap: 85px
+			grid-column-gap: 15px
+		@media (max-width: 550px)
+			display: block
+			height: fit-content
+			.slick-dots
+				margin-top: 20px
+	&__item
+		display: flex
+		flex-direction: column
+		&-icon
+			text-align: center
+			margin-bottom: 20px
+			img
+				width: 100%
+				max-width: 122px
+				@media (max-width: 1200px)
+					max-width: 77px
+					margin: auto
+		&-title
+			width: 100%
+			margin-bottom: 30px
+			font-weight: 600
+			font-size: 26px
+			line-height: 30px
+			text-align: center
+			color: $blue-lightest
+			@media (max-width: 992px)
+				font-size: 18px
+				line-height: 18px
+				margin-bottom: 20px
+		p
+			font-style: normal
+			font-weight: 400
+			font-size: 22px
+			line-height: 26px
+			color: $white
+			@media (max-width: 1200px)
+				font-size: 16px
+				line-height: 19px
+
+
+///contacts///
+.contacts
+	padding: 110px 0 250px
+	position: relative
+	background: url('../img/contacts/b1.png')
+	background-size: cover
+	@media (max-width: 1200px)
+		padding: 60px 0 200px
+	@media (max-width: 550px)
+		padding: 40px 0 80px
+	&__wrapper
+		display: flex
+		flex-direction: column
+	&__item
+		display: grid
+		grid-template-columns: 1fr 1fr
+		margin-bottom: 100px
+		@media (max-width: 550px)
+			display: flex
+			flex-direction: column-reverse
+			margin-bottom: 85px
+		&-title
+			position: relative
+			font-weight: 400
+			font-size: 30px
+			line-height: 37px
+			color: $white
+			margin-bottom: 48px
+			padding-left: 50px
+			@media (max-width: 1200px)
+				font-size: 28px
+				line-height: 34px
+			&::before
+				content: ''
+				width: 40px
+				height: 40px
+				position: absolute
+				left: 0
+				background-size: cover
+				top: 0
+			&.blue
+				&::before
+					background: url("data:image/svg+xml,%3Csvg width='42' height='42' viewBox='0 0 42 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_f_273_137066)'%3E%3Crect width='14.1066' height='14.1066' rx='1.41421' transform='matrix(0.705319 0.70889 -0.705319 0.70889 20.9497 11)' fill='url(%23paint0_linear_273_137066)' fill-opacity='0.6'/%3E%3C/g%3E%3Crect width='14.1066' height='14.1066' rx='1.41421' transform='matrix(0.705319 0.70889 -0.705319 0.70889 21.0503 11)' fill='%231BA4D8'/%3E%3Cdefs%3E%3Cfilter id='filter0_f_273_137066' x='0.270763' y='0.273693' width='41.3579' height='41.4526' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='5.65685' result='effect1_foregroundBlur_273_137066'/%3E%3C/filter%3E%3ClinearGradient id='paint0_linear_273_137066' x1='13.4355' y1='0.362147' x2='-0.716319' y2='11.7683' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%230073FF'/%3E%3Cstop offset='1' stop-color='%23BB6DF5'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A")
+			&.red
+				&::before
+					background: url("data:image/svg+xml,%3Csvg width='42' height='42' viewBox='0 0 42 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_f_273_137058)'%3E%3Crect width='14.1064' height='14.1064' rx='1.41421' transform='matrix(0.705309 0.7089 -0.705309 0.7089 20.9495 11)' fill='url(%23paint0_linear_273_137058)' fill-opacity='0.6'/%3E%3C/g%3E%3Crect width='14.1064' height='14.1064' rx='1.41421' transform='matrix(0.705309 0.7089 -0.705309 0.7089 21.0508 11)' fill='%23DC5224'/%3E%3Cdefs%3E%3Cfilter id='filter0_f_273_137058' x='0.270764' y='0.273694' width='41.3574' height='41.4526' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='5.65685' result='effect1_foregroundBlur_273_137058'/%3E%3C/filter%3E%3ClinearGradient id='paint0_linear_273_137058' x1='12.6378' y1='0.475658' x2='7.68934' y2='16.1588' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FF5710'/%3E%3Cstop offset='1' stop-color='%23FF0037'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A")
+			&.yellow
+				&::before
+					background: url("data:image/svg+xml,%3Csvg width='42' height='42' viewBox='0 0 42 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_f_273_137075)'%3E%3Crect width='14.1067' height='14.1067' rx='1.41421' transform='matrix(0.705327 0.708882 -0.705327 0.708882 20.95 11)' fill='url(%23paint0_linear_273_137075)' fill-opacity='0.6'/%3E%3C/g%3E%3Crect width='14.1067' height='14.1067' rx='1.41421' transform='matrix(0.705327 0.708882 -0.705327 0.708882 21.0496 11)' fill='%23FEBB08'/%3E%3Cdefs%3E%3Cfilter id='filter0_f_273_137075' x='0.270764' y='0.273694' width='41.3584' height='41.4526' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='5.65685' result='effect1_foregroundBlur_273_137075'/%3E%3C/filter%3E%3ClinearGradient id='paint0_linear_273_137075' x1='13.7764' y1='0.907087' x2='-2.10031' y2='9.60712' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FFA361'/%3E%3Cstop offset='1' stop-color='%23FD2222'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A")
+		p,a
+			font-weight: 400
+			font-size: 22px
+			line-height: 26px
+			color: $white
+			@media (max-width: 1200px)
+				font-size: 18px
+				line-height: 22px
+		p
+			margin-bottom: 27px
+		&_map
+			min-height: 300px
+			filter: drop-shadow(0px 4px 50px rgba(0, 0, 0, 0.2))
+			border-radius: 10px
+			overflow: hidden
+	&_form
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%)		
+		padding: 88px 0 230px 0
+		position: relative
+		&::before
+			content: ''
+			background-image: url('../img/contacts/b2.png')
+			background-size: cover
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+		& form
+			max-width: 884px
+			width: 100%
+			margin: auto
+			display: flex
+			flex-direction: column
+		&-formtitle
+			font-weight: 400
+			font-size: 28px
+			line-height: 28px
+			text-align: center
+			color: $white
+			margin-bottom: 44px
+		&_wrapper
+			display: flex
+			flex-direction: column
 
 ///1400px///
 @media (max-width: 1400px)
@@ -1488,6 +1743,8 @@ main
 	.title
 		font-size: 28px
 		line-height: 30px
+		&-small
+			font-size: 20px
 		&-img
 			height: 21px
 			margin-left: -25%

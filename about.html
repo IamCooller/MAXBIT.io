@@ -71,7 +71,7 @@
                 <nav class="header__menu">
                     <span class="slide2"></span>
                     <ul>
-                        <li><a href="#" class="header__menu-link body-2 active">Home </a></li>
+                        <li><a href="/index.html" class="header__menu-link body-2 ">Home </a></li>
                         <li class="has-child"><a href="#" class="header__menu-link body-2 ">Origami ® </a>
                             <div class="child">
                                 <ul class="container">
@@ -223,7 +223,7 @@
                             </div>
                         </li>
                         <li><a href="#" class="header__menu-link body-2">News</a></li>
-                        <li><a href="#" class="header__menu-link body-2">Partners</a></li>
+                        <li><a href="#" class="header__menu-link body-2 active">Partners</a></li>
                         <li><a href="#" class="header__menu-link body-2">Contacts</a></li>
                     </ul>
                 </nav>
@@ -274,7 +274,7 @@
                             <div class="hamburger-menu__content">
                                 <nav class="hamburger-menu__nav">
                                     <ul>
-                                        <li><a href="#main" class="active">Home</a></li>
+                                        <li><a href="/index.html" class="active">Home</a></li>
                                         <li class="has-child mobile-child"><a>Products</a>
                                             <div class="child">
                                                 <div class="mobile-child"><svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -458,9 +458,13 @@
 
     <!--main-->
     <main class="main">
-        <section class="about content__section">
+        <section class="about ">
+            <div class="content__section">
+                <div class="about-title content__text title title-orange h3  container">ABOUT MAXBIT</div>
+            </div>
+
             <div class="container">
-                <div class="about__wrapper" data-aos="fade-up">
+                <div class="about__wrapper">
                     <div class="about__row">
                         <img src="img/about/1.png" alt=" dsa" />
                         <div class="about__text">
@@ -507,14 +511,20 @@
                         </div>
                     </div>
                 </div>
-                <div class="about__bg">
-                    <span class="about__bg-1"></span>
-                    <span class="about__bg-2"></span>
-                </div>
-                <div class="about-title content__text title title-yellow h3 container">ABOUT MAXBIT</div>
             </div>
+            <div class="about__bg ">
+                <div class="about__bg-1 parallax"><img src="img/about/wave1.svg" alt="wave" data-depth="0.20" /></div>
+                <div class="about__bg-2 parallax"><img src="img/about/wave2.svg" alt="wave" data-depth="0.30" /></div>
+            </div>
+
+            <div class="content__section">
+                <div class="about-title content__text title title-orange h3  container">ABOUT MAXBIT</div>
+            </div>
+
+
+
         </section>
-        <section class="partners content__section">
+        <section class="partners content__section" style="background: none">
             <div class="container">
                 <div class="partners__wrapper" data-aos="fade-up">
                     <div class="partners__item">
@@ -538,7 +548,7 @@
                     </div>
                 </div>
             </div>
-            <div class="partners-title content__text title title-orange h3 container">MAXBIT PARTNERS</div>
+            <div class="partners-title content__text title title-blue h3 container">MAXBIT PARTNERS</div>
         </section>
     </main>
     <footer class="footer" data-aos="fade-up">
@@ -549,11 +559,11 @@
                         <img src="img/logo.svg" alt="footer-logo" />
                     </a>
                     <nav class="footer__nav">
-                        <a href="#" class="footer__nav-link body-2 active">Home</a>
+                        <a href="/index.html" class="footer__nav-link body-2 ">Home</a>
                         <a href="#" class="footer__nav-link body-2"> Origami®</a>
                         <a href="#" class="footer__nav-link body-2"> Services</a>
                         <a href="#" class="footer__nav-link body-2"> News</a>
-                        <a href="#" class="footer__nav-link body-2"> Partners</a>
+                        <a href="#" class="footer__nav-link body-2 active"> Partners</a>
                         <a href="#" class="footer__nav-link body-2"> Contacts</a>
                     </nav>
                     <div class="footer__contacts">
