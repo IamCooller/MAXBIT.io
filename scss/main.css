@@ -35,7 +35,7 @@
 }
 
 .preloader {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -47,36 +47,16 @@
 .preloader::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
   z-index: 99999;
-  background-image: url("../img/preload.svg");
-  background-repeat: repeat;
+  background-image: url("../img/_4.gif");
+  background-repeat: no-repeat;
   background-size: cover;
-  -webkit-animation: preloader-move 10s infinite linear;
-          animation: preloader-move 10s infinite linear;
-}
-
-@-webkit-keyframes preloader-move {
-  0%,
-  100% {
-    background-position: 0;
-  }
-  50% {
-    background-position: calc(100vw + 700px) calc(100vh + 700px);
-  }
-}
-
-@keyframes preloader-move {
-  0%,
-  100% {
-    background-position: 0;
-  }
-  50% {
-    background-position: calc(100vw + 700px) calc(100vh + 700px);
-  }
 }
 
 .loaded_hiding .preloader {
