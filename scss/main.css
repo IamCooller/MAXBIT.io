@@ -54,7 +54,7 @@
   width: 500px;
   height: 500px;
   z-index: 99999;
-  background-image: url("../img/_4.gif");
+  background-image: url("../img/preloader.gif");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -2069,6 +2069,31 @@ main.zindex {
   display: -ms-flexbox;
   display: flex;
   grid-gap: 10px;
+}
+
+.about {
+  padding: 70px 0 100px 0;
+}
+
+.about__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about__text {
+  max-width: 659px;
+  margin-bottom: 100px;
+}
+
+.about__text p {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #fff;
 }
 
 @media (max-width: 1400px) {
