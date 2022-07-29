@@ -3222,5 +3222,9 @@ main.zindex {
   .office .slick-dots {
     padding-top: 42px;
   }
+  #rocket img {
+    max-width: 175px;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
