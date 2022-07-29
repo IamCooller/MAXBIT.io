@@ -43,14 +43,12 @@ $('.intro__bg-2').scrollingParallax({
 $(window).scroll(function() {
     if ($(this).scrollTop() > 1) {
         header.addClass('header_fixed')
-            //header.addClass('overflow')
         $('body').css({
             paddingTop: hederHeight + 'px',
 
         })
         $('main').css('overflow', 'hidden');
     } else {
-        //header.removeClass('overflow')
         header.removeClass('header_fixed')
         $('body').css({
             paddingTop: 0,
@@ -500,7 +498,6 @@ $('.menu__icon, .hamburger-menu__close').on('click', function(e) {
     $('.hamburger-menu').fadeToggle()
     $('body').toggleClass('scroll_disabled')
     $('main').toggleClass('zindex')
-    $('.header_fixed').toggleClass('overflow')
 })
 
 $('.hamburger-menu').on('click', function(e) {
@@ -510,7 +507,6 @@ $('.hamburger-menu').on('click', function(e) {
         $('.hamburger-menu').fadeOut();
         $('body').removeClass('scroll_disabled')
         $('main').removeClass('zindex')
-        $('.header_fixed').removeClass('overflow')
     }
 
 })
