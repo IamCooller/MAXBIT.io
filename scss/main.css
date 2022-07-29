@@ -418,7 +418,6 @@
 body {
   font-family: 'Proxima Nova';
   font-weight: 400;
-  overflow-x: hidden;
   color: #fff;
   background: #26255F;
 }
