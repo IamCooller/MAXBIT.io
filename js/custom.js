@@ -525,9 +525,9 @@ $('#rocket').waypoint(function(dir) {
     } else {
         $('#rocket img').animate({
             "top": "0"
-        }, 2000);
+        }, 1500);
 
     }
 }, {
-    offset: '10%'
+    offset: '40%'
 })
