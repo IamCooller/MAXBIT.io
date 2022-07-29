@@ -3001,6 +3001,9 @@ main.zindex {
     height: 21px;
     margin-left: -25%;
   }
+  .header {
+    max-height: 65px;
+  }
   .header__wrapper {
     padding: 20px 0;
   }
