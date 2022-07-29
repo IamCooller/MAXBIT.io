@@ -39,53 +39,6 @@ $('.intro__bg-2').scrollingParallax({
 
 });
 
-/* $('.intro__bg-3').scrollingParallax({
-    loopIt: true,
-
-    disableIE6: true,
-    bgWidth: '100%',
-    staticSpeed: 3,
-});
- */
-
-
-
-
-/* $(function() {
-
-    $.scrollingParallax('../img/intro/pattern.svg', {
-        loopIt: false,
-        staticScrollLimit: true,
-        bgHeight: '100%',
-        bgRepeat: true,
-        disableIE6: true,
-        bgWidth: '100%',
-        staticSpeed: 1,
-    });
-
-}); */
-
-
-
-
-
-
-// AOS
-AOS.init({
-    once: true,
-    duration: 1000,
-    offset: 0,
-})
-
-$(window).on('resize load', function() {
-    AOS.refreshHard()
-})
-
-$(window).on('scroll load', function() {
-        AOS.refresh()
-    })
-    // eof
-
 // Hover menu
 $(".header__menu a.header__menu-link").on("mouseover", function() {
     if (!$(this).hasClass("active")) {
