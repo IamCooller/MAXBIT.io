@@ -39,52 +39,26 @@ $('.intro__bg-2').scrollingParallax({
 
 });
 
-/* $('.intro__bg-3').scrollingParallax({
-    loopIt: true,
 
-    disableIE6: true,
-    bgWidth: '100%',
-    staticSpeed: 3,
-});
- */
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 1) {
+        header.addClass('header_fixed')
+            //header.addClass('overflow')
+        $('body').css({
+            paddingTop: hederHeight + 'px',
 
+        })
+        $('main').css('overflow', 'hidden');
+    } else {
+        //header.removeClass('overflow')
+        header.removeClass('header_fixed')
+        $('body').css({
+            paddingTop: 0,
 
-
-
-/* $(function() {
-
-    $.scrollingParallax('../img/intro/pattern.svg', {
-        loopIt: false,
-        staticScrollLimit: true,
-        bgHeight: '100%',
-        bgRepeat: true,
-        disableIE6: true,
-        bgWidth: '100%',
-        staticSpeed: 1,
-    });
-
-}); */
-
-
-
-
-
-
-// AOS
-AOS.init({
-    once: true,
-    duration: 1000,
-    offset: 0,
+        })
+        $('main').css('overflow', 'initial');
+    }
 })
-
-$(window).on('resize load', function() {
-    AOS.refreshHard()
-})
-
-$(window).on('scroll load', function() {
-        AOS.refresh()
-    })
-    // eof
 
 // Hover menu
 $(".header__menu a.header__menu-link").on("mouseover", function() {
@@ -212,52 +186,11 @@ $(window).on('load resize', function() {
             slidesToScroll: 1,
             arrows: false
         });
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 1) {
-                header.addClass('header_fixed')
-                    //header.addClass('overflow')
-                $('body').css({
-                    paddingTop: hederHeight + 'px',
-                    transition: 'padding-top 0.5s ease-in-out'
-                })
-                $('main').css('overflow', 'hidden');
-            } else {
-                //header.removeClass('overflow')
-                header.removeClass('header_fixed')
-                $('body').css({
-                    paddingTop: 0,
-                    transition: 'padding-top 0s '
-                })
-                $('main').css('overflow', 'initial');
-            }
-        })
+
     } else {
         $(".vantage__wrapper.slick-initialized").slick("unslick");
         $(".office__list.slick-initialized").slick("unslick");
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 1) {
-                header.addClass('header_fixed')
-                    //header.addClass('overflow')
-                $('body').css({
-                    paddingTop: hederHeight + 'px',
-                })
-                $('main').css('overflow', 'hidden');
 
-                $('.header__menu ul .has-child .child').css({
-                    visibility: 'hidden',
-                    top: -hederHeight,
-                })
-
-
-            } else {
-                //header.removeClass('overflow')
-                header.removeClass('header_fixed')
-                $('body').css({
-                    paddingTop: 0,
-                })
-                $('main').css('overflow', 'initial');
-            }
-        })
     }
 
 
