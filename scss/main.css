@@ -832,6 +832,8 @@ main.zindex {
   background: url("data:image/svg+xml,%3Csvg viewBox='0 0 1901 110' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg filter='url(%23filter0_f_273_75701)'%3E%3Cellipse cx='1676.83' cy='117.051' rx='514.188' ry='64.9233' transform='rotate(10.6625 1676.83 117.051)' fill='%238B00CD' fill-opacity='0.5'/%3E%3C/g%3E%3Cg filter='url(%23filter1_f_273_75701)'%3E%3Cellipse cx='1106.28' cy='-1.06069' rx='514.188' ry='64.9233' transform='rotate(10.6625 1106.28 -1.06069)' fill='%231BA4D8' fill-opacity='0.5'/%3E%3C/g%3E%3Cg filter='url(%23filter2_f_273_75701)'%3E%3Cellipse cx='1251.51' cy='103.039' rx='514.188' ry='64.9233' transform='rotate(10.6625 1251.51 103.039)' fill='%238B00CD' fill-opacity='0.5'/%3E%3C/g%3E%3Cdefs%3E%3Cfilter id='filter0_f_273_75701' x='571.37' y='-597.512' width='2210.91' height='1429.12' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='300' result='effect1_foregroundBlur_273_75701'/%3E%3C/filter%3E%3Cfilter id='filter1_f_273_75701' x='0.823242' y='-715.623' width='2210.91' height='1429.12' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='300' result='effect1_foregroundBlur_273_75701'/%3E%3C/filter%3E%3Cfilter id='filter2_f_273_75701' x='146.055' y='-611.523' width='2210.91' height='1429.12' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3E%3CfeFlood flood-opacity='0' result='BackgroundImageFix'/%3E%3CfeBlend mode='normal' in='SourceGraphic' in2='BackgroundImageFix' result='shape'/%3E%3CfeGaussianBlur stdDeviation='300' result='effect1_foregroundBlur_273_75701'/%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E%0A");
   width: 100%;
   background-size: cover;
+  max-height: 110px;
+  height: 100%;
 }
 
 .header .container {
@@ -1298,6 +1300,12 @@ main.zindex {
   top: 0;
   visibility: visible;
   left: 0;
+}
+
+.intro {
+  padding-top: 112px;
+  padding-bottom: 391px;
+  position: relative;
 }
 
 .vantage {
