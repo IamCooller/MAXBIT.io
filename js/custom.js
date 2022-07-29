@@ -17,28 +17,6 @@ for (const item of ParallaxItems) {
     const parallaxInstance = new Parallax(item);
 }
 
-$('.intro__bg-1').scrollingParallax({
-    loopIt: false,
-    staticScrollLimit: false,
-    bgHeight: '20%',
-    bgRepeat: false,
-    disableIE6: true,
-    bgWidth: '100%',
-    staticSpeed: 1.5,
-
-});
-
-$('.intro__bg-2').scrollingParallax({
-    loopIt: false,
-    staticScrollLimit: false,
-    bgHeight: '20%',
-    bgRepeat: false,
-    disableIE6: true,
-    bgWidth: '100%',
-    staticSpeed: 1,
-
-});
-
 
 $(window).scroll(function() {
     if ($(this).scrollTop() > 1) {
