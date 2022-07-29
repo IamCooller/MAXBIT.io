@@ -11,11 +11,6 @@ jQuery.browser = {};
 })();
 
 
-const ParallaxItems = document.querySelectorAll('.parallax');
-
-for (const item of ParallaxItems) {
-    const parallaxInstance = new Parallax(item);
-}
 
 $('.intro__bg-1').scrollingParallax({
     loopIt: false,
@@ -219,7 +214,7 @@ $(window).on('load resize', function() {
                     //header.addClass('overflow')
                 $('body').css({
                     paddingTop: hederHeight + 'px',
-                    transition: 'padding-top 0.5s ease-in-out'
+                    transition: 'padding-top 0.1s'
                 })
                 $('main').css('overflow', 'hidden');
             } else {
@@ -260,10 +255,17 @@ $(window).on('load resize', function() {
                 })
                 $('main').css('overflow', 'initial');
             }
+
+
         })
 
 
 
+        const ParallaxItems = document.querySelectorAll('.parallax');
+
+        for (const item of ParallaxItems) {
+            const parallaxInstance = new Parallax(item);
+        }
 
     }
 
