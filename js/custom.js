@@ -11,6 +11,11 @@ jQuery.browser = {};
 })();
 
 
+const ParallaxItems = document.querySelectorAll('.parallax');
+
+for (const item of ParallaxItems) {
+    const parallaxInstance = new Parallax(item);
+}
 
 $('.intro__bg-1').scrollingParallax({
     loopIt: false,
@@ -65,6 +70,22 @@ $('.intro__bg-2').scrollingParallax({
 
 
 
+// AOS
+AOS.init({
+    once: true,
+    duration: 1000,
+    offset: 0,
+})
+
+$(window).on('resize load', function() {
+    AOS.refreshHard()
+})
+
+$(window).on('scroll load', function() {
+        AOS.refresh()
+    })
+    // eof
+
 // Hover menu
 $(".header__menu a.header__menu-link").on("mouseover", function() {
     if (!$(this).hasClass("active")) {
@@ -93,9 +114,9 @@ $(".header__menu a").on("mouseout", function() {
 //windowSize
 
 function windowSize() {
-    /* $('.header__menu ul .has-child .child').css({
+    $('.header__menu ul .has-child .child').css({
         left: -(window.screen.width - $('header .container').width()) / 2
-    }); */
+    });
 }
 $(window).on('load resize', windowSize);
 
@@ -214,7 +235,7 @@ $(window).on('load resize', function() {
                     //header.addClass('overflow')
                 $('body').css({
                     paddingTop: hederHeight + 'px',
-                    transition: 'padding-top 0.1s'
+                    transition: 'padding-top 0.5s ease-in-out'
                 })
                 $('main').css('overflow', 'hidden');
             } else {
@@ -225,7 +246,6 @@ $(window).on('load resize', function() {
                     transition: 'padding-top 0s '
                 })
                 $('main').css('overflow', 'initial');
-
             }
         })
     } else {
@@ -255,140 +275,7 @@ $(window).on('load resize', function() {
                 })
                 $('main').css('overflow', 'initial');
             }
-
-
         })
-
-
-
-        const ParallaxItems = document.querySelectorAll('.parallax');
-
-        for (const item of ParallaxItems) {
-            const parallaxInstance = new Parallax(item);
-        }
-
-
-        $(document).ready(function() {
-            const chars = ['$', '%', '#', '@', '&', '(', ')', '=', '*', '/'];
-            const charsTotal = chars.length;
-            const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
-
-            class Entry {
-                constructor(el) {
-                    this.DOM = {
-                        el: el
-                    };
-
-                    this.DOM.title = {
-                        word: this.DOM.el.querySelector('.content__text')
-                    };
-
-                    charming(this.DOM.title.word);
-                    this.DOM.title.letters = Array.from(this.DOM.title.word.querySelectorAll('span')).sort(() => 0.5 - Math.random());
-                    this.DOM.title.letters.forEach(letter => letter.dataset.initial = letter.innerHTML);
-                    this.lettersTotal = this.DOM.title.letters.length;
-                    observer.observe(this.DOM.el);
-                }
-                enter(direction = 'down') {
-                    this.DOM.title.word.style.opacity = 1;
-
-                    this.timeouts = [];
-                    this.complete = false;
-                    let cnt = 0;
-                    this.DOM.title.letters.forEach((letter, pos) => {
-                        const timeout = setTimeout(() => {
-                            letter.innerHTML = chars[getRandomInt(0, charsTotal - 1)];
-                            setTimeout(() => {
-                                letter.innerHTML = letter.dataset.initial;
-                                ++cnt;
-                                if (cnt === this.lettersTotal) {
-                                    this.complete = true;
-                                }
-                            }, 100);
-                        }, pos * 80);
-                        this.timeouts.push(timeout);
-                    });
-                }
-                exit(direction = 'down') {
-                    this.DOM.title.word.style.opacity = 0;
-                    if (this.complete) return;
-                    for (let i = 0, len = this.timeouts.length; i <= len - 1; ++i) {
-                        clearTimeout(this.timeouts[i]);
-                    }
-                }
-            }
-
-            let observer;
-            let current = -1;
-            let allentries = [];
-            const sections = Array.from(document.querySelectorAll('.content__section'));
-
-
-            if ('IntersectionObserver' in window) {
-                document.body.classList.add('ioapi');
-
-                observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.intersectionRatio > 0.5) {
-                            const newcurrent = sections.indexOf(entry.target);
-                            if (newcurrent === current) return;
-                            const direction = newcurrent > current;
-                            if (current >= 0) {
-                                allentries[current].exit(direction ? 'down' : 'up');
-                            }
-                            allentries[newcurrent].enter(direction ? 'down' : 'up');
-                            current = newcurrent;
-                        }
-                    });
-                }, {
-                    threshold: 0.5
-                });
-
-                sections.forEach(section => allentries.push(new Entry(section)));
-            }
-
-
-            document.addEventListener("scroll", function() {
-                const scrolled = window.pageYOffset;
-                let content__text = document.querySelector('.content__text');
-                let FirstBlock = document.querySelectorAll(".content__text")[0];
-                let lastBlock = document.querySelectorAll(".content__text")[document.querySelectorAll(".content__text").length - 1];
-                let FooterHeight = document.querySelector(".footer").offsetHeight;
-
-
-                const observer = new window.IntersectionObserver(([entry]) => {
-                    if (entry.isIntersecting) {
-                        FirstBlock.style.bottom = '-20vh';
-                        return
-                    }
-                    FirstBlock.style.bottom = '6vmax';
-                }, {
-                    root: null,
-                    threshold: 0.5, // set offset 0.1 means trigger if atleast 10% of element in viewport
-                })
-                if (document.querySelector(".mainBlock") !== null) {
-                    let InnerBlock = document.querySelector(".mainBlock");
-                    observer.observe(InnerBlock);
-                }
-
-
-
-                if ($(window).scrollTop() + $(window).height() + FooterHeight >= $(document).height()) {
-                    for (item of document.querySelectorAll(".content__text")) {
-                        item.style.left = '-100vw';
-                        item.style.visibility = 'hidden';
-                    }
-
-                } else {
-                    for (item of document.querySelectorAll(".content__text")) {
-                        item.style.left = '0';
-                        item.style.visibility = 'visible';
-                    }
-                }
-            });
-
-        })
-
     }
 
 
@@ -452,8 +339,127 @@ $(function() {
 //Title
 
 
+$(document).ready(function() {
+        const chars = ['$', '%', '#', '@', '&', '(', ')', '=', '*', '/'];
+        const charsTotal = chars.length;
+        const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-//Script for load elements
+        class Entry {
+            constructor(el) {
+                this.DOM = {
+                    el: el
+                };
+
+                this.DOM.title = {
+                    word: this.DOM.el.querySelector('.content__text')
+                };
+
+                charming(this.DOM.title.word);
+                this.DOM.title.letters = Array.from(this.DOM.title.word.querySelectorAll('span')).sort(() => 0.5 - Math.random());
+                this.DOM.title.letters.forEach(letter => letter.dataset.initial = letter.innerHTML);
+                this.lettersTotal = this.DOM.title.letters.length;
+                observer.observe(this.DOM.el);
+            }
+            enter(direction = 'down') {
+                this.DOM.title.word.style.opacity = 1;
+
+                this.timeouts = [];
+                this.complete = false;
+                let cnt = 0;
+                this.DOM.title.letters.forEach((letter, pos) => {
+                    const timeout = setTimeout(() => {
+                        letter.innerHTML = chars[getRandomInt(0, charsTotal - 1)];
+                        setTimeout(() => {
+                            letter.innerHTML = letter.dataset.initial;
+                            ++cnt;
+                            if (cnt === this.lettersTotal) {
+                                this.complete = true;
+                            }
+                        }, 100);
+                    }, pos * 80);
+                    this.timeouts.push(timeout);
+                });
+            }
+            exit(direction = 'down') {
+                this.DOM.title.word.style.opacity = 0;
+                if (this.complete) return;
+                for (let i = 0, len = this.timeouts.length; i <= len - 1; ++i) {
+                    clearTimeout(this.timeouts[i]);
+                }
+            }
+        }
+
+        let observer;
+        let current = -1;
+        let allentries = [];
+        const sections = Array.from(document.querySelectorAll('.content__section'));
+
+
+        if ('IntersectionObserver' in window) {
+            document.body.classList.add('ioapi');
+
+            observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.intersectionRatio > 0.5) {
+                        const newcurrent = sections.indexOf(entry.target);
+                        if (newcurrent === current) return;
+                        const direction = newcurrent > current;
+                        if (current >= 0) {
+                            allentries[current].exit(direction ? 'down' : 'up');
+                        }
+                        allentries[newcurrent].enter(direction ? 'down' : 'up');
+                        current = newcurrent;
+                    }
+                });
+            }, {
+                threshold: 0.5
+            });
+
+            sections.forEach(section => allentries.push(new Entry(section)));
+        }
+
+
+        document.addEventListener("scroll", function() {
+            const scrolled = window.pageYOffset;
+            let content__text = document.querySelector('.content__text');
+            let FirstBlock = document.querySelectorAll(".content__text")[0];
+            let lastBlock = document.querySelectorAll(".content__text")[document.querySelectorAll(".content__text").length - 1];
+            let FooterHeight = document.querySelector(".footer").offsetHeight;
+
+
+            const observer = new window.IntersectionObserver(([entry]) => {
+                if (entry.isIntersecting) {
+                    FirstBlock.style.bottom = '-20vh';
+                    return
+                }
+                FirstBlock.style.bottom = '6vmax';
+            }, {
+                root: null,
+                threshold: 0.5, // set offset 0.1 means trigger if atleast 10% of element in viewport
+            })
+            if (document.querySelector(".mainBlock") !== null) {
+                let InnerBlock = document.querySelector(".mainBlock");
+                observer.observe(InnerBlock);
+            }
+
+
+
+            if ($(window).scrollTop() + $(window).height() + FooterHeight >= $(document).height()) {
+                for (item of document.querySelectorAll(".content__text")) {
+                    item.style.left = '-100vw';
+                    item.style.visibility = 'hidden';
+                }
+
+            } else {
+                for (item of document.querySelectorAll(".content__text")) {
+                    item.style.left = '0';
+                    item.style.visibility = 'visible';
+                }
+            }
+        });
+
+    })
+    //Script for load elements
 
 function waitForElm(selector) {
     return new Promise(resolve => {
