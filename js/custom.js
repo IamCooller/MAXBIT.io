@@ -111,15 +111,6 @@ $(".header__menu a").on("mouseout", function() {
 });
 
 
-//windowSize
-
-function windowSize() {
-    $('.header__menu ul .has-child .child').css({
-        left: -(window.screen.width - $('header .container').width()) / 2
-    });
-}
-$(window).on('load resize', windowSize);
-
 //Children menu
 $(document).ready(function() {
     {
