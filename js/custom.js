@@ -171,7 +171,7 @@ $(window).on('load resize', function() {
                     //header.addClass('overflow')
                 $('body').css({
                     paddingTop: hederHeight + 'px',
-                    transition: 'padding-top 0.5s ease-in-out'
+
                 })
                 $('main').css('overflow', 'hidden');
             } else {
@@ -179,7 +179,7 @@ $(window).on('load resize', function() {
                 header.removeClass('header_fixed')
                 $('body').css({
                     paddingTop: 0,
-                    transition: 'padding-top 0s '
+
                 })
                 $('main').css('overflow', 'initial');
             }
@@ -543,8 +543,9 @@ $('#rocket').waypoint(function(dir) {
             "top": "-=100vh"
         }, 2000);
     }
+
 }, {
-    offset: '80%'
+    offset: 80
 })
 
 $('#rocket').waypoint(function(dir) {
@@ -553,6 +554,7 @@ $('#rocket').waypoint(function(dir) {
             "top": "0"
         }, 1500);
     }
+
 }, {
-    offset: '50%'
+    offset: 50
 })
