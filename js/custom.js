@@ -522,12 +522,17 @@ $('#rocket').waypoint(function(dir) {
         $('#rocket img').animate({
             "top": "-=100vh"
         }, 2000);
-    } else {
+    }
+}, {
+    offset: '80%'
+})
+
+$('#rocket').waypoint(function(dir) {
+    if (dir === 'up') {
         $('#rocket img').animate({
             "top": "0"
         }, 1500);
-
     }
 }, {
-    offset: '40%'
+    offset: '50%'
 })
