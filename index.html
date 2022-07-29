@@ -18,10 +18,10 @@
     <link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css" />
 
     <!-- jQeury -->
-    <script defer src="libs/jquery-3.5.1.min.js"></script>
+    <script src="libs/jquery-3.5.1.min.js"></script>
 
     <!-- libs js -->
-
+    <script async src="libs/lazysizes.min.js"></script>
     <script defer src="libs/charming.min.js"></script>
     <script defer src="libs/imagesloaded.pkgd.min.js"></script>
     <script defer src="libs/aos/aos.js"></script>
@@ -512,9 +512,9 @@
             <div class="container">
                 <div class="vantage__wrapper">
                     <div class="vantage__item" data-aos="fade-right">
-                        <div class="parallax">
-                            <img src="img/vantage/1.svg" alt="Inclusive" class="vantage__item-img" data-depth="0.50" />
-                        </div>
+
+                        <img src="img/vantage/1.svg" alt="Inclusive" class="vantage__item-img" />
+
                         <div class="vantage__item_content">
                             <div class="vantage__item-title">Inclusive</div>
                             <p class="vantage__item-text body-1">
@@ -523,9 +523,9 @@
                         </div>
                     </div>
                     <div class="vantage__item" data-aos="fade-left">
-                        <div class="parallax">
-                            <img src="img/vantage/2.svg" alt="Inclusive" class="vantage__item-img " data-depth="0.50" />
-                        </div>
+
+                        <img src="img/vantage/2.svg" alt="Inclusive" class="vantage__item-img " />
+
                         <div class="vantage__item_content">
                             <div class="vantage__item-title">Expert-led</div>
                             <p class="vantage__item-text body-1">
@@ -534,9 +534,9 @@
                         </div>
                     </div>
                     <div class="vantage__item" data-aos="fade-right">
-                        <div class="parallax">
-                            <img src="img/vantage/3.svg" alt="Inclusive" class="vantage__item-img" data-depth="0.50" />
-                        </div>
+
+                        <img src="img/vantage/3.svg" alt="Inclusive" class="vantage__item-img" />
+
                         <div class="vantage__item_content">
                             <div class="vantage__item-title">Cost-effective</div>
                             <p class="vantage__item-text body-1">
@@ -545,9 +545,9 @@
                         </div>
                     </div>
                     <div class="vantage__item" data-aos="fade-left">
-                        <div class="parallax">
-                            <img src="img/vantage/4.svg" alt="Inclusive" class="vantage__item-img" data-depth="0.50" />
-                        </div>
+
+                        <img src="img/vantage/4.svg" alt="Inclusive" class="vantage__item-img" />
+
                         <div class="vantage__item_content">
                             <div class="vantage__item-title">Up-to-date</div>
                             <p class="vantage__item-text body-1">
@@ -571,8 +571,8 @@
                 <div class="services__wrapper">
                     <div class="services__slider" data-aos="fade-left">
                         <div class="services__slider_item">
-                            <div class="services__slider_item_icon parallax">
-                                <img src="img/services/1.png" alt="1" data-depth="0.50" />
+                            <div class="services__slider_item_icon">
+                                <img data-src="img/services/1.png" class="lazyload" alt="1" />
                             </div>
                             <div class="services__slider_item-title">H/W</div>
                             <p class="services__slider_item-text">
@@ -584,8 +584,8 @@
                             </p>
                         </div>
                         <div class="services__slider_item">
-                            <div class="services__slider_item_icon parallax">
-                                <img src="img/services/2.png" alt="1" data-depth="0.50" />
+                            <div class="services__slider_item_icon">
+                                <img data-src="img/services/2.png" alt="1" class="lazyload" />
                             </div>
                             <div class="services__slider_item-title">Cloud</div>
                             <p class="services__slider_item-text">
@@ -597,8 +597,8 @@
                             </p>
                         </div>
                         <div class="services__slider_item">
-                            <div class="services__slider_item_icon parallax">
-                                <img src="img/services/3.png" alt="1" data-depth="0.50" />
+                            <div class="services__slider_item_icon">
+                                <img data-src="img/services/3.png" alt="1" class="lazyload" />
                             </div>
                             <div class="services__slider_item-title">Security</div>
                             <p class="services__slider_item-text">
@@ -610,8 +610,8 @@
                             </p>
                         </div>
                         <div class="services__slider_item">
-                            <div class="services__slider_item_icon parallax">
-                                <img src="img/services/4.png" alt="1" data-depth="0.50" />
+                            <div class="services__slider_item_icon">
+                                <img data-src="img/services/4.png" alt="1" class="lazyload" />
                             </div>
                             <div class="services__slider_item-title">Digital</div>
                             <p class="services__slider_item-text">
@@ -623,8 +623,8 @@
                             </p>
                         </div>
                         <div class="services__slider_item">
-                            <div class="services__slider_item_icon parallax">
-                                <img src="img/services/5.png" alt="1" data-depth="0.50" />
+                            <div class="services__slider_item_icon">
+                                <img data-src="img/services/5.png" class="lazyload" alt="1" />
                             </div>
                             <div class="services__slider_item-title">
                                 Systems integration
@@ -639,8 +639,8 @@
                         </div>
 
                         <div class="services__slider_item">
-                            <div class="services__slider_item_icon parallax">
-                                <img src="img/services/6.png" alt="1" data-depth="0.50" />
+                            <div class="services__slider_item_icon">
+                                <img data-src="img/services/6.png" class="lazyload" alt="1" />
                             </div>
                             <div class="services__slider_item-title">Data</div>
                             <p class="services__slider_item-text">
@@ -652,8 +652,8 @@
                             </p>
                         </div>
                         <div class="services__slider_item">
-                            <div class="services__slider_item_icon parallax">
-                                <img src="img/services/7.png" alt="1" data-depth="0.50" />
+                            <div class="services__slider_item_icon">
+                                <img data-src="img/services/7.png" alt="1" class="lazyload" />
                             </div>
                             <div class="services__slider_item-title">S/W</div>
                             <p class="services__slider_item-text">
@@ -665,8 +665,8 @@
                             </p>
                         </div>
                         <div class="services__slider_item">
-                            <div class="services__slider_item_icon parallax">
-                                <img src="img/services/8.png" alt="1" data-depth="0.50" />
+                            <div class="services__slider_item_icon">
+                                <img data-src="img/services/8.png" alt="1" class="lazyload" />
                             </div>
                             <div class="services__slider_item-title">Consultancy</div>
                             <p class="services__slider_item-text">
@@ -678,8 +678,8 @@
                             </p>
                         </div>
                         <div class="services__slider_item">
-                            <div class="services__slider_item_icon parallax">
-                                <img src="img/services/9.png" alt="1" data-depth="0.50" />
+                            <div class="services__slider_item_icon">
+                                <img data-src="img/services/9.png" alt="1" class="lazyload" />
                             </div>
                             <div class="services__slider_item-title">Outsourcing</div>
                             <p class="services__slider_item-text">
