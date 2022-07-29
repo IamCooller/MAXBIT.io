@@ -2679,7 +2679,7 @@ main.zindex {
     min-height: auto;
     padding-bottom: 54px;
   }
-  .origami__col img {
+  .origami__col:first img {
     max-width: 274px;
   }
   .origami__icon {
@@ -3087,9 +3087,6 @@ main.zindex {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .origami__col img {
-    margin: auto;
   }
   .origami__slider_item_wrapper {
     -ms-grid-columns: 1fr;

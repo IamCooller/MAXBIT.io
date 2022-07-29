@@ -1473,8 +1473,9 @@ main
 				&_wrapper
 					min-height: auto
 					padding-bottom: 54px
-		&__col img
-			max-width: 274px
+		&__col:first
+			img
+				max-width: 274px
 		&__icon
 			max-width: 158px
 		&__text
@@ -1785,8 +1786,7 @@ main
 			display: flex
 			flex-direction: column
 			align-items: center
-			& img
-				margin: auto
+
 
 		&__slider
 			&_item
