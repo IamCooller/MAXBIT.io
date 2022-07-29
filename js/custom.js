@@ -475,8 +475,9 @@ $('[data-svg]').each(function() {
         });
         const $pin = document.querySelectorAll('.office__item');
         $('#Map [data-location]')
-            .on('mouseenter', function(e) {
+            .on('mouseover', function(e) {
                 const location = this.getAttribute('data-location');
+                console.log(e)
                 forEach($pin, function(index, value) {
                     if (value.getAttribute('location') == location) {
 
