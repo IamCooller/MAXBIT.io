@@ -303,9 +303,6 @@ main
 	height: 100%
 	position: relative
 	z-index: 10
-	.container
-		z-index: 1
-		position: relative
 	&.header_fixed
 		position: fixed
 		top: 0
@@ -313,7 +310,6 @@ main
 		background: linear-gradient(90.74deg, rgba(44, 40, 103, 0.2) 8.79%, rgba(41, 38, 99, 0.2) 101.9%)
 		box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2)
 		backdrop-filter: blur(100px)
-		z-index: 9
 		
 		&::before
 			content: ''
@@ -353,6 +349,7 @@ main
 	&__menu
 		position: relative
 		max-width: 613px
+		z-index: 4
 		width: 100%
 		ul
 			position: relative
@@ -370,7 +367,7 @@ main
 			height: 8px
 			pointer-events: none
 			opacity: 0
-			z-index: 0
+			z-index: 5
 			transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1.05)
 		.squeeze
 			transform: scale(0.9)
@@ -418,17 +415,19 @@ main
 		backdrop-filter: blur(200px)
 		width: 100vw
 		height: fit-content
-		padding: 40px 0
+		max-height: 0
+		
 		transition: all 0.3s ease-in-out
 		z-index: -2
-		@media (max-height: 600px) 
-			padding: 10px 0
+		overflow: hidden
+		
 			
 		@media (max-width:550px)
 			top: -100vh
 			padding: 16px
 			height: 100vh
-
+			max-height: 100vh
+			z-index: 9999
 		.mobile-child
 			padding: 0 16px
 			text-align: right
@@ -441,6 +440,14 @@ main
 			text-align: left
 		ul.container
 			display: grid
+			padding-top: 40px
+			padding-bottom: 40px
+			@media (max-height: 600px) 
+				padding-top: 10px
+				padding-bottom: 10px
+			@media (max-width:550px)
+				padding-top: 0
+				padding-bottom: 0
 			grid-template-columns: repeat(5,1fr)
 			align-items: start
 			justify-content: space-between
@@ -560,6 +567,7 @@ main
 				img
 					margin-bottom: 0
 					margin-right: 20px
+					max-width: 60px
 		& .list-child
 				display: flex
 				align-items: center

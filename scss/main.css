@@ -843,11 +843,6 @@ main.zindex {
   z-index: 10;
 }
 
-.header .container {
-  z-index: 1;
-  position: relative;
-}
-
 .header.header_fixed {
   position: fixed;
   top: 0;
@@ -857,7 +852,6 @@ main.zindex {
           box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
   -webkit-backdrop-filter: blur(100px);
           backdrop-filter: blur(100px);
-  z-index: 9;
 }
 
 .header.header_fixed::before {
@@ -916,6 +910,7 @@ main.zindex {
 .header__menu {
   position: relative;
   max-width: 613px;
+  z-index: 4;
   width: 100%;
 }
 
@@ -942,7 +937,7 @@ main.zindex {
   height: 8px;
   pointer-events: none;
   opacity: 0;
-  z-index: 0;
+  z-index: 5;
   -webkit-transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1.05);
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1.05);
 }
@@ -1012,16 +1007,11 @@ main.zindex {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  padding: 40px 0;
+  max-height: 0;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   z-index: -2;
-}
-
-@media (max-height: 600px) {
-  .has-child .child {
-    padding: 10px 0;
-  }
+  overflow: hidden;
 }
 
 @media (max-width: 550px) {
@@ -1029,6 +1019,8 @@ main.zindex {
     top: -100vh;
     padding: 16px;
     height: 100vh;
+    max-height: 100vh;
+    z-index: 9999;
   }
 }
 
@@ -1049,6 +1041,8 @@ main.zindex {
 .has-child .child ul.container {
   display: -ms-grid;
   display: grid;
+  padding-top: 40px;
+  padding-bottom: 40px;
   -ms-grid-columns: (1fr)[5];
       grid-template-columns: repeat(5, 1fr);
   -webkit-box-align: start;
@@ -1057,6 +1051,20 @@ main.zindex {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-height: 600px) {
+  .has-child .child ul.container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 550px) {
+  .has-child .child ul.container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 @media (max-width: 720px) {
@@ -1259,6 +1267,7 @@ main.zindex {
   .has-child .child .single-child img {
     margin-bottom: 0;
     margin-right: 20px;
+    max-width: 60px;
   }
 }
 

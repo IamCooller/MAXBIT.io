@@ -51,17 +51,6 @@ $(function() {
             speed = $(this).attr('data-speed');
             let yPos = -(top * speed / 100);
             $(this).attr('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
-            /*   if (top < 1000) {
-                let yPos = -(top * speed / 100);
-                $(this).attr('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
-            } else {
-                let yPos = -(top * speed);
-                //$(this).attr('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
-                $(this).animate({
-                    "transform": 'translate3d(0px, ' + yPos + 'px, 0px)'
-                }, 2000);
-            }
- */
         });
     });
 });
@@ -95,13 +84,17 @@ $(".header__menu a").on("mouseout", function() {
 //Children menu
 $(document).ready(function() {
     {
+        $('.header__menu ul .has-child .child').css({
+            top: hederHeight
+        });
         var Timeoutmenu;
         $('.header__menu ul .has-child').on('mouseleave', function() {
             Timeoutmenu = setTimeout(() => {
                 $(this).find('.child').css({
                     visibility: 'hidden',
-                    top: -hederHeight,
-                    pointerEvents: 'none'
+                    maxHeight: '0',
+                    pointerEvents: 'none',
+
                 })
                 $('.content__text').css('left', '0');
             }, 1000)
@@ -112,14 +105,18 @@ $(document).ready(function() {
             Timeoutmenu = null;
             $('.header__menu ul .has-child .child').css({
                 visibility: 'hidden',
-                top: -hederHeight,
-                pointerEvents: 'none'
-            })
+                maxHeight: '0',
+                pointerEvents: 'none',
 
+
+            })
+            let HeightChild = $(this).find('.child ul:first').outerHeight();
             $(this).find('.child').css({
                 visibility: 'visible',
-                top: hederHeight,
-                pointerEvents: 'initial'
+                maxHeight: HeightChild,
+                pointerEvents: 'initial',
+
+
             })
             $('.content__text').css('left', '-100%');
 
@@ -127,9 +124,10 @@ $(document).ready(function() {
         $('.header__menu ul .has-child .child ul.container').mouseenter(function() {
             clearTimeout(Timeoutmenu);
             Timeoutmenu = null;
+            let HeightChild = $(this).find('.child ul:first').outerHeight();
             $(this).find('.child').css({
                 visibility: 'visible',
-                top: hederHeight,
+                maxHeight: HeightChild,
                 pointerEvents: 'initial'
             })
 
@@ -226,7 +224,7 @@ $(window).on('load resize', function() {
 
                 $('.header__menu ul .has-child .child').css({
                     visibility: 'hidden',
-                    top: -hederHeight,
+                    maxHeight: 0
                 })
 
 
