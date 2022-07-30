@@ -1624,8 +1624,8 @@ main.zindex {
 }
 
 .services {
-  background: -webkit-gradient(linear, left top, left bottom, from(#5328A3), to(rgba(38, 37, 95, 0)));
-  background: linear-gradient(180deg, #5328A3 0%, rgba(38, 37, 95, 0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#5328A3), to(#26255f));
+  background: linear-gradient(180deg, #5328A3 0%, #26255f 100%);
   padding: 100px 0;
 }
 
@@ -1730,8 +1730,8 @@ main.zindex {
 }
 
 .origami {
-  background: -webkit-gradient(linear, left top, left bottom, from(#760EBA), to(rgba(38, 41, 98, 0)));
-  background: linear-gradient(180deg, #760EBA 0%, rgba(38, 41, 98, 0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#760EBA), to(#262962));
+  background: linear-gradient(180deg, #760EBA 0%, #262962 100%);
   padding-bottom: 150px;
 }
 
@@ -3025,9 +3025,11 @@ main.zindex {
     padding-top: 0;
     padding-bottom: 66px;
   }
+  .intro__wrapper {
+    padding-top: 50px;
+  }
   .intro__images {
-    max-width: 208px;
-    max-height: 300px;
+    display: none;
   }
   .intro-title {
     font-size: 28px;
@@ -3037,7 +3039,7 @@ main.zindex {
   }
   .intro-subtitle {
     font-size: 16px;
-    line-height: 16px;
+    line-height: 18px;
     margin-bottom: 16px;
   }
   .intro-list {
@@ -3138,7 +3140,12 @@ main.zindex {
     margin-top: 20px;
   }
   .partners__wrapper {
-    grid-gap: 21px 44px;
+    grid-gap: 21px 10px;
+    padding: 0 15px;
+  }
+  .footer {
+    max-height: 320px;
+    height: 100%;
   }
   .footer__nav {
     display: none;
