@@ -1328,40 +1328,68 @@ main.zindex {
 }
 
 .intro__bg-1 {
+  width: 100%;
+  display: block;
+  bottom: -100%;
+  height: 100%;
+}
+
+.intro__bg-1::before {
+  content: '';
   background: linear-gradient(175.3deg, #592FA4 -40.1%, #26255F 90.46%);
   -webkit-transform: rotate(15deg);
           transform: rotate(15deg);
-  width: 150%;
-  height: calc(100vh + 125%);
   position: absolute;
-  display: block;
-  z-index: -3;
   left: -20%;
-  top: 200%;
+  bottom: 0;
+  width: 130%;
+  height: 100%;
+  will-change: transform;
 }
 
 .intro__bg-2 {
+  width: 100%;
+  height: 400px;
+  display: block;
+  bottom: -50%;
+}
+
+.intro__bg-2::before {
+  content: '';
   background: linear-gradient(164.18deg, rgba(65, 73, 174, 0.3) -26.22%, rgba(98, 23, 168, 0.3) 28.55%, rgba(38, 37, 95, 0.3) 81.48%);
   -webkit-transform: rotate(30deg);
           transform: rotate(30deg);
-  width: 150%;
-  height: 600px;
   position: absolute;
-  display: block;
-  z-index: -4;
-  left: -30%;
-  top: 150%;
+  left: -20%;
+  bottom: 0;
+  width: 130%;
+  height: 100%;
+  will-change: transform;
 }
 
 .intro__bg-3 {
   background: url("../img/intro/pattern.svg");
   background-size: cover;
   height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
+  background-position: right top;
   width: 100%;
-  z-index: -5;
+  top: 0;
+  right: 0;
+  will-change: transform;
+  height: calc(100vh + 70%);
+}
+
+@media (max-width: 550px) {
+  .intro__bg-3 {
+    background-position-x: center;
+    height: 100%;
+  }
+}
+
+.intro .parallax__layer {
+  position: fixed;
+  width: 100%;
+  z-index: -2;
 }
 
 .intro__wrapper {
@@ -3059,6 +3087,8 @@ main.zindex {
   }
   .services {
     padding: 55px 0 59px 0;
+    background: -webkit-gradient(linear, left top, left bottom, from(#5328A3), to(#26255f));
+    background: linear-gradient(180deg, #5328A3 0%, #26255f 100%);
   }
   .services__slider_item-title {
     font-size: 28px;

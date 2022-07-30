@@ -17,7 +17,7 @@ for (const item of ParallaxItems) {
     const parallaxInstance = new Parallax(item);
 }
 
-$('.intro__bg-1').scrollingParallax({
+/* $('.intro__bg-1').scrollingParallax({
     loopIt: false,
     staticScrollLimit: false,
     bgHeight: '20%',
@@ -38,6 +38,34 @@ $('.intro__bg-2').scrollingParallax({
     staticSpeed: 1,
 
 });
+ */
+
+$(function() {
+    window.addEventListener("scroll", function(event) {
+
+        let top = this.pageYOffset;
+
+        let layers = $(".parallax__layer");
+        let speed, yPos;
+        layers.each(function() {
+            speed = $(this).attr('data-speed');
+            let yPos = -(top * speed / 100);
+            $(this).attr('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
+            /*   if (top < 1000) {
+                let yPos = -(top * speed / 100);
+                $(this).attr('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
+            } else {
+                let yPos = -(top * speed);
+                //$(this).attr('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
+                $(this).animate({
+                    "transform": 'translate3d(0px, ' + yPos + 'px, 0px)'
+                }, 2000);
+            }
+ */
+        });
+    });
+});
+
 
 // Hover menu
 $(".header__menu a.header__menu-link").on("mouseover", function() {
