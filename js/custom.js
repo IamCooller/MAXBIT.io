@@ -190,7 +190,9 @@ $(window).on('load resize', function() {
             slidesToShow: 1,
             infinite: false,
             slidesToScroll: 1,
-            arrows: false
+            arrows: false,
+            autoplay: true,
+            autoplaySpeed: 2000,
         });
         $(window).scroll(function() {
             if ($(this).scrollTop() > 1) {

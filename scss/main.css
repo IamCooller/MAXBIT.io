@@ -1363,6 +1363,9 @@ main.zindex {
   display: block;
   bottom: -100%;
   height: 100%;
+  -webkit-transition: .3s all ease-in-out;
+  transition: .3s all ease-in-out;
+  will-change: transform;
 }
 
 .intro__bg-1::before {
@@ -1389,6 +1392,9 @@ main.zindex {
   height: 400px;
   display: block;
   bottom: -50%;
+  will-change: transform;
+  -webkit-transition: .3s all ease-in-out;
+  transition: .3s all ease-in-out;
 }
 
 .intro__bg-2::before {
@@ -1422,8 +1428,11 @@ main.zindex {
   height: 120%;
   max-width: 765px;
   width: 100%;
+  -webkit-transition: .3s all ease-in-out;
+  transition: .3s all ease-in-out;
   background-repeat: no-repeat;
   top: -78px;
+  will-change: transform;
 }
 
 @media (max-width: 550px) {
@@ -1690,6 +1699,12 @@ main.zindex {
   background: -webkit-gradient(linear, left top, left bottom, from(#5328A3), to(#26255f));
   background: linear-gradient(180deg, #5328A3 0%, #26255f 100%);
   padding: 100px 0;
+}
+
+.services__wrapper {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .services__slider {
@@ -2207,6 +2222,9 @@ main.zindex {
 .footer {
   background: -webkit-gradient(linear, left top, left bottom, from(#471E8C), to(rgba(38, 41, 98, 0)));
   background: linear-gradient(180deg, #471E8C 0%, rgba(38, 41, 98, 0) 100%);
+}
+
+.footer__wrapper {
   padding: 47px 0;
 }
 
@@ -3232,6 +3250,7 @@ main.zindex {
     margin: 0 auto;
   }
   .intro {
+    height: 100vh;
     padding-top: 0;
     padding-bottom: 66px;
   }
@@ -3241,6 +3260,22 @@ main.zindex {
   .intro__images {
     max-width: 208px;
     max-height: 208px;
+  }
+  .intro__images-1 img {
+    max-width: 200px;
+    width: 100%;
+  }
+  .intro__images-2 img {
+    max-width: 90px;
+  }
+  .intro__images-3 img {
+    max-width: 160px;
+  }
+  .intro__images-6 img {
+    max-width: 75px;
+  }
+  .intro__images-7 img {
+    max-width: 100px;
   }
   .intro-title {
     font-size: 28px;
@@ -3321,6 +3356,7 @@ main.zindex {
   }
   .origami {
     padding: 60px 0;
+    padding-top: 0;
   }
   .origami__col {
     display: -webkit-box;
@@ -3358,7 +3394,7 @@ main.zindex {
     margin-right: -12px;
   }
   .footer {
-    height: auto;
+    max-height: 320px;
   }
   .footer__nav {
     display: none;

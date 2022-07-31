@@ -619,6 +619,8 @@ main
 			display: block
 			bottom: -100%
 			height: 100%
+			transition: .3s all ease-in-out
+			will-change: transform
 			&::before
 				content: ''
 				background: linear-gradient(175.3deg, #592FA4 -40.1%, #26255F 90.46%)
@@ -636,6 +638,8 @@ main
 			height: 400px
 			display: block
 			bottom: -50%
+			will-change: transform
+			transition: .3s all ease-in-out
 			&::before
 				content: ''
 				background: linear-gradient(164.18deg, rgba(65, 73, 174, 0.3) -26.22%, rgba(98, 23, 168, 0.3) 28.55%, rgba(38, 37, 95, 0.3) 81.48%)
@@ -660,8 +664,10 @@ main
 			height: 120%
 			max-width: 765px
 			width: 100%
+			transition: .3s all ease-in-out
 			background-repeat: no-repeat
 			top: -78px
+			will-change: transform
 			@media (max-width: 550px)
 				height: 100%
 				background-position: right -61px
@@ -844,7 +850,8 @@ main
 .services
 	background: linear-gradient(180deg, #5328A3 0%, rgba(38, 37, 95, 1) 100%)
 	padding: 100px 0
-
+	&__wrapper
+		height: fit-content
 	&__slider
 		height: fit-content
 		margin-right: -10%
@@ -1164,10 +1171,11 @@ main
 
 .footer
 	background: linear-gradient(180deg, #471E8C 0%, rgba(38, 41, 98, 0) 100%)
-	padding: 47px 0
+	
 
 	
 	&__wrapper
+		padding: 47px 0
 		&_top
 			display: flex
 			justify-content: space-between
@@ -1827,7 +1835,7 @@ main
 				display: flex
 				margin: 0 auto
 	.intro
-		
+		height: 100vh
 		padding-top: 0
 		padding-bottom: 66px
 		&__wrapper
@@ -1835,6 +1843,23 @@ main
 		&__images
 			max-width: 208px
 			max-height: 208px
+			&-1
+				img
+					max-width: 200px
+					width: 100%
+			&-2
+				img
+					max-width: 90px
+			&-3
+				img
+					max-width: 160px
+			&-6
+				img
+					max-width: 75px
+			&-7
+
+				img
+					max-width: 100px
 		&-title
 			font-size: 28px
 			line-height: 30px
@@ -1897,6 +1922,7 @@ main
 			margin-top: 27px
 	.origami
 		padding: 60px 0
+		padding-top: 0
 		&__col
 			display: flex
 			flex-direction: column
@@ -1925,7 +1951,7 @@ main
 			&:nth-of-type(2)
 				margin-right: -12px
 	.footer
-		height: auto
+		max-height: 320px
 		&__nav
 			display: none
 		&__wrapper
