@@ -450,6 +450,13 @@ body {
   font-weight: 400;
   color: #fff;
   background: #26255F;
+  padding-top: 110px;
+}
+
+@media (max-width: 550px) {
+  body {
+    padding-top: 70px;
+  }
 }
 
 body.scroll_disabled {
@@ -861,14 +868,13 @@ main.zindex {
   background-size: cover;
   max-height: 110px;
   height: 100%;
-  position: relative;
   z-index: 10;
-}
-
-.header.header_fixed {
   position: fixed;
   top: 0;
   left: 0;
+}
+
+.header.header_fixed {
   background: linear-gradient(90.74deg, rgba(44, 40, 103, 0.2) 8.79%, rgba(41, 38, 99, 0.2) 101.9%);
   -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
@@ -1376,7 +1382,7 @@ main.zindex {
   position: absolute;
   left: -20%;
   bottom: 0;
-  width: 130%;
+  width: 150%;
   height: 100%;
   will-change: transform;
 }
@@ -1405,7 +1411,7 @@ main.zindex {
   position: absolute;
   left: -20%;
   bottom: 0;
-  width: 130%;
+  width: 150%;
   height: 100%;
   will-change: transform;
 }
@@ -1856,8 +1862,8 @@ main.zindex {
 }
 
 .partners {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(-3.29%, #3267B8), to(rgba(40, 36, 97, 0)));
-  background: linear-gradient(180deg, #3267B8 -3.29%, rgba(40, 36, 97, 0) 100%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#760eba00), to(#262962));
+  background: linear-gradient(0deg, #760eba00 0%, #262962 100%);
   padding-bottom: 150px;
   position: relative;
   padding-top: 500px;
@@ -3250,16 +3256,20 @@ main.zindex {
     margin: 0 auto;
   }
   .intro {
-    height: 100vh;
+    height: 95vh;
     padding-top: 0;
     padding-bottom: 66px;
   }
   .intro__wrapper {
     padding-top: 50px;
+    height: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .intro__images {
     max-width: 208px;
     max-height: 208px;
+    margin-top: 0;
   }
   .intro__images-1 img {
     max-width: 200px;
@@ -3370,6 +3380,9 @@ main.zindex {
         -ms-flex-align: center;
             align-items: center;
   }
+  .origami__col:nth-child(1) {
+    margin: 50px 0;
+  }
   .origami__slider_item_wrapper {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -3458,6 +3471,11 @@ main.zindex {
   #rocket img {
     max-width: 175px;
     width: 100%;
+  }
+  .services__slider_item {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
 }
 /*# sourceMappingURL=main.css.map */

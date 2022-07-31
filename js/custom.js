@@ -198,18 +198,12 @@ $(window).on('load resize', function() {
             if ($(this).scrollTop() > 1) {
                 header.addClass('header_fixed')
                     //header.addClass('overflow')
-                $('body').css({
-                    paddingTop: hederHeight + 'px',
 
-                })
                 $('main').css('overflow', 'hidden');
             } else {
                 //header.removeClass('overflow')
                 header.removeClass('header_fixed')
-                $('body').css({
-                    paddingTop: 0,
 
-                })
                 $('main').css('overflow', 'initial');
             }
         })
@@ -220,9 +214,7 @@ $(window).on('load resize', function() {
             if ($(this).scrollTop() > 1) {
                 header.addClass('header_fixed')
                     //header.addClass('overflow')
-                $('body').css({
-                    paddingTop: hederHeight + 'px',
-                })
+
                 $('main').css('overflow', 'hidden');
 
                 $('.header__menu ul .has-child .child').css({
@@ -234,9 +226,7 @@ $(window).on('load resize', function() {
             } else {
                 //header.removeClass('overflow')
                 header.removeClass('header_fixed')
-                $('body').css({
-                    paddingTop: 0,
-                })
+
                 $('main').css('overflow', 'initial');
             }
         })

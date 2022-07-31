@@ -17,7 +17,9 @@ body
 	font-weight: 400
 	color: $white
 	background: $blue-black
-
+	padding-top: 110px
+	@media (max-width: 550px)
+		padding-top: 70px
 	&.scroll_disabled
 		overflow-y: hidden
 
@@ -301,13 +303,12 @@ main
 	background-size: cover
 	max-height: 110px
 	height: 100%
-	position: relative
 	z-index: 10
-	
+	position: fixed
+	top: 0
+	left: 0
 	&.header_fixed
-		position: fixed
-		top: 0
-		left: 0
+		
 		background: linear-gradient(90.74deg, rgba(44, 40, 103, 0.2) 8.79%, rgba(41, 38, 99, 0.2) 101.9%)
 		box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2)
 		backdrop-filter: blur(100px)
@@ -628,7 +629,7 @@ main
 				position: absolute
 				left: -20%
 				bottom: 0
-				width: 130%
+				width: 150%
 				height: 100%
 				will-change: transform
 				@media (max-width: 550px)
@@ -647,7 +648,7 @@ main
 				position: absolute
 				left: -20%
 				bottom: 0
-				width: 130%
+				width: 150%
 				height: 100%
 				will-change: transform
 				@media (max-width: 550px)
@@ -961,7 +962,7 @@ main
 //////partners///
 
 .partners
-	background: linear-gradient(180deg, #3267B8 -3.29%, rgba(40, 36, 97, 0) 100%)
+	background: linear-gradient(0deg, #760eba00 0%, #262962 100%)
 	padding-bottom: 150px
 	position: relative
 	padding-top: 500px
@@ -1835,14 +1836,17 @@ main
 				display: flex
 				margin: 0 auto
 	.intro
-		height: 100vh
+		height: 95vh
 		padding-top: 0
 		padding-bottom: 66px
 		&__wrapper
 			padding-top: 50px
+			height: 100%
+			justify-content: space-around
 		&__images
 			max-width: 208px
 			max-height: 208px
+			margin-top: 0
 			&-1
 				img
 					max-width: 200px
@@ -1927,7 +1931,8 @@ main
 			display: flex
 			flex-direction: column
 			align-items: center
-
+			&:nth-child(1)
+				margin: 50px 0
 
 		&__slider
 			&_item
@@ -1999,3 +2004,6 @@ main
 	#rocket img
 		max-width: 175px
 		width: 100%
+
+	.services__slider_item
+		height: fit-content
