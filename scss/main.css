@@ -3408,12 +3408,15 @@ main.zindex {
   }
   .footer {
     max-height: 320px;
+    overflow: hidden;
+    height: 100%;
   }
   .footer__nav {
     display: none;
   }
   .footer__wrapper {
     max-height: 320px;
+    height: 100%;
   }
   .footer__wrapper_top {
     -webkit-box-align: start;
