@@ -18,6 +18,7 @@
     }
 }
 
+@include font('Proxima Nova', normal, 200, '../fonts/proximanova_light.otf');
 @include font('Proxima Nova', normal, 400, '../fonts/proximanova_regular.ttf');
 @include font('Proxima Nova', normal, 700, '../fonts/Proxima Nova Bold.otf');
 @include font('Proxima Nova', normal, 600, '../fonts/Proxima Nova Semibold.otf');

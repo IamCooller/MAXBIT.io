@@ -131,7 +131,7 @@ main
 .Btn
 	width: 100%
 	max-width: 215px
-	height: 54px
+	height: 49px
 	position: relative
 	background: linear-gradient(87.73deg, #FEBB08 -27.23%, #FCEBD1 141.45%)
 	mix-blend-mode: normal
@@ -303,6 +303,7 @@ main
 	height: 100%
 	position: relative
 	z-index: 10
+	
 	&.header_fixed
 		position: fixed
 		top: 0
@@ -406,7 +407,7 @@ main
 					transition: all 0.2s
 .has-child
 	& .child
-		visibility: hidden
+		visibility: hidden !important
 		position: fixed
 		top: 0
 		left: 0
@@ -609,9 +610,9 @@ main
 		width: 100%
 		height: 100%
 		top: -180px
-		background-size: cover
-		z-index: -1
-		right: 0
+		background-size: contain
+		z-index: -7
+		right: -470px
 	&__bg
 		&-1
 			width: 100%
@@ -649,18 +650,43 @@ main
 					left: -40%
 		&-3
 			background: url('../img/intro/pattern.svg')
-			background-size: cover
+			background-size: contain
 			height: 100%
-			background-position: right top
+			background-position: right
 			width: 100%
 			top: 0
 			right: 0
 			will-change: transform
-			height: calc(100vh + 70%)
+			height: 120%
+			max-width: 765px
+			width: 100%
+			background-repeat: no-repeat
+			top: -78px
 			@media (max-width: 550px)
-				background-position-x: center
 				height: 100%
-				
+				background-position: right -61px
+	&__images
+		&-1
+			img
+				display: block
+				margin-left: auto
+		&-2
+			right: 0
+			left: auto !important
+		&-3
+			left: auto !important
+			right: 50px
+			top: -17% !important
+		&-4
+			bottom: 0px
+			left: auto !important
+			top: auto !important
+			right: 100px
+		&-5
+			top: 20% !important
+		&-6
+			left: 25% !important
+			top: 16% !important
 	.parallax__layer
 		position: fixed
 		width: 100%
@@ -675,7 +701,7 @@ main
 		color: $white
 		max-width: 547px
 	&-subtitle
-		font-weight: 400
+		font-weight: 200
 		font-size: 28px
 		line-height: 28px
 		margin-bottom: 40px
@@ -779,6 +805,7 @@ main
 			width: auto
 			height: auto
 			display: block
+			margin-right: 20px
 		.parallax
 			max-width: 210px
 			width: 100%
@@ -789,6 +816,9 @@ main
 			line-height: 30px
 			color: $blue-lightest
 			margin-bottom: 35px
+		&:first-of-type
+			.vantage__item-img
+				margin-right: 0
 .slick-dots
 	display: flex
 	justify-content: center
@@ -817,6 +847,7 @@ main
 
 	&__slider
 		height: fit-content
+		margin-right: -10%
 		&_item
 			height: auto
 			margin: 0 20px
@@ -987,6 +1018,8 @@ main
 	padding: 123px 0 100px
 	background: linear-gradient(180deg, #471E8C 0%, rgba(38, 41, 98, 0) 100%)
 	position: relative
+	.container
+		position: relative
 	&__bg
 		&-1
 			background: #8B00CD
@@ -1029,7 +1062,6 @@ main
 			border-radius: 100%
 	
 	&__list
-		position: absolute
 		width: 100%
 		height: 100%
 		top: 0
@@ -1078,28 +1110,58 @@ main
 			top: 0
 			left: 0
 			transform: translate(12%, 87%)
+			@media (min-width: 1600px)
+				transform: translate(17%, 17%)
+			@media (max-width: 1600px)
+				transform: translate(0%, 22%)
+			@media (max-width: 1400px)
+				transform: translate(-15%, 30%)
 			@media (max-width: 1200px)
-				transform: translate(-10%, 160%)
+				transform: translate(15%, 60%)
+			@media (max-width: 992px)
+				transform: translate(0%, 70%)
 			@media (max-width: 770px)
-				transform: translate(-18%, 130%)
+				transform: translate(-15%, 25%)
+			@media (max-width: 600px)
+				transform: translate(-15%, 10%)
 		&#Egupt
 			position: absolute
-			top: 50%
+			top: 0%
 			right: 50%
 			transform: translate(-55%, -50%)
+			@media (min-width: 1600px)
+				transform: translate(20%, 25%)
+			@media (max-width: 1600px)
+				transform: translate(20%, 30%)
+			@media (max-width: 1400px)
+				transform: translate(18%, 40%)
 			@media (max-width: 1200px)
-				transform: translate(-15%, -45%)
+				transform: translate(22%, 75%)
+			@media (max-width: 992px)
+				transform: translate(20%, 85%)
 			@media (max-width: 770px)
-				transform: translate(-20%, -85%)
+				transform: translate(15%, 30%)
+			@media (max-width: 600px)
+				transform: translate(10%, 20%)
 		&#Kuwait
 			position: absolute
 			right: 50%
 			top: 0
 			transform: translate(85%, 100%)
+			@media (min-width: 1600px)
+				transform: translate(168%, 26%)
+			@media (max-width: 1600px)
+				transform: translate(165%, 30%)
+			@media (max-width: 1400px)
+				transform: translate(154%, 40%)
 			@media (max-width: 1200px)
-				transform: translate(131%, 175%)
+				transform: translate(170%, 70%)
+			@media (max-width: 992px)
+				transform: translate(160%, 85%)
 			@media (max-width: 770px)
-				transform: translate(117%, 133%)
+				transform: translate(150%, 30%)
+			@media (max-width: 600px)
+				transform: translate(145%, 20%)
 ///Footer///
 
 .footer
@@ -1632,7 +1694,34 @@ main
 			margin: auto auto 54px auto
 		&-btn
 			margin: auto
-		
+		&__images
+			&-1
+				img
+					max-width: 250px
+					width: 100%
+			&-2
+				right: -10%
+				img
+					max-width: 140px
+			&-3
+				right: 10px
+				top: -30% !important
+				img
+					max-width: 220px
+			&-4
+				bottom: -50px
+			&-5
+				top: 30% !important
+			&-6
+				left: -10% !important
+				top: 10% !important
+				img
+					max-width: 120px
+			&-7
+				left: -50px !important
+				top: -50px !important
+				img
+					max-width: 140px
 	.vantage
 		&__item
 			flex-direction: column
@@ -1724,8 +1813,9 @@ main
 			margin-left: -25%
 	.header
 		max-height: 65px
+		padding: 20px 0
 		&__wrapper
-			padding: 20px 0
+			padding: 0
 		&__menu
 			display: none
 			&_mobile
@@ -1829,11 +1919,11 @@ main
 			grid-gap: 21px 10px
 			padding: 0 15px
 	.footer
-		max-height: 320px
-		height: 100%
+		height: auto
 		&__nav
 			display: none
 		&__wrapper
+			max-height: 320px
 			&_top
 				align-items: flex-start
 			&_bottom
