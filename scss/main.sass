@@ -926,6 +926,8 @@ main
 	background: linear-gradient(180deg, #760EBA 0%, rgba(38, 41, 98, 1) 100%)
 	
 	padding-bottom: 150px
+	&__col
+		position: relative
 	&__slider
 		height: fit-content
 		&_item
@@ -1673,12 +1675,15 @@ main
 		&::before
 			background-position: right
 		&__images
-			max-width: 420px
+			max-width: 290px
+			max-height: 290px
+			width: 100%
+			height: 100%
 			margin: auto
-			margin-top: 50px
+			margin-bottom: 50px
 		&__wrapper
 			display: flex
-			flex-direction: column
+			flex-direction: column-reverse
 		&-title
 			max-width: 100%
 			text-align: center
@@ -1822,12 +1827,14 @@ main
 				display: flex
 				margin: 0 auto
 	.intro
+		
 		padding-top: 0
 		padding-bottom: 66px
 		&__wrapper
 			padding-top: 50px
 		&__images
-			display: none
+			max-width: 208px
+			max-height: 208px
 		&-title
 			font-size: 28px
 			line-height: 30px
