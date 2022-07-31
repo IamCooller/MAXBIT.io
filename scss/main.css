@@ -792,6 +792,7 @@ main.zindex {
       justify-content: space-around;
   height: 100%;
   margin: auto;
+  padding-bottom: 20px;
 }
 
 .hamburger-menu__nav {
@@ -3446,6 +3447,9 @@ main.zindex {
     font-size: 14px;
     line-height: 21px;
     margin-bottom: 30px;
+  }
+  .callback button.mfp-close::after {
+    left: 20px;
   }
   .office__list {
     position: relative;
