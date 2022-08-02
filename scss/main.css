@@ -102,6 +102,10 @@
   white-space: pre;
 }
 
+.title {
+  line-height: 0.8 !important;
+}
+
 .title::after {
   content: '';
   background-size: cover;
@@ -1349,14 +1353,13 @@ main.zindex {
 
 .intro {
   padding-top: 112px;
-  padding-bottom: 391px;
   position: relative;
 }
 
 .intro::before {
   content: '';
   background: url("../img/intro/blur.svg") no-repeat center right;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   top: -180px;
@@ -1373,6 +1376,7 @@ main.zindex {
   -webkit-transition: .3s all ease-in-out;
   transition: .3s all ease-in-out;
   will-change: transform;
+  position: fixed;
 }
 
 .intro__bg-1::before {
@@ -1402,6 +1406,7 @@ main.zindex {
   will-change: transform;
   -webkit-transition: .3s all ease-in-out;
   transition: .3s all ease-in-out;
+  position: fixed;
 }
 
 .intro__bg-2::before {
@@ -1440,6 +1445,7 @@ main.zindex {
   background-repeat: no-repeat;
   top: -78px;
   will-change: transform;
+  position: fixed;
 }
 
 @media (max-width: 550px) {
@@ -1449,14 +1455,20 @@ main.zindex {
   }
 }
 
+.intro__images {
+  left: -30px;
+  top: 30px;
+}
+
 .intro__images-1 img {
   display: block;
   margin-left: auto;
 }
 
 .intro__images-2 {
-  right: 0;
+  right: -18px;
   left: auto !important;
+  top: -43px !important;
 }
 
 .intro__images-3 {
@@ -1481,6 +1493,11 @@ main.zindex {
   top: 16% !important;
 }
 
+.intro__images-7 {
+  top: -80px !important;
+  left: 90px !important;
+}
+
 .intro .parallax__layer {
   position: fixed;
   width: 100%;
@@ -1503,7 +1520,7 @@ main.zindex {
 .intro-subtitle {
   font-weight: 200;
   font-size: 28px;
-  line-height: 28px;
+  line-height: 35px;
   margin-bottom: 40px;
   max-width: 547px;
   color: #fff;
@@ -1547,7 +1564,7 @@ main.zindex {
 
 .vantage {
   position: relative;
-  padding-bottom: 150px;
+  padding-top: 150px;
 }
 
 .vantage_service {
@@ -1703,8 +1720,6 @@ main.zindex {
 }
 
 .services {
-  background: -webkit-gradient(linear, left top, left bottom, from(#5328A3), to(#26255f));
-  background: linear-gradient(180deg, #5328A3 0%, #26255f 100%);
   padding: 100px 0;
 }
 
@@ -1718,6 +1733,9 @@ main.zindex {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+}
+
+.services__slider .slick-list {
   margin-right: -10%;
 }
 
@@ -1816,8 +1834,6 @@ main.zindex {
 }
 
 .origami {
-  background: -webkit-gradient(linear, left top, left bottom, from(#760EBA), to(#262962));
-  background: linear-gradient(180deg, #760EBA 0%, #262962 100%);
   padding-bottom: 150px;
 }
 
@@ -1853,8 +1869,9 @@ main.zindex {
 
 .origami__text p {
   font-size: 28px;
-  line-height: 30px;
+  line-height: 35px;
   color: #fff;
+  font-weight: 200;
 }
 
 .origami__text p strong {
@@ -1862,9 +1879,11 @@ main.zindex {
   display: block;
 }
 
+.origami__icon {
+  margin-left: -60px;
+}
+
 .partners {
-  background: -webkit-gradient(linear, left bottom, left top, from(#760eba00), to(#262962));
-  background: linear-gradient(0deg, #760eba00 0%, #262962 100%);
   padding-bottom: 150px;
   position: relative;
   padding-top: 500px;
@@ -2011,8 +2030,8 @@ main.zindex {
   max-width: 210px;
   padding: 20px 30px;
   visibility: hidden;
-  -webkit-transition: .3s all;
-  transition: .3s all;
+  -webkit-transition: .5s all ease;
+  transition: .5s all ease;
   border-radius: 10px;
 }
 

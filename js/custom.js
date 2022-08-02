@@ -39,7 +39,7 @@ $('.intro__bg-2').scrollingParallax({
 
 });
  */
-
+/* 
 $(function() {
     window.addEventListener("scroll", function(event) {
 
@@ -55,7 +55,7 @@ $(function() {
         });
     });
 });
-
+ */
 
 // Hover menu
 $(".header__menu a.header__menu-link").on("mouseover", function() {
@@ -309,7 +309,7 @@ $(document).ready(function() {
                 };
 
                 charming(this.DOM.title.word);
-                this.DOM.title.letters = Array.from(this.DOM.title.word.querySelectorAll('span')).sort(() => 0.5 - Math.random());
+                this.DOM.title.letters = Array.from(this.DOM.title.word.querySelectorAll('span'));
                 this.DOM.title.letters.forEach(letter => letter.dataset.initial = letter.innerHTML);
                 this.lettersTotal = this.DOM.title.letters.length;
                 observer.observe(this.DOM.el);
@@ -354,7 +354,8 @@ $(document).ready(function() {
 
             observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    if (entry.intersectionRatio > 0.5) {
+                    console.log(entry.intersectionRatio)
+                    if (entry.intersectionRatio > 0.2) {
                         const newcurrent = sections.indexOf(entry.target);
                         if (newcurrent === current) return;
                         const direction = newcurrent > current;
@@ -366,7 +367,7 @@ $(document).ready(function() {
                     }
                 });
             }, {
-                threshold: 0.5
+                threshold: 0.2
             });
 
             sections.forEach(section => allentries.push(new Entry(section)));
@@ -389,10 +390,10 @@ $(document).ready(function() {
                 FirstBlock.style.bottom = '6vmax';
             }, {
                 root: null,
-                threshold: 0.5, // set offset 0.1 means trigger if atleast 10% of element in viewport
+                threshold: 0.2, // set offset 0.1 means trigger if atleast 10% of element in viewport
             })
-            if (document.querySelector(".intro") !== null) {
-                let InnerBlock = document.querySelector(".intro");
+            if (document.querySelector(".mainblock") !== null) {
+                let InnerBlock = document.querySelector(".mainblock");
                 observer.observe(InnerBlock);
             }
 
@@ -484,13 +485,14 @@ $('[data-svg]').each(function() {
                 delay: randomIntFromInterval(1, 3),
                 repeatDelay: randomIntFromInterval(0, 1)
             });
-
-            pinTimeline.
-            to(value.querySelector('.Pin-back'), 3, {
-                scale: 50,
-                transformOrigin: 'center center',
-                opacity: 0
-            });
+            if (value.querySelector('.Pin-back')) {
+                pinTimeline.
+                to(value.querySelector('.Pin-back'), 3, {
+                    scale: 50,
+                    transformOrigin: 'center center',
+                    opacity: 0
+                });
+            }
         });
         const $pin = document.querySelectorAll('.office__item');
         $('#Map [data-location]')

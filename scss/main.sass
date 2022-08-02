@@ -602,13 +602,13 @@ main
 //Intro///
 .intro
 	padding-top: 112px
-	padding-bottom: 391px
+	
 	position: relative
 	
 	&::before
 		content: ''
 		background: url('../img/intro/blur.svg') no-repeat center right
-		position: absolute
+		position: fixed
 		width: 100%
 		height: 100%
 		top: -180px
@@ -623,6 +623,7 @@ main
 			height: 100%
 			transition: .3s all ease-in-out
 			will-change: transform
+			position: fixed
 			&::before
 				content: ''
 				background: linear-gradient(175.3deg, #592FA4 -40.1%, #26255F 90.46%)
@@ -642,6 +643,7 @@ main
 			bottom: -50%
 			will-change: transform
 			transition: .3s all ease-in-out
+			position: fixed
 			&::before
 				content: ''
 				background: linear-gradient(164.18deg, rgba(65, 73, 174, 0.3) -26.22%, rgba(98, 23, 168, 0.3) 28.55%, rgba(38, 37, 95, 0.3) 81.48%)
@@ -670,17 +672,21 @@ main
 			background-repeat: no-repeat
 			top: -78px
 			will-change: transform
+			position: fixed
 			@media (max-width: 550px)
 				height: 100%
 				background-position: right -61px
 	&__images
+		left: -30px
+		top: 30px
 		&-1
 			img
 				display: block
 				margin-left: auto
 		&-2
-			right: 0
+			right: -18px
 			left: auto !important
+			top: -43px !important
 		&-3
 			left: auto !important
 			right: 50px
@@ -695,6 +701,10 @@ main
 		&-6
 			left: 25% !important
 			top: 16% !important
+		&-7
+			top: -80px !important
+			left: 90px !important
+    		
 	.parallax__layer
 		position: fixed
 		width: 100%
@@ -711,7 +721,7 @@ main
 	&-subtitle
 		font-weight: 200
 		font-size: 28px
-		line-height: 28px
+		line-height: 35px
 		margin-bottom: 40px
 		max-width: 547px
 		color: $white
@@ -747,7 +757,8 @@ main
 
 .vantage
 	position: relative
-	padding-bottom: 150px
+
+	padding-top: 150px
 	&_service
 		background: linear-gradient(180deg, #760EBA 0%, rgba(38, 41, 98, 0) 100%)
 		padding: 162px 0 255px 
@@ -850,13 +861,15 @@ main
 //////services/////
 
 .services
-	background: linear-gradient(180deg, #5328A3 0%, rgba(38, 37, 95, 1) 100%)
+	//background: linear-gradient(180deg, #5328A3 0%, rgba(38, 37, 95, 1) 100%)
 	padding: 100px 0
 	&__wrapper
 		height: fit-content
 	&__slider
 		height: fit-content
-		margin-right: -10%
+		
+		.slick-list
+			margin-right: -10%
 		&_item
 			height: auto
 			margin: 0 20px
@@ -932,7 +945,7 @@ main
 ////Origami///
 
 .origami
-	background: linear-gradient(180deg, #760EBA 0%, rgba(38, 41, 98, 1) 100%)
+	//background: linear-gradient(180deg, #760EBA 0%, rgba(38, 41, 98, 1) 100%)
 	
 	padding-bottom: 150px
 	&__col
@@ -953,17 +966,20 @@ main
 		margin-bottom: 42px
 		p
 			font-size: 28px
-			line-height: 30px
+			line-height: 35px
 			color: $white
+			font-weight: 200
 			strong
 				margin-bottom: 30px
 				display: block
+	&__icon
+		margin-left: -60px
 	
 
 //////partners///
 
 .partners
-	background: linear-gradient(0deg, #760eba00 0%, #262962 100%)
+	//background: linear-gradient(0deg, #760eba00 0%, #262962 100%)
 	padding-bottom: 150px
 	position: relative
 	padding-top: 500px
@@ -1071,8 +1087,6 @@ main
 			width: 50%
 			height: 50%
 			border-radius: 100%
-	
-	&__list
 	&__item
 		background: rgba(255, 255, 255, 0.5)
 		backdrop-filter: blur(50px)
@@ -1080,7 +1094,7 @@ main
 		padding: 20px 30px
 		visibility: hidden
 		
-		transition: .3s all
+		transition: .5s all ease
 		::before
 			content: ''
 			margin: -35px
