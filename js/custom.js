@@ -498,10 +498,11 @@ $('[data-svg]').each(function() {
         $('#Map [data-location]')
             .on('mouseover', function(e) {
                 const location = this.getAttribute('data-location');
-                console.log(e)
-                forEach($pin, function(index, value) {
-                    if (value.getAttribute('location') == location) {
 
+                forEach($pin, function(index, value) {
+                    console.log(getComputedStyle(value).visibility == 'hidden')
+                    if (value.getAttribute('location') == location && getComputedStyle(value).visibility == 'hidden') {
+                        value.style.opacity = '1'
                         value.style.visibility = 'visible';
                     }
                 });
@@ -510,7 +511,7 @@ $('[data-svg]').each(function() {
                 const location = this.getAttribute('data-location');
                 forEach($pin, function(index, value) {
                     if (value.getAttribute('location') == location) {
-
+                        value.style.opacity = '0'
                         value.style.visibility = 'hidden';
                     }
                 });
