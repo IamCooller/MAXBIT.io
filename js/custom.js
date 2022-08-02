@@ -146,7 +146,7 @@ $(document).ready(function() {
 $('.services__slider').slick({
     infinite: false,
     slidesToShow: 5,
-    slidesToScroll: 1,
+    slidesToScroll: 5,
     arrows: false,
     dots: true,
     responsive: [{

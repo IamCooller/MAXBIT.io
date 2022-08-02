@@ -1641,7 +1641,7 @@ main.zindex {
 .vantage__wrapper {
   display: -ms-grid;
   display: grid;
-  grid-gap: 120px 16px;
+  grid-gap: 60px 16px;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   padding-bottom: 170px;
@@ -1664,10 +1664,11 @@ main.zindex {
   height: auto;
   display: block;
   margin-right: 20px;
+  max-width: 150px;
 }
 
 .vantage__item .parallax {
-  max-width: 210px;
+  max-width: 150px;
   width: 100%;
 }
 
@@ -1907,7 +1908,7 @@ main.zindex {
 .partners__clouds-first::before {
   content: '';
   display: block;
-  background: url("../img/partners/cloud2.png");
+  background: url("../img/partners/cloud2.svg");
   -webkit-animation: wave 4s 0.1s infinite linear;
           animation: wave 4s 0.1s infinite linear;
   background-size: auto 120%;
@@ -1929,7 +1930,7 @@ main.zindex {
   content: '';
   display: block;
   background-repeat-x: repeat;
-  background: url("../img/partners/cloud1.png");
+  background: url("../img/partners/cloud1.svg");
   background-size: auto 120%;
   -webkit-animation: wave 4s 0.1s infinite linear;
           animation: wave 4s 0.1s infinite linear;
