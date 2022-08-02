@@ -219,30 +219,30 @@ circle.Pin-front {
  transform: rotateZ(30deg) translate3d(0,10%,0) rotateZ(-30deg) */
 @-webkit-keyframes wave {
   0% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
   }
   50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-            transform: scale3d(1.05, 1.05, 1.05);
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
   }
   to {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
   }
 }
 @keyframes wave {
   0% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
   }
   50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-            transform: scale3d(1.05, 1.05, 1.05);
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
   }
   to {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
   }
 }
 
