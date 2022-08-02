@@ -495,7 +495,7 @@ $('[data-svg]').each(function() {
             }
         });
         const $pin = document.querySelectorAll('.office__item');
-        $('#Map [data-location]')
+        $('.office-country [data-location]')
             .on('mouseover', function(e) {
                 const location = this.getAttribute('data-location');
 

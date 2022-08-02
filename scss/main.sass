@@ -1046,6 +1046,84 @@ main
 	position: relative
 	.container
 		position: relative
+	&-country
+		position: absolute
+		width: 100%
+		height: 100%
+		span
+			position: absolute
+			width: 12px
+			height: 12px
+			background: #d95125
+			border-radius: 100px
+			background: #DC5224
+			mix-blend-mode: normal
+			box-shadow: 0px 1px 6px #90282a
+			z-index: 1
+			@media (max-width: 550px)
+					visibility: hidden
+			&#USA
+				top: 195px
+				left: 230px
+				@media (max-width: 1600px)
+					left: 190px
+					top: 209px
+    				
+				@media (max-width: 1400px)
+					left: 164px
+					top: 225px
+				@media (max-width: 1200px)
+					left: 15%
+					top: 34%		
+				@media (max-width: 992px)
+					top: 36%
+				@media (max-width: 830px)
+					top: 38%
+				@media (max-width: 770px)
+					top: 33%
+
+			&#Egupt
+				right: 669px
+				top: 217px
+				@media (max-width: 1600px)
+					right: 584px
+					top: 230px
+					
+					
+    			
+				@media (max-width: 1400px)
+					top: 242px
+					right: 508px
+    				
+				@media (max-width: 1100px)
+					top: 37%
+					right: 47%
+    				
+				@media (max-width: 992px)
+					top: 38%
+				@media (max-width: 830px)
+					top: 40%
+				@media (max-width: 770px)
+					top: 36%
+				
+			&#Kuwait
+				top: 212px
+				right: 574px
+				@media (max-width: 1600px)
+					top: 224px
+					right: 500px
+				@media (max-width: 1400px)
+					right: 436px
+					top: 240px
+				@media (max-width: 1100px)
+					right: 40.5%
+					top: 36.5%
+				@media (max-width: 992px)
+    				top: 37.5%
+				@media (max-width: 830px)
+					top: 39.5%
+				@media (max-width: 770px)
+					top: 35.5%
 	&__bg
 		&-1
 			background: #8B00CD
