@@ -354,7 +354,7 @@ $(document).ready(function() {
 
             observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    console.log(entry.intersectionRatio)
+
                     if (entry.intersectionRatio > 0.2) {
                         const newcurrent = sections.indexOf(entry.target);
                         if (newcurrent === current) return;
@@ -500,7 +500,7 @@ $('[data-svg]').each(function() {
                 const location = this.getAttribute('data-location');
 
                 forEach($pin, function(index, value) {
-                    console.log(getComputedStyle(value).visibility == 'hidden')
+
                     if (value.getAttribute('location') == location && getComputedStyle(value).visibility == 'hidden') {
                         value.style.opacity = '1'
                         value.style.visibility = 'visible';
