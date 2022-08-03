@@ -39,7 +39,7 @@ $('.intro__bg-2').scrollingParallax({
 
 });
  */
-/* 
+
 $(function() {
     window.addEventListener("scroll", function(event) {
 
@@ -55,7 +55,7 @@ $(function() {
         });
     });
 });
- */
+
 
 // Hover menu
 $(".header__menu a.header__menu-link").on("mouseover", function() {

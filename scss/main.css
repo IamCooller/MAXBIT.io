@@ -1726,6 +1726,8 @@ main.zindex {
 }
 
 .services {
+  background: -webkit-gradient(linear, left top, left bottom, from(#5328A3), to(#26255f));
+  background: linear-gradient(180deg, #5328A3 0%, #26255f 100%);
   padding: 100px 0;
 }
 
@@ -1840,6 +1842,8 @@ main.zindex {
 }
 
 .origami {
+  background: -webkit-gradient(linear, left top, left bottom, from(#760EBA), to(#262962));
+  background: linear-gradient(180deg, #760EBA 0%, #262962 100%);
   padding-bottom: 150px;
 }
 
@@ -1890,6 +1894,8 @@ main.zindex {
 }
 
 .partners {
+  background: -webkit-gradient(linear, left bottom, left top, from(#760eba00), to(#262962));
+  background: linear-gradient(0deg, #760eba00 0%, #262962 100%);
   padding-bottom: 150px;
   position: relative;
   padding-top: 500px;
@@ -3026,6 +3032,13 @@ main.zindex {
       grid-template-columns: repeat(2, 1fr);
 }
 
+.ProductMain-text {
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 26px;
+  color: #fff;
+}
+
 .ProductMain-title {
   font-weight: 700;
   font-size: 54px;
@@ -3036,7 +3049,33 @@ main.zindex {
 }
 
 .ProductMain-btn {
-  max-width: 285px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  padding: 12px 20px;
+}
+
+.ProductMain__present {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 90%;
+}
+
+.ProductMain__present_item {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.ProductMain__present_item-1 {
+  left: 30px;
+  top: 120px;
+}
+
+.ProductMain__present_item-3 {
+  right: -25px;
+  top: 49%;
 }
 
 @media (max-width: 1400px) {
