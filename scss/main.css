@@ -2437,6 +2437,7 @@ main.zindex {
 .footer {
   background: -webkit-gradient(linear, left top, left bottom, from(#471E8C), to(rgba(38, 41, 98, 0)));
   background: linear-gradient(180deg, #471E8C 0%, rgba(38, 41, 98, 0) 100%);
+  max-height: 300px;
 }
 
 .footer__wrapper {
