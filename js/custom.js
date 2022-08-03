@@ -581,3 +581,19 @@ $('#rocket').waypoint(function(dir) {
 }, {
     offset: 50
 })
+
+
+
+//Video Play
+
+jQuery(document).ready(function($) {
+    (function initPlayVideo() {
+        let $videoCover = $(".ProductVideo__cover");
+        let $videoPlayerIframe = $(".ProductVideo__player iframe");
+
+        $videoCover.on("click", function() {
+            $videoCover.fadeOut();
+            $videoPlayerIframe[0].src += "&autoplay=1";
+        });
+    })();
+});

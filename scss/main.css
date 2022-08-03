@@ -1371,10 +1371,10 @@ main.zindex {
   display: block;
   bottom: -100%;
   height: 100%;
-  -webkit-transition: .3s all ease-in-out;
-  transition: .3s all ease-in-out;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   will-change: transform;
-  position: fixed;
+  position: absolute;
 }
 
 .intro__bg-1::before {
@@ -1402,9 +1402,9 @@ main.zindex {
   display: block;
   bottom: -50%;
   will-change: transform;
-  -webkit-transition: .3s all ease-in-out;
-  transition: .3s all ease-in-out;
-  position: fixed;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  position: absolute;
 }
 
 .intro__bg-2::before {
@@ -1438,12 +1438,12 @@ main.zindex {
   height: 120%;
   max-width: 765px;
   width: 100%;
-  -webkit-transition: .3s all ease-in-out;
-  transition: .3s all ease-in-out;
   background-repeat: no-repeat;
   top: -78px;
   will-change: transform;
-  position: fixed;
+  position: absolute;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 
 @media (max-width: 550px) {
@@ -3076,6 +3076,56 @@ main.zindex {
 .ProductMain__present_item-3 {
   right: -25px;
   top: 49%;
+}
+
+.ProductVideo {
+  background: url("../img/products/video_bg.png") no-repeat center;
+  background-size: cover;
+  padding: 150px 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.ProductVideo-title {
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.ProductVideo__container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.ProductVideo__player {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.ProductVideo__player iframe,
+.ProductVideo__player object,
+.ProductVideo__player embed {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
 }
 
 @media (max-width: 1400px) {
