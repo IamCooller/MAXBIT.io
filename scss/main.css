@@ -3780,6 +3780,8 @@ main.zindex {
   .footer__wrapper {
     max-height: 320px;
     height: auto;
+    -ms-flex-wrap: inherit;
+        flex-wrap: inherit;
   }
   .footer__wrapper_top {
     -webkit-box-align: start;
