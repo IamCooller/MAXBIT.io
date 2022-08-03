@@ -3830,6 +3830,7 @@ main.zindex {
     height: -moz-fit-content;
     height: fit-content;
     max-width: 100%;
+    opacity: 1 !important;
   }
   .office .slick-dots {
     padding-top: 42px;
