@@ -3770,17 +3770,12 @@ main.zindex {
     grid-gap: 21px 10px;
     padding: 0 15px;
   }
-  .footer {
-    max-height: 320px;
-    overflow: hidden;
-    height: 100%;
-  }
   .footer__nav {
     display: none;
   }
   .footer__wrapper {
     max-height: 320px;
-    height: 100%;
+    height: auto;
   }
   .footer__wrapper_top {
     -webkit-box-align: start;

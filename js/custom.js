@@ -526,7 +526,7 @@ $('[data-svg]').each(function() {
 $(document).ready(function() {
     const $moreText = () => (`<span class="more_text">....more</span>`);
 
-    $('.services__wrapper .services__slider_item').find('.services__slider_item-text:first').append($moreText);
+    $('.hiddeText_container').find('p:first').append($moreText);
 
     $('.more_text').on('click', function() {
         $(this).parent().parent().find('.hidden').css('max-height', '100%');
