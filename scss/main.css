@@ -3773,6 +3773,10 @@ main.zindex {
   .footer__nav {
     display: none;
   }
+  .footer-logo {
+    max-height: 25px;
+    height: 100%;
+  }
   .footer__wrapper {
     max-height: 320px;
     height: auto;
@@ -3782,6 +3786,10 @@ main.zindex {
         -ms-flex-align: start;
             align-items: flex-start;
     max-height: 366px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
   }
   .footer__wrapper_bottom {
     margin-top: 30px;
