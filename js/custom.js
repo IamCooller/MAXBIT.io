@@ -593,6 +593,10 @@ jQuery(document).ready(function($) {
 
         $videoCover.on("click", function() {
             $videoCover.fadeOut();
+            $(".ProductVideo__player").css({
+                opacity: 1,
+                visibility: "visible"
+            });
             $videoPlayerIframe[0].src += "&autoplay=1";
         });
     })();

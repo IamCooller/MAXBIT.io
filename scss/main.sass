@@ -399,7 +399,7 @@ main
 					transition: all 0.2s
 .has-child
 	& .child
-		visibility: hidden 
+		visibility: hidden !important
 		position: fixed
 		top: 0
 		left: 0
@@ -959,7 +959,7 @@ main
 .origami
 	background: linear-gradient(180deg, #760EBA 0%, rgba(38, 41, 98, 1) 100%)
 	
-	padding-bottom: 150px
+	padding-bottom: 30px
 	&__col
 		position: relative
 	&__slider
@@ -1001,7 +1001,7 @@ main
 		top: 0
 		left: 0
 		width: 100%
-		height: 100%
+		height: 110%
 		&-first
 			height: 100%
 			width: 250%
@@ -1062,79 +1062,91 @@ main
 		width: 100%
 		height: 100%
 		span
+			width: 20px
+			height: 20px
+			background: none
 			position: absolute
-			width: 12px
-			height: 12px
-			background: #d95125
-			border-radius: 100px
-			background: #DC5224
-			mix-blend-mode: normal
-			box-shadow: 0px 1px 6px #90282a
+			display: flex
+			justify-content: center
+			align-items: center
 			z-index: 1
+			cursor: pointer
+			&::after
+				content: ''
+				position: absolute
+
+				width: 12px
+				height: 12px
+				background: #d95125
+				border-radius: 100px
+				background: #DC5224
+				mix-blend-mode: normal
+				box-shadow: 0px 1px 6px #90282a
 			@media (max-width: 550px)
 					visibility: hidden
 			&#USA
-				top: 195px
-				left: 230px
+				top: 191px
+				left: 226px
 				@media (max-width: 1600px)
-					left: 190px
-					top: 209px
+					left: 186px
+					top: 205px
     				
 				@media (max-width: 1400px)
-					left: 164px
-					top: 225px
+					left: 160px
+					top: 221px
 				@media (max-width: 1200px)
-					left: 15%
-					top: 34%		
+					left: 14.8%
+					top: 33.5%		
 				@media (max-width: 992px)
-					top: 36%
+					top: 35%
 				@media (max-width: 830px)
-					top: 38%
+					top: 36%
 				@media (max-width: 770px)
-					top: 33%
+					top: 32%
+					left: 14%
 
 			&#Egupt
-				right: 668px
-				top: 217px
+				right: 664px
+				top: 213px
 				@media (max-width: 1600px)
-					right: 584px
-					top: 230px
+					right: 580px
+					top: 226px
 					
 					
     			
 				@media (max-width: 1400px)
-					top: 242px
-					right: 508px
+					top: 238px
+					right: 504px
     				
 				@media (max-width: 1100px)
-					top: 37%
-					right: 47%
+					top: 35.8%
+					right: 46.7%
     				
 				@media (max-width: 992px)
-					top: 38%
+					top: 37.2%
 				@media (max-width: 830px)
-					top: 40%
+					top: 38.2%
 				@media (max-width: 770px)
-					top: 36%
+					top: 35%
 				
 			&#Kuwait
-				top: 212px
-				right: 574px
+				top: 208px
+				right: 570px
 				@media (max-width: 1600px)
-					top: 224px
-					right: 500px
+					top: 220px
+					right: 496px
 				@media (max-width: 1400px)
-					right: 436px
-					top: 240px
+					right: 430px
+					top: 236px
 				@media (max-width: 1100px)
-					right: 40.5%
-					top: 36.5%
+					right: 39.9%
+					top: 35.2%
 				@media (max-width: 992px)
-    				top: 37.5%
+    				top: 36.8%
 				@media (max-width: 830px)
-					top: 39.5%
+					top: 37.8%
 				@media (max-width: 770px)
-					top: 35.5%
+					top: 34.5%
 	&__bg
 		&-1
 			background: #8B00CD
@@ -1653,12 +1665,17 @@ main
 		position: relative
 		width: 100%
 		height: 100%
-		display: block
+		display: flex
+		align-items: center
+		justify-content: center
 	&__player
 		position: relative
 		overflow: hidden
-		height: 0
-		padding-bottom: 56.25%
+		height: 100%
+		width: 100%
+		opacity: 0
+		visibility: hidden
+		transition: .5s all
 		& iframe,
 		& object,
 		& embed
@@ -1668,10 +1685,27 @@ main
 			height: 100%
 			width: 100%
 	&__cover
-	position: absolute
-	top: 50%
-	transform: translateY(-50%)
-	cursor: pointer
+		cursor: pointer
+		position: absolute
+		img
+			position: relative
+		&::before
+			content: ''
+			position: absolute
+			background: linear-gradient(241.28deg, rgba(255, 163, 97, 0.4) 3.79%, rgba(253, 34, 34, 0.4) 98.33%)
+			mix-blend-mode: normal
+			filter: blur(13.1042px)
+			border-radius: 100px
+			width: 100%
+			height: 100%
+			bottom: -7.27px
+			left: 0
+			right: 0
+			transition: .3s all ease-in-out
+			opacity: 0
+		&:hover
+			&::before
+				opacity: 1
 ///1400px///
 @media (max-width: 1400px)
 	.header

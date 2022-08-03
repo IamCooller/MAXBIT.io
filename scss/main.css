@@ -1011,7 +1011,7 @@ main.zindex {
 }
 
 .has-child .child {
-  visibility: hidden;
+  visibility: hidden !important;
   position: fixed;
   top: 0;
   left: 0;
@@ -1844,7 +1844,7 @@ main.zindex {
 .origami {
   background: -webkit-gradient(linear, left top, left bottom, from(#760EBA), to(#262962));
   background: linear-gradient(180deg, #760EBA 0%, #262962 100%);
-  padding-bottom: 150px;
+  padding-bottom: 30px;
 }
 
 .origami__col {
@@ -1907,7 +1907,7 @@ main.zindex {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 110%;
 }
 
 .partners__clouds-first {
@@ -1991,6 +1991,25 @@ main.zindex {
 }
 
 .office-country span {
+  width: 20px;
+  height: 20px;
+  background: none;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.office-country span::after {
+  content: '';
   position: absolute;
   width: 12px;
   height: 12px;
@@ -2000,7 +2019,6 @@ main.zindex {
   mix-blend-mode: normal;
   -webkit-box-shadow: 0px 1px 6px #90282a;
           box-shadow: 0px 1px 6px #90282a;
-  z-index: 1;
 }
 
 @media (max-width: 550px) {
@@ -2010,134 +2028,135 @@ main.zindex {
 }
 
 .office-country span#USA {
-  top: 195px;
-  left: 230px;
+  top: 191px;
+  left: 226px;
 }
 
 @media (max-width: 1600px) {
   .office-country span#USA {
-    left: 190px;
-    top: 209px;
+    left: 186px;
+    top: 205px;
   }
 }
 
 @media (max-width: 1400px) {
   .office-country span#USA {
-    left: 164px;
-    top: 225px;
+    left: 160px;
+    top: 221px;
   }
 }
 
 @media (max-width: 1200px) {
   .office-country span#USA {
-    left: 15%;
-    top: 34%;
+    left: 14.8%;
+    top: 33.5%;
   }
 }
 
 @media (max-width: 992px) {
   .office-country span#USA {
-    top: 36%;
+    top: 35%;
   }
 }
 
 @media (max-width: 830px) {
   .office-country span#USA {
-    top: 38%;
+    top: 36%;
   }
 }
 
 @media (max-width: 770px) {
   .office-country span#USA {
-    top: 33%;
+    top: 32%;
+    left: 14%;
   }
 }
 
 .office-country span#Egupt {
-  right: 668px;
-  top: 217px;
+  right: 664px;
+  top: 213px;
 }
 
 @media (max-width: 1600px) {
   .office-country span#Egupt {
-    right: 584px;
-    top: 230px;
+    right: 580px;
+    top: 226px;
   }
 }
 
 @media (max-width: 1400px) {
   .office-country span#Egupt {
-    top: 242px;
-    right: 508px;
+    top: 238px;
+    right: 504px;
   }
 }
 
 @media (max-width: 1100px) {
   .office-country span#Egupt {
-    top: 37%;
-    right: 47%;
+    top: 35.8%;
+    right: 46.7%;
   }
 }
 
 @media (max-width: 992px) {
   .office-country span#Egupt {
-    top: 38%;
+    top: 37.2%;
   }
 }
 
 @media (max-width: 830px) {
   .office-country span#Egupt {
-    top: 40%;
+    top: 38.2%;
   }
 }
 
 @media (max-width: 770px) {
   .office-country span#Egupt {
-    top: 36%;
+    top: 35%;
   }
 }
 
 .office-country span#Kuwait {
-  top: 212px;
-  right: 574px;
+  top: 208px;
+  right: 570px;
 }
 
 @media (max-width: 1600px) {
   .office-country span#Kuwait {
-    top: 224px;
-    right: 500px;
+    top: 220px;
+    right: 496px;
   }
 }
 
 @media (max-width: 1400px) {
   .office-country span#Kuwait {
-    right: 436px;
-    top: 240px;
+    right: 430px;
+    top: 236px;
   }
 }
 
 @media (max-width: 1100px) {
   .office-country span#Kuwait {
-    right: 40.5%;
-    top: 36.5%;
+    right: 39.9%;
+    top: 35.2%;
   }
 }
 
 @media (max-width: 992px) {
   .office-country span#Kuwait {
-    top: 37.5%;
+    top: 36.8%;
   }
 }
 
 @media (max-width: 830px) {
   .office-country span#Kuwait {
-    top: 39.5%;
+    top: 37.8%;
   }
 }
 
 @media (max-width: 770px) {
   .office-country span#Kuwait {
-    top: 35.5%;
+    top: 34.5%;
   }
 }
 
@@ -3082,11 +3101,6 @@ main.zindex {
   background: url("../img/products/video_bg.png") no-repeat center;
   background-size: cover;
   padding: 150px 0;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  cursor: pointer;
 }
 
 .ProductVideo-title {
@@ -3108,14 +3122,26 @@ main.zindex {
   position: relative;
   width: 100%;
   height: 100%;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .ProductVideo__player {
   position: relative;
   overflow: hidden;
-  height: 0;
-  padding-bottom: 56.25%;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .5s all;
+  transition: .5s all;
 }
 
 .ProductVideo__player iframe,
@@ -3126,6 +3152,37 @@ main.zindex {
   top: 0;
   height: 100%;
   width: 100%;
+}
+
+.ProductVideo__cover {
+  cursor: pointer;
+  position: absolute;
+}
+
+.ProductVideo__cover img {
+  position: relative;
+}
+
+.ProductVideo__cover::before {
+  content: '';
+  position: absolute;
+  background: linear-gradient(241.28deg, rgba(255, 163, 97, 0.4) 3.79%, rgba(253, 34, 34, 0.4) 98.33%);
+  mix-blend-mode: normal;
+  -webkit-filter: blur(13.1042px);
+          filter: blur(13.1042px);
+  border-radius: 100px;
+  width: 100%;
+  height: 100%;
+  bottom: -7.27px;
+  left: 0;
+  right: 0;
+  -webkit-transition: .3s all ease-in-out;
+  transition: .3s all ease-in-out;
+  opacity: 0;
+}
+
+.ProductVideo__cover:hover::before {
+  opacity: 1;
 }
 
 @media (max-width: 1400px) {
