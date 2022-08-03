@@ -1498,3 +1498,99 @@ main.zindex {
     width: 100%;
     z-index: -2;
 }
+
+.intro__wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.intro-title {
+    margin-bottom: 40px;
+    color: #fff;
+    max-width: 547px;
+}
+
+.intro-subtitle {
+    font-weight: 200;
+    font-size: 28px;
+    line-height: 35px;
+    margin-bottom: 40px;
+    max-width: 547px;
+    color: #fff;
+}
+
+.intro-list {
+    margin-bottom: 60px;
+}
+
+.intro-list li {
+    position: relative;
+    color: #fff;
+    font-weight: 400;
+    font-size: 30px;
+    padding-left: 72px;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.intro-list li::before {
+    content: '';
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    left: 0;
+    top: -5px;
+    background-size: cover !important;
+}
+
+.intro-list li:nth-of-type(1)::before {
+    background: no-repeat center url("../img/mat/blue.svg");
+}
+
+.intro-list li:nth-of-type(2)::before {
+    background: no-repeat center url("../img/mat/red.svg");
+}
+
+.intro-list li:nth-of-type(3)::before {
+    background: no-repeat center url("../img/mat/yellow.svg");
+}
+
+.vantage {
+    position: relative;
+    padding-top: 150px;
+}
+
+.vantage_service {
+    background: -webkit-gradient(linear, left top, left bottom, from(#760EBA), to(rgba(38, 41, 98, 0)));
+    background: linear-gradient(180deg, #760EBA 0%, rgba(38, 41, 98, 0) 100%);
+    padding: 162px 0 255px;
+}
+
+.vantage__bg-1 {
+    background: rgba(139, 0, 205, 0.7);
+    -webkit-filter: blur(148.578px);
+    filter: blur(148.578px);
+    -webkit-transform: rotate(15.6deg);
+    transform: rotate(15.6deg);
+    position: absolute;
+    z-index: -1;
+    width: 50%;
+    height: 50%;
+    top: 0;
+}
+
+.vantage__bg-2 {
+    background: rgba(27, 164, 216, 0.7);
+    -webkit-filter: blur(308.578px);
+    filter: blur(308.578px);
+    -webkit-transform: rotate(30.6deg);
+    transform: rotate(30.6deg);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    width: 30%;
+    height: 40%;
+}
