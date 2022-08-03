@@ -2469,8 +2469,16 @@ main.zindex {
 .footer-logo {
   width: 100%;
   max-width: 130px;
+  height: auto !important;
   max-height: 27px;
   margin-top: -100px;
+}
+
+.footer-logo img {
+  width: 100%;
+  max-width: 130px;
+  height: auto !important;
+  max-height: 27px;
 }
 
 .footer__nav {
