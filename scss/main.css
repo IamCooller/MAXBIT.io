@@ -4417,6 +4417,7 @@ main.zindex {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+    position: relative;
   }
   .footer__wrapper_bottom {
     margin-top: 30px;
@@ -4427,6 +4428,11 @@ main.zindex {
   }
   .footer__contacts-title {
     display: none;
+  }
+  .footer__contacts_socials {
+    position: absolute;
+    left: 0;
+    bottom: 0;
   }
   .callback {
     max-height: 100%;
