@@ -185,6 +185,21 @@ $(window).on('load resize', function() {
             slidesToScroll: 1,
             arrows: false
         });
+        $('.ProductWhy__wrapper:not(.slick-initialized)').slick({
+            dots: true,
+            slidesToShow: 2,
+            infinite: false,
+            slidesToScroll: 1,
+            arrows: false
+        });
+
+        $('.ProductFeatures__wrapper:not(.slick-initialized)').slick({
+            dots: true,
+            slidesToShow: 2,
+            infinite: false,
+            slidesToScroll: 1,
+            arrows: false
+        });
         $('.office__list:not(.slick-initialized)').slick({
             dots: true,
             slidesToShow: 1,
@@ -194,6 +209,7 @@ $(window).on('load resize', function() {
             autoplay: true,
             autoplaySpeed: 2000,
         });
+
         $(window).scroll(function() {
             if ($(this).scrollTop() > 1) {
                 header.addClass('header_fixed')
@@ -208,7 +224,10 @@ $(window).on('load resize', function() {
             }
         })
     } else {
+
+        $(".ProductWhy__wrapper.slick-initialized").slick("unslick");
         $(".vantage__wrapper.slick-initialized").slick("unslick");
+        $(".ProductFeatures__wrapper.slick-initialized").slick("unslick");
         $(".office__list.slick-initialized").slick("unslick");
         $(window).scroll(function() {
             if ($(this).scrollTop() > 1) {
@@ -315,6 +334,7 @@ $(document).ready(function() {
                 observer.observe(this.DOM.el);
             }
             enter(direction = 'down') {
+
                 this.DOM.title.word.style.opacity = 1;
 
                 this.timeouts = [];
@@ -347,15 +367,20 @@ $(document).ready(function() {
         let current = -1;
         let allentries = [];
         const sections = Array.from(document.querySelectorAll('.content__section'));
-
+        let content__text = document.querySelectorAll('.content__text');
 
         if ('IntersectionObserver' in window) {
             document.body.classList.add('ioapi');
 
             observer = new IntersectionObserver((entries) => {
+
                 entries.forEach(entry => {
 
-                    if (entry.intersectionRatio > 0.2) {
+                    if (entry.intersectionRatio > 0.1) {
+                        for (item of document.querySelectorAll(".content__text")) {
+                            item.style.left = '0';
+                            item.style.visibility = 'visible';
+                        }
                         const newcurrent = sections.indexOf(entry.target);
                         if (newcurrent === current) return;
                         const direction = newcurrent > current;
@@ -364,10 +389,12 @@ $(document).ready(function() {
                         }
                         allentries[newcurrent].enter(direction ? 'down' : 'up');
                         current = newcurrent;
+
                     }
+
                 });
             }, {
-                threshold: 0.2
+                threshold: 0.1
             });
 
             sections.forEach(section => allentries.push(new Entry(section)));
@@ -381,37 +408,38 @@ $(document).ready(function() {
             let lastBlock = document.querySelectorAll(".content__text")[document.querySelectorAll(".content__text").length - 1];
             let FooterHeight = document.querySelector(".footer").offsetHeight;
 
-
-            const observer = new window.IntersectionObserver(([entry]) => {
-                if (entry.isIntersecting) {
-                    FirstBlock.style.bottom = '-20vh';
-                    return
-                }
-                FirstBlock.style.bottom = '6vmax';
-            }, {
-                root: null,
-                threshold: 0.2, // set offset 0.1 means trigger if atleast 10% of element in viewport
-            })
-            if (document.querySelector(".mainblock") !== null) {
-                let InnerBlock = document.querySelector(".mainblock");
-                observer.observe(InnerBlock);
-            }
-
-
-
             if ($(window).scrollTop() + $(window).height() + FooterHeight >= $(document).height()) {
                 for (item of document.querySelectorAll(".content__text")) {
                     item.style.left = '-100vw';
                     item.style.visibility = 'hidden';
                 }
 
-            } else {
-                for (item of document.querySelectorAll(".content__text")) {
-                    item.style.left = '0';
-                    item.style.visibility = 'visible';
-                }
             }
         });
+        const content = document.querySelectorAll('.content__text');
+        const Newobserver = new window.IntersectionObserver((entries) => {
+            console.log(entries)
+            entries.forEach(entry => {
+                console.log(entry.isIntersecting);
+                if (entry.isIntersecting) {
+                    for (item of content) {
+                        item.style.left = '-100vw';
+                        console.log(item.style.left)
+                        item.style.visibility = 'hidden';
+                    }
+
+                }
+            })
+        }, {
+            root: null,
+            threshold: 0.3
+        })
+        if (document.querySelector(".mainblock") !== null) {
+            let InnerBlock = document.querySelectorAll(".mainblock");
+            for (item of InnerBlock) {
+                Newobserver.observe(item)
+            }
+        }
 
     })
     //Script for load elements

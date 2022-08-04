@@ -326,7 +326,9 @@ main
 			left: 0
 			filter: blur(100px)
 			z-index: -1
-
+			background: linear-gradient(90.74deg, rgba(44, 40, 103, 0.2) 8.79%, rgba(41, 38, 99, 0.2) 101.9%)
+			box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2)
+			backdrop-filter: blur(100px)
 	&__wrapper
 		display: flex
 		align-items: center
@@ -686,9 +688,13 @@ main
 			@media (max-width: 550px)
 				height: 100%
 				background-position: right -61px
+				top: 50px
 	&__images
 		left: -30px
 		top: 30px
+		@media (max-width: 550px)
+			left: 0
+			top: 0
 		&-1
 			img
 				display: block
@@ -769,6 +775,8 @@ main
 	position: relative
 
 	padding-top: 150px
+	@media (max-width: 550px)
+		padding-top: 0
 	&_service
 		background: linear-gradient(180deg, #760EBA 0%, rgba(38, 41, 98, 0) 100%)
 		padding: 162px 0 255px 
@@ -1004,6 +1012,8 @@ main
 		left: 0
 		width: 100%
 		height: 110%
+		@media (max-width: 550px)
+			left: -40%
 		&-first
 			height: 100%
 			width: 250%
@@ -1619,17 +1629,52 @@ main
 .ProductMain
 	background: linear-gradient(0deg, #3267B8 -14.68%, rgba(38, 37, 95, 0) 100%)
 	padding: 82px 0 182px
+	@media (max-width: 1200px)
+		padding: 52px 0 150px
+	@media (max-width: 768px)
+		padding: 60px 0 100px
+	@media (max-width: 550px)
+		padding: 40px 0 40px
+		height: 95vh
+		&__col
+			&:first-of-type
+				display: flex
+				align-items: center
+				justify-content: space-between
+				flex-direction: column
 	&-logo
 		margin-left: -60px
+		@media (max-width: 768px)
+			margin-left: 0
+			max-width: 155px
+		@media (max-width: 550px)
+			margin-right: 20px
+
 	&__wrapper
 		
 		display: grid
 		grid-template-columns: repeat(2, 1fr)
+		@media (max-width: 768px)
+			grid-template-columns: 1fr
+			justify-content: center	
+		@media (max-width: 550px)
+			justify-content: space-between
+			height: 100%
 	&-text
 		font-weight: 400
 		font-size: 22px
 		line-height: 26px
 		color: $white	
+		@media (max-width: 992px)
+			font-size: 18px
+			line-height: 18px
+		@media (max-width: 768px)
+			font-size: 22px
+			line-height: 26px
+			margin-bottom: 40px
+		@media (max-width: 550px)
+			font-size: 18px
+			line-height: 20px
 	&-title
 		font-weight: 700
 		font-size: 54px
@@ -1637,14 +1682,50 @@ main
 		color: $white
 		mix-blend-mode: normal
 		margin: 60px 0
+		@media (max-width: 1200px)
+			font-weight: 600
+			font-size: 36px
+			line-height: 36px
+		@media (max-width: 768px)
+			max-width: 435px
+			font-weight: 600
+			font-size: 36px
+			line-height: 36px
+		@media (max-width: 768px)
+			margin: 0
+		@media (max-width: 768px)
+			font-size: 29px
+			line-height: 30px
 	&-btn
 		max-width: fit-content
 		padding: 12px 20px
+		&.mobile-on
+			display: none
+		@media (max-width: 768px)
+			&.mobile-on
+				display: flex
+			&.mobile-off
+				display: none
+			p
+				font-size: 20.4753px
+				line-height: 20px
+			&.Btn
+				width: 263px
+				height: 41px
+			padding: 10px 15px
+			margin: auto
 	&__present
 		position: relative
 		display: block
 		width: 100%
 		height: 90%
+		@media (max-width: 1200px)
+			max-width: 390px
+		@media (max-width: 768px)
+			height: 450px
+			margin: auto
+		@media (max-width: 550px)
+			height: 30vh
 		&_item
 			position: absolute
 			top: 0
@@ -1652,15 +1733,32 @@ main
 			&-1
 				left: 30px
 				top: 120px
+				@media (max-width: 768px)
+					max-width: 313px
+					left: 10px
+				@media (max-width: 550px)
+					max-width: 40%
+					left: 25% 
+					top: 35%
+			&-2
+				@media (max-width: 550px)
+					max-width: 60%
+					right: 20%
 			&-3
 				right: -25px
 				top: 49%
-
+				@media (max-width: 768px)
+					max-width: 190px
+					top: 43%
+				@media (max-width: 550px)
+					top: 20%
 ///ProductVideo///
 .ProductVideo
 	background: url('../img/products/video_bg.png') no-repeat center
 	background-size: cover
 	padding: 150px 0
+	@media (max-width: 1200px)
+		padding: 75px 0
 	&-title
 		font-weight: 700
 		font-size: 70px
@@ -1670,6 +1768,14 @@ main
 		text-align: center
 		color: $white
 		margin-bottom: 20px
+		@media (max-width: 1200px)
+			font-size: 54px
+			line-height: 80px
+		@media (max-width: 992px)
+			font-size: 44px
+			line-height: 50px
+		@media (max-width: 768px)
+			text-align: left
 	&__container
 		position: relative
 		width: 100%
@@ -1677,6 +1783,8 @@ main
 		display: flex
 		align-items: center
 		justify-content: center
+		@media (max-width: 550px)
+			max-height: 550px
 	&__player
 		position: relative
 		overflow: hidden
@@ -1698,6 +1806,8 @@ main
 		position: absolute
 		img
 			position: relative
+			@media (max-width: 768px)
+				max-width: 80px
 		&::before
 			content: ''
 			position: absolute
@@ -1715,6 +1825,197 @@ main
 		&:hover
 			&::before
 				opacity: 1
+
+
+////ProductFeatures/// 
+
+.ProductFeatures
+	padding: 64px 0 270px 0
+	background: linear-gradient(180deg, #5328A3 0%, rgba(38, 37, 95, 0) 100%)
+	@media (max-width: 1200px)
+		padding: 40px 0 150px
+	@media (max-width: 550px)
+		padding: 50px 0
+	&__wrapper
+		display: grid
+		grid-template-columns: repeat(3,1fr)
+		grid-gap: 60px 23px
+		@media (max-width: 1200px)
+			grid-gap: 10px
+		@media (max-width: 550px)
+			grid-gap: 0px
+			grid-template-columns: 1fr
+	&__item
+		@media (max-width: 550px)
+			padding: 0 10px
+		&-icon
+			margin: auto
+			max-width: 122px
+			display: block
+			margin-bottom: 20px
+			@media (max-width: 1200px)
+				max-width: 80px
+				margin-bottom: 16px
+			@media (max-width: 768px)
+				max-width: 70px
+		&-title
+			font-weight: 600
+			font-size: 30px
+			line-height: 30px
+			color: $blue-lightest
+			margin-bottom: auto
+			@media (max-width: 1200px)
+				font-size: 26px
+			@media (max-width: 550px)
+				font-size: 18px
+				line-height: 18px
+
+		p
+			font-weight: 400
+			font-size: 22px
+			line-height: 22px
+			color: $white
+			max-height: 0
+			overflow: hidden
+			margin-top: 20px
+			transition: .3s all
+			@media (max-width: 1200px)
+				font-size: 16px
+				line-height: 16px
+			&:first-of-type
+				max-height: 100%
+			span
+				color: $blue-lightest
+				cursor: pointer
+
+
+
+/////ProductWhy//// 
+.ProductWhy
+	position: relative
+	padding: 96px 0 250px
+	background: linear-gradient(180deg, #760EBA 0%, rgba(38, 41, 98, 0) 100%)
+	@media (max-width: 1200px)
+		padding: 84px 0 220px
+	@media (max-width: 550px)
+		padding: 50px 0
+	&__wrapper
+		display: grid
+		grid-template-columns: repeat(3,1fr)
+		grid-gap: 60px 23px
+		@media (max-width: 1200px)
+			grid-gap: 50px 10px
+		@media (max-width: 768px)
+			grid-template-columns: repeat(2,1fr)
+		@media (max-width: 550px)
+			grid-template-columns: 1fr
+			grid-gap: 0
+	&_item
+		display: flex
+		@media (max-width: 550px)
+			&-icon
+				margin-bottom: 20px
+				img
+					margin: auto
+			padding: 0 10px
+		&_content
+			width: 75%
+			padding-left: 20px
+			@media (max-width: 1200px)
+				width: 80%
+			@media (max-width: 992px)
+				width: 100%
+				padding-left: 0
+		&-title
+			font-weight: 600
+			font-size: 30px
+			line-height: 30px
+			color: $blue-lightest
+			@media (max-width: 1200px)
+				font-size: 26px
+			@media (max-width: 768px)
+				line-height: 26px
+			@media (max-width: 550px)
+				font-size: 18px
+				line-height: 18px
+		&-text
+			margin-top: 40px
+			font-weight: 400
+			font-size: 22px
+			line-height: 22px
+			color: $white
+			mix-blend-mode: normal
+			max-height: 0
+			overflow: hidden
+			transition: .3s all
+			@media (max-width: 1200px)
+				font-size: 16px
+				line-height: 16px
+			&:first-of-type
+				max-height: 100%
+			span
+				color: $blue-lightest
+				cursor: pointer
+
+
+///ProductDemo///// 
+.ProductDemo
+	position: relative
+	padding: 150px 0 400px
+	background: linear-gradient(180deg, #3267B8 -3.29%, rgba(40, 36, 97, 0) 100%)
+	@media (max-width: 1200px)
+		padding: 60px 0 300px
+	@media (max-width: 550px)
+		padding: 30px 0 180px
+	&-title
+		font-style: normal
+		font-weight: 700
+		font-size: 76px
+		line-height: 100px
+		text-align: center
+		color: $white
+		mix-blend-mode: normal
+		margin-bottom: 30px
+		@media (max-width: 1200px)
+			font-size: 64px
+			line-height: 80px
+			margin-bottom: 24px
+		@media (max-width: 550px)
+			font-size: 28px
+			line-height: 30px
+			margin-bottom: 12px
+	&-subtitle
+		font-weight: 600
+		font-size: 20px
+		line-height: 20px
+		text-align: center
+		color: $white
+		mix-blend-mode: normal
+		margin-bottom: 70px
+		@media (max-width: 1200px)
+			font-size: 16px
+			line-height: 16px
+			margin-bottom: 50px
+		@media (max-width: 550px)
+			margin-bottom: 30px
+	&-btn
+		margin: auto
+	&__bg
+		position: absolute
+		bottom: 0
+		left: -20%
+		@media (max-width: 550px)
+			bottom: 35px
+		&-1
+			position: absolute
+			top: -50%
+			animation: wave 8s 0.1s infinite linear
+		&-2
+			bottom: -45px
+			animation: wave 6s 0.1s infinite linear
+		img
+			width: 120%
+			max-width: initial
 ///1400px///
 @media (max-width: 1400px)
 	.header
@@ -2244,3 +2545,5 @@ main
 
 	.services__slider_item
 		height: fit-content
+	.office
+		padding-bottom: 0
