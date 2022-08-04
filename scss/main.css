@@ -898,11 +898,6 @@ main.zindex {
   -webkit-filter: blur(100px);
           filter: blur(100px);
   z-index: -1;
-  background: linear-gradient(90.74deg, rgba(44, 40, 103, 0.2) 8.79%, rgba(41, 38, 99, 0.2) 101.9%);
-  -webkit-box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
-  -webkit-backdrop-filter: blur(100px);
-          backdrop-filter: blur(100px);
 }
 
 .header__wrapper {
