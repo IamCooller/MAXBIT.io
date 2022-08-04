@@ -3075,13 +3075,6 @@ main.zindex {
   .ProductMain {
     padding: 60px 0 100px;
   }
-}
-
-@media (max-width: 550px) {
-  .ProductMain {
-    padding: 40px 0 40px;
-    height: 95vh;
-  }
   .ProductMain__col:first-of-type {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3092,6 +3085,15 @@ main.zindex {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+}
+
+@media (max-width: 550px) {
+  .ProductMain {
+    padding: 40px 0 40px;
+    height: 95vh;
+  }
+  .ProductMain__col:first-of-type {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -3248,12 +3250,13 @@ main.zindex {
   position: relative;
   display: block;
   width: 100%;
-  height: 90%;
+  height: 600px;
 }
 
 @media (max-width: 1200px) {
   .ProductMain__present {
     max-width: 390px;
+    height: 420px;
   }
 }
 
