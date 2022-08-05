@@ -1448,7 +1448,7 @@ main.zindex {
 @media (max-width: 550px) {
   .intro__bg-3 {
     height: 100%;
-    background-position: right -61px;
+    background-position: right -10px;
     top: 50px;
   }
 }
