@@ -23,9 +23,8 @@ body
 	&.scroll_disabled
 		overflow-y: hidden
 
-main
-	&.zindex
-		z-index: -1
+.zindex
+		z-index: -1 !important
 		position: relative
 
 //Popup
@@ -2487,6 +2486,8 @@ main
 			padding: 0 15px
 
 	.footer
+		z-index: 9999
+		background: linear-gradient(180deg, #471E8C 0%, rgba(38, 41, 98, 1) 100%)
 		&__nav
 			display: none
 		&-logo

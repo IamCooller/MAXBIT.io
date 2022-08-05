@@ -373,6 +373,7 @@ $(document).ready(function() {
         let allentries = [];
         const sections = Array.from(document.querySelectorAll('.content__section'));
         let content__text = document.querySelectorAll('.content__text');
+        let mobilesize = window.matchMedia("(max-width: 550px)");
 
         if ('IntersectionObserver' in window) {
             document.body.classList.add('ioapi');
@@ -380,7 +381,7 @@ $(document).ready(function() {
             observer = new IntersectionObserver((entries) => {
 
                 entries.forEach(entry => {
-
+                    console.log(mobilesize.matches)
                     if (entry.intersectionRatio > 0.1) {
                         for (item of document.querySelectorAll(".content__text")) {
                             item.style.left = '0';
@@ -413,7 +414,7 @@ $(document).ready(function() {
             let lastBlock = document.querySelectorAll(".content__text")[document.querySelectorAll(".content__text").length - 1];
             let FooterHeight = document.querySelector(".footer").offsetHeight;
 
-            if ($(window).scrollTop() + $(window).height() + FooterHeight >= $(document).height()) {
+            if ($(window).scrollTop() + $(window).height() + FooterHeight - 100 >= $(document).height() && !mobilesize.matches) {
                 for (item of document.querySelectorAll(".content__text")) {
                     item.style.left = '-100vw';
                     item.style.visibility = 'hidden';
@@ -576,6 +577,7 @@ $('.menu__icon, .hamburger-menu__close').on('click', function(e) {
     $('.hamburger-menu').fadeToggle()
     $('body').toggleClass('scroll_disabled')
     $('main').toggleClass('zindex')
+    $('footer').toggleClass('zindex')
         //$('.header_fixed').toggleClass('overflow')
 })
 
@@ -586,6 +588,7 @@ $('.hamburger-menu').on('click', function(e) {
         $('.hamburger-menu').fadeOut();
         $('body').removeClass('scroll_disabled')
         $('main').removeClass('zindex')
+        $('footer').removeClass('zindex')
             // $('.header_fixed').removeClass('overflow')
     }
 

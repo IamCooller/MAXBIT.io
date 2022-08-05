@@ -467,8 +467,8 @@ body.scroll_disabled {
   overflow-y: hidden;
 }
 
-main.zindex {
-  z-index: -1;
+.zindex {
+  z-index: -1 !important;
   position: relative;
 }
 
@@ -4394,6 +4394,11 @@ main.zindex {
   .partners__wrapper {
     grid-gap: 21px 10px;
     padding: 0 15px;
+  }
+  .footer {
+    z-index: 9999;
+    background: -webkit-gradient(linear, left top, left bottom, from(#471E8C), to(#262962));
+    background: linear-gradient(180deg, #471E8C 0%, #262962 100%);
   }
   .footer__nav {
     display: none;
