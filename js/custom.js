@@ -167,12 +167,7 @@ $('.services__slider').slick({
                 slidesToShow: 2
             }
         },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 2
-            }
-        }
+
     ]
 });
 
