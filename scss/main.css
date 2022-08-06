@@ -4427,6 +4427,7 @@ body.scroll_disabled {
   .footer__wrapper_bottom {
     margin-top: 30px;
     max-width: 100%;
+    text-align: center;
   }
   .footer__contacts {
     margin-top: 0;

@@ -595,29 +595,23 @@ $('.hamburger-menu').on('click', function(e) {
 })
 
 //Rocket animation
-
-$('#rocket').waypoint(function(dir) {
-    if (dir === 'down') {
-        $('#rocket img').animate({
-            "top": "-=100vh"
-        }, 2000);
-    }
-
-}, {
-    offset: 80
-})
-
-$('#rocket').waypoint(function(dir) {
-    if (dir === 'up') {
-        $('#rocket img').animate({
-            "top": "0"
-        }, 1500);
-    }
-
-}, {
-    offset: 50
-})
-
+$(document).ready(function() {
+    var waypoint = new Waypoint({
+        element: document.querySelector('.rocket_animation'),
+        handler: function(direction) {
+            if (direction == 'up') {
+                $('#rocket img').animate({
+                    "top": "0"
+                }, 500);
+            } else if (direction == 'down') {
+                $('#rocket img').animate({
+                    "top": "-=100vh"
+                }, 500);
+            }
+        },
+        offset: '30%'
+    })
+});
 
 
 //Video Play
