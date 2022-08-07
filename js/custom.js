@@ -64,6 +64,7 @@ $(".header__menu a.header__menu-link").on("mouseover", function() {
             .position();
         let width = $(this)
             .width();
+        console.log(position)
         let height = $('.header').height()
         $(".header__menu .slide2").css({
                 opacity: 1,
@@ -143,6 +144,46 @@ $(document).ready(function() {
 })
 
 //Sliders
+$('.newsOther__slider').slick({
+    infinite: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: true,
+    responsive: [{
+            breakpoint: 1600,
+            settings: {
+                slidesToShow: 4,
+            }
+        },
+        {
+            breakpoint: 1400,
+            settings: {
+                slidesToShow: 3,
+            }
+        },
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 3,
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+
+                slidesToShow: 2,
+            }
+        },
+        {
+            breakpoint: 550,
+            settings: {
+
+                slidesToShow: 1,
+            }
+        }
+    ]
+});
 $('.services__slider').slick({
     infinite: false,
     slidesToShow: 5,
@@ -220,12 +261,12 @@ $(window).on('load resize', function() {
                 header.addClass('header_fixed')
                     //header.addClass('overflow')
 
-                $('main').css('overflow', 'hidden');
+                //$('main').css('overflow', 'hidden');
             } else {
                 //header.removeClass('overflow')
                 header.removeClass('header_fixed')
 
-                $('main').css('overflow', 'initial');
+                //$('main').css('overflow', 'initial');
             }
         })
     } else {
@@ -412,15 +453,15 @@ $(document).ready(function() {
             let content__text = document.querySelector('.content__text');
             let FirstBlock = document.querySelectorAll(".content__text")[0];
             let lastBlock = document.querySelectorAll(".content__text")[document.querySelectorAll(".content__text").length - 1];
-            let FooterHeight = document.querySelector(".footer").offsetHeight;
+            /*  let FooterHeight = document.querySelector(".footer").offsetHeight;
 
-            if ($(window).scrollTop() + $(window).height() + FooterHeight - 100 >= $(document).height() && !mobilesize.matches) {
-                for (item of document.querySelectorAll(".content__text")) {
-                    item.style.left = '-100vw';
-                    item.style.visibility = 'hidden';
-                }
+             if ($(window).scrollTop() + $(window).height() + FooterHeight - 100 >= $(document).height() && !mobilesize.matches) {
+                 for (item of document.querySelectorAll(".content__text")) {
+                     item.style.left = '-100vw';
+                     item.style.visibility = 'hidden';
+                 }
 
-            }
+             } */
         });
         const content = document.querySelectorAll('.content__text');
         const Newobserver = new window.IntersectionObserver((entries) => {
