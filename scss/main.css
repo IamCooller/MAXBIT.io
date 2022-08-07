@@ -3906,8 +3906,29 @@ body.scroll_disabled {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
-  overflow: hidden;
   position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.news__item::before {
+  content: '';
+  mix-blend-mode: lighten;
+  border: 4px solid #00B9FF;
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  border-radius: 18px;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: .3s all ease-in-out;
+  transition: .3s all ease-in-out;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
 }
 
 .news__item_img {
@@ -3920,6 +3941,8 @@ body.scroll_disabled {
   background-position: center;
   -webkit-transition: .3s all ease-in-out;
   transition: .3s all ease-in-out;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 @media (max-width: 992px) {
@@ -3934,6 +3957,8 @@ body.scroll_disabled {
           backdrop-filter: saturate(180%) blur(30px);
   padding: 24px;
   padding-bottom: 40px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 @media (max-width: 992px) {
@@ -3999,9 +4024,8 @@ body.scroll_disabled {
   color: orange;
 }
 
-.news__item:hover .news__item_img {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+.news__item:hover::before {
+  opacity: 1;
 }
 
 .newsSingle::before {
@@ -4187,11 +4211,11 @@ body.scroll_disabled {
 
 .newsOther__item {
   border-radius: 14px;
-  overflow: hidden;
   margin: 0 15px;
   width: 100%;
   max-width: 440px;
   position: relative;
+  padding: 15px;
 }
 
 @media (max-width: 550px) {
@@ -4201,13 +4225,14 @@ body.scroll_disabled {
 }
 
 .newsOther__item-img {
-  height: 100%;
-  max-height: 100%;
+  height: auto;
   background-size: cover;
   background-repeat: no-repeat;
   display: block;
   padding-top: 190px;
   background-position: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   -webkit-transition: .3s all ease-in-out;
   transition: .3s all ease-in-out;
 }
@@ -4218,6 +4243,8 @@ body.scroll_disabled {
           backdrop-filter: saturate(180%) blur(30px);
   padding: 24px;
   padding-bottom: 40px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 @media (max-width: 992px) {
@@ -4282,11 +4309,6 @@ body.scroll_disabled {
 
 .newsOther__item-desc span {
   color: orange;
-}
-
-.newsOther__item:hover .newsOther__item-img {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
 }
 
 @media (max-width: 1200px) {
