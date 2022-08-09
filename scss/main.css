@@ -248,50 +248,50 @@ circle.Pin-front {
 
 .h1 {
   font-weight: 700;
-  font-size: 76px;
-  line-height: 100px;
+  font-size: 66px;
+  line-height: 70px;
 }
 
 .h2 {
   font-weight: 700;
-  font-size: 70px;
-  line-height: 70px;
+  font-size: 60px;
+  line-height: 60px;
 }
 
 .h3 {
   font-weight: 700;
-  font-size: 54px;
-  line-height: 80px;
+  font-size: 44px;
+  line-height: 60px;
 }
 
 .h3-semi {
   font-weight: 600;
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 20px;
+  line-height: 20px;
 }
 
 .h4 {
   font-weight: 400;
-  font-size: 30px;
-  line-height: 37px;
+  font-size: 20px;
+  line-height: 27px;
 }
 
 .body-1 {
   font-weight: 400;
-  font-size: 22px;
-  line-height: 27px;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .body-2 {
   font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .body-3 {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 17px;
+  font-size: 12px;
+  line-height: 15px;
 }
 
 @media (max-width: 1200px) {
@@ -515,8 +515,8 @@ body.scroll_disabled {
 
 .callback-title {
   font-weight: 700;
-  font-size: 44px;
-  line-height: 50px;
+  font-size: 34px;
+  line-height: 40px;
   width: 100%;
   text-align: center;
   color: #fff;
@@ -525,8 +525,8 @@ body.scroll_disabled {
 
 .callback-subtitle {
   font-weight: 400;
-  font-size: 22px;
-  line-height: 26px;
+  font-size: 18px;
+  line-height: 24px;
   color: #fff;
   margin-bottom: 54px;
   text-align: center;
@@ -554,8 +554,8 @@ body.scroll_disabled {
 
 .callback__form__input label {
   font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 20px;
   color: #807AAB;
   margin-bottom: 18px;
 }
@@ -563,8 +563,8 @@ body.scroll_disabled {
 .callback__form__input input {
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 20px;
   color: #fff;
   padding-bottom: 9px;
   border-bottom: 1px solid #807AAB;
@@ -655,8 +655,8 @@ body.scroll_disabled {
 
 .Btn p {
   font-weight: 600;
-  font-size: 24.5703px;
-  line-height: 25px;
+  font-size: 20.5703px;
+  line-height: 22px;
   color: #26255F;
   -webkit-transition: .4s all;
   transition: .4s all;
@@ -814,8 +814,8 @@ body.scroll_disabled {
 }
 
 .hamburger-menu__nav a {
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 14px;
+  line-height: 16px;
   color: #fff;
   width: 100%;
   position: relative;
@@ -823,8 +823,8 @@ body.scroll_disabled {
 
 .hamburger-menu__nav a.active {
   font-weight: 500;
-  font-size: 18px;
-  line-height: 27px;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .hamburger-menu__nav a.active::after {
@@ -970,8 +970,8 @@ body.scroll_disabled {
 
 .header__menu a.active {
   font-weight: 600;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 18px;
+  line-height: 18px;
 }
 
 .header__menu a.active::after {
@@ -1061,8 +1061,8 @@ body.scroll_disabled {
 
 .has-child .child .child-title {
   font-weight: 600;
-  font-size: 22px;
-  line-height: 26px;
+  font-size: 20px;
+  line-height: 24px;
   margin-bottom: 30px;
   color: #fff;
   text-align: left;
@@ -1260,8 +1260,8 @@ body.scroll_disabled {
           flex-direction: column;
   text-align: center;
   font-weight: 600;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 18px;
+  line-height: 18px;
   text-align: center;
   color: #fff;
   max-height: 107px;
@@ -1309,8 +1309,8 @@ body.scroll_disabled {
       -ms-flex-align: center;
           align-items: center;
   font-weight: 600;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 18px;
+  line-height: 18px;
   color: #fff;
   margin-bottom: 10px;
 }
@@ -1524,8 +1524,8 @@ body.scroll_disabled {
 
 .intro-subtitle {
   font-weight: 200;
-  font-size: 28px;
-  line-height: 35px;
+  font-size: 18px;
+  line-height: 22px;
   margin-bottom: 40px;
   max-width: 547px;
   color: #fff;
@@ -1539,9 +1539,9 @@ body.scroll_disabled {
   position: relative;
   color: #fff;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 22px;
   padding-left: 72px;
-  line-height: 30px;
+  line-height: 24px;
   margin-bottom: 20px;
 }
 
@@ -1693,8 +1693,8 @@ body.scroll_disabled {
 .vantage__item-title {
   font-style: normal;
   font-weight: 600;
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 26px;
+  line-height: 26px;
   color: #FEBB08;
   margin-bottom: 35px;
 }
@@ -1766,8 +1766,8 @@ body.scroll_disabled {
 }
 
 .services__slider_item-text {
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 20px;
   font-weight: 400;
 }
 
@@ -1794,9 +1794,9 @@ body.scroll_disabled {
 
 .services__slider_item-title {
   font-weight: 600;
-  font-size: 30px;
+  font-size: 26px;
   color: #fff;
-  line-height: 30px;
+  line-height: 26px;
   text-align: center;
   margin: 40px 0 35px;
 }
@@ -1804,8 +1804,8 @@ body.scroll_disabled {
 .services__slider .more_text {
   color: orange;
   cursor: pointer;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 20px;
   font-weight: 400;
 }
 
@@ -1889,8 +1889,8 @@ body.scroll_disabled {
 }
 
 .origami__text p {
-  font-size: 28px;
-  line-height: 35px;
+  font-size: 26px;
+  line-height: 30px;
   color: #fff;
   font-weight: 200;
 }
@@ -2256,8 +2256,8 @@ body.scroll_disabled {
 
 .office__item-title {
   font-weight: bold;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 20px;
   text-align: center;
   color: #26255F;
   margin-bottom: 10px;
@@ -2265,8 +2265,8 @@ body.scroll_disabled {
 
 .office__item-subtitle {
   font-weight: 600;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 20px;
   text-align: center;
   color: #26255F;
   margin-bottom: 10px;
@@ -2274,8 +2274,8 @@ body.scroll_disabled {
 
 .office__item address {
   font-weight: 300;
-  font-size: 18px;
-  line-height: 22px;
+  font-size: 16px;
+  line-height: 20px;
   text-align: center;
   color: #26255F;
 }
@@ -2620,8 +2620,8 @@ body.scroll_disabled {
 
 .about__text h3 {
   font-weight: 400;
-  font-size: 30px;
-  line-height: 37px;
+  font-size: 26px;
+  line-height: 30px;
   color: #fff;
   margin-bottom: 47px;
 }
@@ -2636,8 +2636,8 @@ body.scroll_disabled {
 
 .about__text p {
   font-weight: 400;
-  font-size: 22px;
-  line-height: 26px;
+  font-size: 18px;
+  line-height: 24px;
   color: #fff;
 }
 
@@ -2727,8 +2727,8 @@ body.scroll_disabled {
 
 .service__content .h1 {
   font-weight: 700;
-  font-size: 76px;
-  line-height: 100px;
+  font-size: 66px;
+  line-height: 90px;
   color: #fff;
   margin-bottom: 40px;
 }
@@ -2752,8 +2752,8 @@ body.scroll_disabled {
 
 .service__content .h3 {
   font-weight: 600;
-  font-size: 28px;
-  line-height: 30px;
+  font-size: 24px;
+  line-height: 26px;
   color: #fff;
   margin-bottom: 40px;
 }
@@ -2775,8 +2775,8 @@ body.scroll_disabled {
 
 .service__content .text {
   font-weight: 400;
-  font-size: 22px;
-  line-height: 26px;
+  font-size: 18px;
+  line-height: 24px;
   color: #fff;
   margin-bottom: 68px;
 }
@@ -2868,8 +2868,8 @@ body.scroll_disabled {
   width: 100%;
   margin-bottom: 30px;
   font-weight: 600;
-  font-size: 26px;
-  line-height: 30px;
+  font-size: 24px;
+  line-height: 28px;
   text-align: center;
   color: #FEBB08;
 }
@@ -2885,8 +2885,8 @@ body.scroll_disabled {
 .include__item p {
   font-style: normal;
   font-weight: 400;
-  font-size: 22px;
-  line-height: 26px;
+  font-size: 20px;
+  line-height: 24px;
   color: #fff;
 }
 
@@ -2950,8 +2950,8 @@ body.scroll_disabled {
 .contacts__item-title {
   position: relative;
   font-weight: 400;
-  font-size: 30px;
-  line-height: 37px;
+  font-size: 28px;
+  line-height: 30px;
   color: #fff;
   margin-bottom: 48px;
   padding-left: 50px;
@@ -2988,8 +2988,8 @@ body.scroll_disabled {
 
 .contacts__item p, .contacts__item a {
   font-weight: 400;
-  font-size: 22px;
-  line-height: 26px;
+  font-size: 18px;
+  line-height: 24px;
   color: #fff;
 }
 
@@ -3045,8 +3045,8 @@ body.scroll_disabled {
 
 .contacts_form-formtitle {
   font-weight: 400;
-  font-size: 28px;
-  line-height: 28px;
+  font-size: 26px;
+  line-height: 26px;
   text-align: center;
   color: #fff;
   margin-bottom: 44px;
@@ -3149,8 +3149,8 @@ body.scroll_disabled {
 
 .ProductMain-text {
   font-weight: 400;
-  font-size: 22px;
-  line-height: 26px;
+  font-size: 20px;
+  line-height: 24px;
   color: #fff;
 }
 
@@ -3178,8 +3178,8 @@ body.scroll_disabled {
 
 .ProductMain-title {
   font-weight: 700;
-  font-size: 54px;
-  line-height: 80px;
+  font-size: 44px;
+  line-height: 70px;
   color: #fff;
   mix-blend-mode: normal;
   margin: 60px 0;
@@ -3341,8 +3341,8 @@ body.scroll_disabled {
 
 .ProductVideo-title {
   font-weight: 700;
-  font-size: 70px;
-  line-height: 70px;
+  font-size: 60px;
+  line-height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3542,8 +3542,8 @@ body.scroll_disabled {
 
 .ProductFeatures__item p {
   font-weight: 400;
-  font-size: 22px;
-  line-height: 22px;
+  font-size: 20px;
+  line-height: 20px;
   color: #fff;
   max-height: 0;
   overflow: hidden;
@@ -3654,8 +3654,8 @@ body.scroll_disabled {
 
 .ProductWhy_item-title {
   font-weight: 600;
-  font-size: 30px;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 25px;
   color: #FEBB08;
 }
 
@@ -3681,8 +3681,8 @@ body.scroll_disabled {
 .ProductWhy_item-text {
   margin-top: 40px;
   font-weight: 400;
-  font-size: 22px;
-  line-height: 22px;
+  font-size: 18px;
+  line-height: 18px;
   color: #fff;
   mix-blend-mode: normal;
   max-height: 0;
@@ -3729,8 +3729,8 @@ body.scroll_disabled {
 .ProductDemo-title {
   font-style: normal;
   font-weight: 700;
-  font-size: 76px;
-  line-height: 100px;
+  font-size: 66px;
+  line-height: 90px;
   text-align: center;
   color: #fff;
   mix-blend-mode: normal;
@@ -3755,8 +3755,8 @@ body.scroll_disabled {
 
 .ProductDemo-subtitle {
   font-weight: 600;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 18px;
+  line-height: 18px;
   text-align: center;
   color: #fff;
   mix-blend-mode: normal;
@@ -3990,8 +3990,8 @@ body.scroll_disabled {
 .news__item-title {
   font-style: normal;
   font-weight: 600;
-  font-size: 22px;
-  line-height: 26px;
+  font-size: 20px;
+  line-height: 24px;
   color: #fff;
   mix-blend-mode: normal;
   margin-bottom: 12px;
@@ -4007,8 +4007,8 @@ body.scroll_disabled {
 .news__item-desc {
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 16px;
   color: #fff;
   mix-blend-mode: normal;
 }
@@ -4067,8 +4067,8 @@ body.scroll_disabled {
 
 .newsSingle time {
   font-weight: 400;
-  font-size: 22px;
-  line-height: 26px;
+  font-size: 20px;
+  line-height: 24px;
   color: #1BA4D8;
   mix-blend-mode: normal;
   width: 100%;
@@ -4085,8 +4085,8 @@ body.scroll_disabled {
 
 .newsSingle-title {
   font-weight: 700;
-  font-size: 54px;
-  line-height: 60px;
+  font-size: 45px;
+  line-height: 55px;
   text-align: center;
   color: #fff;
   mix-blend-mode: normal;
@@ -4119,8 +4119,8 @@ body.scroll_disabled {
 .newsSingle__content p, .newsSingle__content span, .newsSingle__content a {
   font-style: normal;
   font-weight: 400;
-  font-size: 22px;
-  line-height: 26px;
+  font-size: 18px;
+  line-height: 20px;
   color: #fff;
 }
 
@@ -4258,8 +4258,8 @@ body.scroll_disabled {
   font-style: normal;
   text-align: left;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 16px;
   color: #1BA4D8;
   mix-blend-mode: normal;
   margin-bottom: 24px;
@@ -4277,8 +4277,8 @@ body.scroll_disabled {
 .newsOther__item-title {
   font-style: normal;
   font-weight: 600;
-  font-size: 22px;
-  line-height: 26px;
+  font-size: 20px;
+  line-height: 24px;
   color: #fff;
   mix-blend-mode: normal;
   margin-bottom: 12px;
@@ -4294,8 +4294,8 @@ body.scroll_disabled {
 .newsOther__item-desc {
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 16px;
+  line-height: 16px;
   color: #fff;
   mix-blend-mode: normal;
 }
