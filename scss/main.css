@@ -3358,6 +3358,7 @@ body.scroll_disabled {
 @media (max-width: 550px) {
   .ProductMain__present_item-3 {
     top: 20%;
+    right: 20px;
   }
 }
 
@@ -3369,6 +3370,7 @@ body.scroll_disabled {
   background: url("../img/products/video_bg.png") no-repeat center;
   background-size: cover;
   padding: 150px 0;
+  display: none;
 }
 
 @media (max-width: 1200px) {
