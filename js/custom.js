@@ -643,14 +643,14 @@ $(document).ready(function() {
             if (direction == 'up') {
                 $('#rocket img').animate({
                     "top": "0"
-                }, 500);
+                }, 1500);
             } else if (direction == 'down') {
                 $('#rocket img').animate({
                     "top": "-=100vh"
-                }, 500);
+                }, 1500);
             }
         },
-        offset: '30%'
+        offset: '40%'
     })
 });
 

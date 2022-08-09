@@ -18,6 +18,7 @@ body
 	color: $white
 	background: $blue-black
 	padding-top: 110px
+	overflow-x: hidden
 	@media (max-width: 550px)
 		padding-top: 70px
 	&.scroll_disabled
@@ -142,6 +143,7 @@ body
 	justify-content: center
 	align-items: center
 	p
+		background: linear-gradient(87.73deg, #FEBB08 -27.23%, #FCEBD1 141.45%)
 		font-weight: 600
 		font-size: 20.5703px
 		line-height: 22px
@@ -168,7 +170,7 @@ body
 		bottom: -3.27px
 		left: 0
 		right: 0
-		z-index: -1
+		z-index: 0
 		
 		transition: .3s all ease-in-out
 	&::before
@@ -184,7 +186,7 @@ body
 		left: 0
 		right: 0
 		transition: .3s all ease-in-out
-		z-index: -1
+		z-index: 0
 		opacity: 0
 	
 
@@ -607,7 +609,7 @@ body
 		left: 0
 //Intro///
 .intro
-	padding-top: 112px
+	padding-top: 5vh
 	
 	position: relative
 	
@@ -689,7 +691,7 @@ body
 				top: 50px
 	&__images
 		left: -30px
-		top: 30px
+		top: 60px
 		@media (max-width: 550px)
 			left: 0
 			top: 0
@@ -829,7 +831,7 @@ body
 			height: 250px
 	&__wrapper
 		display: grid
-		grid-gap: 60px 16px
+		grid-gap: 80px 30px
 		grid-template-columns: repeat(2,1fr)
 		padding-bottom: 170px
 		margin-left: -30px
@@ -844,7 +846,7 @@ body
 			height: auto
 			display: block
 			margin-right: 20px
-			max-width: 150px
+			max-width: 100px
 		.parallax
 			max-width: 150px
 			width: 100%
@@ -879,7 +881,15 @@ body
 				width: 100%
 				height: 100%
 //////services/////
-
+.more_text
+	color: orange
+	cursor: pointer
+	font-size: 18px
+	line-height: 20px
+	font-weight: 400
+	transition: all 0.3s ease-in-out
+	&:hover
+		color: #ddd8ec
 .services
 	background: linear-gradient(180deg, #5328A3 0%, rgba(38, 37, 95, 1) 100%)
 	padding: 100px 0
@@ -921,12 +931,7 @@ body
 				line-height: 26px
 				text-align: center
 				margin: 40px 0 35px
-		.more_text
-			color: orange
-			cursor: pointer
-			font-size: 18px
-			line-height: 20px
-			font-weight: 400
+
 		.slick-dots
 			margin-top: 30px
 	
@@ -1436,6 +1441,10 @@ body
 			display: flex
 			flex-direction: column-reverse
 			justify-content: center
+	&__img
+		img
+			&:nth-of-type(2)
+				 top: 80px !important
 	&__content
 		@media (max-width: 770px)
 			display: flex
@@ -1474,7 +1483,7 @@ body
 				order: 4
 	&-btn
 		@media (max-width: 770px)
-			order: 2
+			order: 4
 			margin: 0 auto 55px
 
 .include
@@ -1539,7 +1548,7 @@ body
 	@media (max-width: 1200px)
 		padding: 60px 0 200px
 	@media (max-width: 550px)
-		padding: 40px 0 80px
+		padding: 40px 0 0px
 	&__wrapper
 		display: flex
 		flex-direction: column
@@ -1594,6 +1603,9 @@ body
 			filter: drop-shadow(0px 4px 50px rgba(0, 0, 0, 0.2))
 			border-radius: 10px
 			overflow: hidden
+			@media (max-width: 550px)
+				min-height: 150px
+				margin-bottom: 30px
 	&_form
 		background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%)		
 		padding: 88px 0 230px 0
@@ -1640,7 +1652,7 @@ body
 				justify-content: space-between
 
 	@media (max-width: 550px)
-		padding: 40px 0 40px
+		padding: 2.5vh 0 2.5vh
 		height: 95vh
 		&__col
 			&:first-of-type
@@ -1680,11 +1692,11 @@ body
 			line-height: 20px
 	&-title
 		font-weight: 700
-		font-size: 44px
-		line-height: 70px
+		font-size: 40px
+		line-height: 46px
 		color: $white
 		mix-blend-mode: normal
-		margin: 60px 0
+		margin: 49px 0
 		@media (max-width: 1200px)
 			font-weight: 600
 			font-size: 36px
@@ -1696,12 +1708,12 @@ body
 			line-height: 36px
 		@media (max-width: 768px)
 			margin: 0
-		@media (max-width: 768px)
-			font-size: 29px
-			line-height: 30px
+			font-size: 27px
+			line-height: 28px
+		@media (max-width: 550px)
+			margin: 30px 0
 	&-btn
-		max-width: fit-content
-		padding: 12px 20px
+		max-width: 285px
 		&.mobile-on
 			display: none
 		@media (max-width: 768px)
@@ -1715,7 +1727,6 @@ body
 			&.Btn
 				width: 263px
 				height: 41px
-			padding: 10px 15px
 			margin: auto
 	&__present
 		position: relative
@@ -1737,6 +1748,20 @@ body
 			&-1
 				left: 30px
 				top: 120px
+				&::before
+					content: ''
+					width: 100%
+					height: 100%
+					background: #fec9438a
+					position: absolute
+					left: 0
+					top: 0
+					right: 0
+					bottom: 0
+					border-radius: 100px
+					filter: blur(105px)
+					transition: .3s ease-in-out
+					opacity: 0
 				@media (max-width: 768px)
 					max-width: 313px
 					left: 10px
@@ -1744,6 +1769,7 @@ body
 					max-width: 40%
 					left: 25% 
 					top: 35%
+				
 			&-2
 				@media (max-width: 550px)
 					max-width: 60%
@@ -1756,6 +1782,11 @@ body
 					top: 43%
 				@media (max-width: 550px)
 					top: 20%
+		&:hover
+			.ProductMain__present_item-1
+				&::before
+					opacity: 1
+			
 ///ProductVideo///
 .ProductVideo
 	background: url('../img/products/video_bg.png') no-repeat center
@@ -2087,17 +2118,17 @@ body
 		&::before
 			content: ''
 			mix-blend-mode: lighten
-			border: 4px solid #00B9FF
+			background: #00B9FF
 			filter: blur(10px)
 			border-radius: 18px
-			width: 100%
-			height: 100%
+			width: 105%
+			height: 105%
 			transition: .3s all ease-in-out
 			position: absolute
-			left: 0
-			right: 0
-			top: 0
-			bottom: 0
+			top: 50%
+			left: 50%
+			margin-right: -50%
+			transform: translate(-50%, -50%)
 			opacity: 0
 			z-index: -1
 		&_img
@@ -2211,6 +2242,7 @@ body
 		mix-blend-mode: normal
 		margin-bottom: 100px
 		width: 100%
+		margin-top: 35px
 		@media (max-width: 1200px)
 			font-size: 44px
 			line-height: 50px
@@ -2386,13 +2418,13 @@ body
 				font-size: 22px
 				line-height: 22px
 			img
-				max-width: 168px
+				max-width: 95px
 			&-text
 				font-size: 16px
 				line-height: 16px
 		&__wrapper
 			padding-bottom: 138px
-			grid-gap: 70px 15px
+			grid-gap: 70px 30px
 
 	.services
 		padding: 77px 0
@@ -2657,8 +2689,7 @@ body
 	.title
 		font-size: 28px
 		line-height: 30px
-		&-small
-			font-size: 20px
+		
 		&-img
 			height: 21px
 			margin-left: -25%
@@ -2868,3 +2899,7 @@ body
 	.services__slider .slick-list
 		margin-right: 0
 	
+
+@media (max-width: 400px)
+	.title-small
+		font-size: 20px
