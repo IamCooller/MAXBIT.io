@@ -1,0 +1,278 @@
+
+@import ../scss/_vars
+body
+  padding: 0
+header
+  position: relative !important
+.perspective
+  position: relative
+  width: 100%
+  height: 100%
+  overflow: hidden
+
+.modalview
+
+  .container
+    position: absolute
+    width: 100%
+    height: 100%
+    overflow: hidden
+    backface-visibility: hidden
+
+
+
+.outer-nav
+  position: absolute
+  top: 50%
+  left: 55%
+  transform: translateY(-50%)
+  transform-style: preserve-3d
+  margin: 0
+  padding: 0
+  list-style: none
+  text-align: center
+  visibility: hidden
+  transition: visibility 0s .2s
+
+  &.is-vis
+    visibility: visible
+
+  &--return
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    display: none
+    cursor: pointer
+    z-index: 11
+
+    &.is-vis
+      display: block
+
+  & > li
+    transform-style: preserve-3d
+    transform: translateX(350px) translateZ(-1000px)
+    font-size: 55px
+    font-weight: 900
+    opacity: 0
+    cursor: pointer
+    transition: transform .2s, opacity .2s
+
+    &.is-vis
+      transform: translateX(0) translateZ(0)
+      opacity: 1
+      transition: transform .4s, opacity .4s
+
+    &::before
+      content: ""
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -25%)
+      width: 110%
+      height: 15px
+      opacity: 0
+      background-color: $purple
+
+    &.is-active::before
+      opacity: 1
+
+    @media (max-width: 767px)
+      font-size: 44px
+
+    @media (max-width: 600px)
+      font-size: 34px
+
+  li.is-vis:nth-child(2)
+    transition-delay: .04s
+
+  li.is-vis:nth-child(3)
+    transition-delay: .08s
+
+  li.is-vis:nth-child(4)
+    transition-delay: .12s
+
+  li.is-vis:nth-child(5)
+    transition-delay: .16s
+
+// section transition styles
+.section
+  opacity: 0
+  visibility: hidden
+  transition: opacity .4s ease-in-out, visibility 0s .4s
+  position: absolute
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  height: 100%
+  width: 100%
+  padding: 0 
+  &--is-active
+    opacity: 1
+    visibility: visible
+    z-index: 1
+    transition: opacity .4s ease-in-out .4s
+
+  &--next
+    transform: translateY(-45px)
+    transition: transform .4s ease-in-out
+
+  &--prev
+    transform: translateY(45px)
+    transition: transform .4s ease-in-out
+    
+.side-nav
+  position: relative
+  display: flex
+  width: 100px
+  height: 70%
+  max-height: 750px
+  flex-direction: column
+  justify-content: space-around
+  margin: 0
+  padding: 0
+  list-style-position: inside
+  z-index: 10
+
+  & > li
+    position: relative
+    top: -5px
+    color: $white
+    font-size: 6px
+    cursor: pointer
+
+    span
+      position: relative
+      top: 3px
+      left: 10px
+      color: $white
+      font-size: 14px
+      font-weight: 300
+      opacity: 0
+      visibility: hidden
+
+    &::before
+      position: absolute
+      top: 3px
+      left: 10px
+      color: #fff
+      font-size: 14px
+      font-weight: 300
+
+  li:nth-child(1)::before
+    content: "01"
+
+  li:nth-child(2)::before
+    content: "02"
+
+  li:nth-child(3)::before
+    content: "03"
+
+  li:nth-child(4)::before
+    content: "04"
+
+  li:nth-child(5)::before
+    content: "05"
+
+  li.is-active
+    color: #FCEBD1 
+    transition: color .4s ease-in-out
+
+    span
+      opacity: 1
+      visibility: visible
+      transition: opacity .4s ease-in-out
+
+    &::before
+      left: -33px
+      color: $white
+
+.l-side-nav
+  position: absolute
+  left: 5vw
+  display: flex
+  height: 100%
+  align-items: center
+
+  // placed on layout class due to firefox bug
+  &::before
+    content: ""
+    position: absolute
+    top: 50%
+    left: 0
+    transform: translateY(-50%)
+    width: 2px
+    height: 70%
+    max-height: 750px
+    background-color: #7110b4
+    opacity: .35
+    z-index: 10
+
+  @media (max-width: 992px)
+    display: none
+
+
+.ProductVideo
+  &__wrapper
+    padding: 50px 0
+  &__container
+    height: 60%
+
+.ProductFeatures
+  display: flex
+  align-items: center
+  justify-content: center
+  &__wrapper
+    grid-gap: 5px
+    padding: 50px 0
+    @media (max-width:550px)
+      height: 80%
+      overflow-y: scroll
+  &__item
+    &-icon
+      max-width: 80px
+    p
+      font-size: 16px
+      line-height: 18px
+    
+    &-title
+      font-size: 24px
+      line-height: 26px
+
+
+
+.content__text
+  bottom: 2vmax
+
+
+.ProductWhy
+  display: flex
+  align-items: center
+  justify-content: center
+  &__wrapper
+    grid-gap: 5px
+    padding: 50px 0
+    @media (max-width:550px)
+      height: 80%
+      overflow-y: scroll
+  &_item
+    &-text
+      margin-top: 20px
+      p
+        font-size: 16px
+        line-height: 18px
+
+.ProductDemo
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  &__wrapper
+    padding: 50px 0
+  &-title
+    font-size: 36px
+    line-height: 40px
+
+  &__bg
+    bottom: 227px

@@ -28,14 +28,16 @@
     <script defer src="libs/jquery.waypoints.js"></script>
     <script async src="libs/TweenMax/TimelineMax.min.js"></script>
     <script async src="libs/TweenMax/TweenMax.min.js"></script>
+    <script defer src="libs/hammer-2.0.8.js"></script>
     <!-- main js -->
-    <script defer src="js/custom.min.js"></script>
-
+    <!-- <script defer src="js/custom.min.js"></script>-->
+    <script defer src="js/fullpage.js"></script>
     <!-- reset css -->
     <link rel="stylesheet" href="scss/reset.css" />
     <!-- main css -->
 
     <link rel="stylesheet" href="scss/main.css" />
+    <link rel="stylesheet" href="fullpage-style/main.css">
     <script>
         document.documentElement.className = "js";
         var supportsCssVars = function() {
@@ -56,185 +58,203 @@
 <body>
     <!--preloader-->
     <div class="preloader"></div>
-    <!--header-->
-    <header class="header">
-        <div class="container">
-            <div class="header__wrapper">
-                <a href="#" class="header-logo">
-                    <img width="100%" height="100%" src="img/logo.svg" alt="logo" />
-                </a>
-                <nav class="header__menu">
-                    <span class="slide2"></span>
-                    <ul>
-                        <li><a href="index.html" class="header__menu-link body-2 ">Home </a></li>
-                        <li class="has-child"><a href="products.html" class="header__menu-link body-2 active">Origami ® </a>
-                            <div class="child">
-                                <ul class="container">
-                                    <li>
-                                        <a href="products.html" class="single-child">
-                                            <img width="100%" height="100%" src="img/menu/origami/1.svg" alt="1" /> Origami
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="single-child">
-                                            <img width="100%" height="100%" src="img/menu/origami/2.svg" alt="1" /> Lorem ipsum dolor 1
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="single-child">
-                                            <img width="100%" height="100%" src="img/menu/origami/3.svg" alt="1" /> Lorem ipsum dolor 2
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="single-child">
-                                            <img width="100%" height="100%" src="img/menu/origami/4.svg" alt="1" /> Lorem ipsum dolor 3
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="single-child">
-                                            <img width="100%" height="100%" src="img/menu/origami/5.svg" alt="1" /> Lorem ipsum dolor 4
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
 
-                        </li>
-                        <li class="has-child"><a href="service.html" class="header__menu-link body-2" style="display: none">Services</a>
-                            <div class="child">
-                                <ul class="container">
-                                    <li>
-                                        <a class="list-child">
-                                            <img width="100%" height="100%" src="img/menu/services/Digital.svg" alt="1" /> Digital
-                                        </a>
-                                        <ul>
-                                            <li><a href="#" class="Yellow">Origami</a></li>
-                                            <li><a href="#" class="Yellow">DMS</a></li>
-                                            <li><a href="#" class="Yellow">RPA</a></li>
-                                            <li><a href="#" class="Yellow">Analytics</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a class="list-child">
-                                            <img width="100%" height="100%" src="img/menu/services/Cloud.svg" alt="1" /> Cloud
-                                        </a>
-                                        <ul>
-                                            <li><a href="#" class="Blue">IT Managed Services</a></li>
-                                            <li><a href="#" class="Blue">Continuous Compliance</a></li>
-                                            <li><a href="#" class="Blue">Container Enablement</a></li>
-                                            <li><a href="#" class="Blue">Cloud Application Services</a></li>
-                                            <li><a href="#" class="Blue">Cloud Optimization</a></li>
-                                            <li><a href="#" class="Blue">Cloud Transformation</a></li>
-                                            <li><a href="#" class="Blue">AWS, Azure, Google</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a class="list-child">
-                                            <img width="100%" height="100%" src="img/menu/services/Data.svg" alt="1" /> Data
-                                        </a>
-                                        <ul>
-                                            <li><a href="#" class="Blue">Data Collection & Processing</a></li>
-                                            <li><a href="#" class="Blue">Analytics & Visualization</a></li>
-                                            <li><a href="#" class="Blue">Data Operations</a></li>
-                                            <li><a href="#" class="Blue">Data Tech. Transformation</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a class="list-child">
-                                            <img width="100%" height="100%" src="img/menu/services/SW.svg" alt="1" /> S/W
-                                        </a>
-                                        <ul>
-                                            <li><a href="#" class="Red">Mobile apps</a></li>
-                                            <li><a href="#" class="Red">Web development</a></li>
-                                            <li><a href="#" class="Red">Ecommerce solutions</a></li>
-                                            <li><a href="#" class="Red">ERP solutions</a></li>
-                                            <li><a href="#" class="Red">Customized development services</a></li>
-                                        </ul>
-                                    </li>
 
-                                    <li>
-                                        <a class="list-child">
-                                            <img width="100%" height="100%" src="img/menu/services/SI.svg" alt="1" /> System Integration
-                                        </a>
-                                        <ul>
-                                            <li><a href="#" class="Blue">Oracle</a></li>
-                                            <li><a href="#" class="Blue">SAP</a></li>
-                                            <li><a href="#" class="Blue">Microsoft</a></li>
-                                            <li><a href="#" class="Blue">CODOO</a></li>
-                                            <li><a href="#" class="Blue">Zoho</a></li>
-                                            <li><a href="#" class="Blue">OpenText</a></li>
-                                            <li><a href="#" class="Blue">Cloudera</a></li>
-                                            <li><a href="#" class="Blue">Qlik</a></li>
-                                            <li><a href="#" class="Blue">Salesforce</a></li>
-                                            <li><a href="#" class="Blue">Fortinet</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a class="list-child">
-                                            <img width="100%" height="100%" src="img/menu/services/Security.svg" alt="1" /> Security
-                                        </a>
-                                        <ul>
-                                            <li><a href="#" class="Red">Penetration Testing</a></li>
-                                            <li><a href="#" class="Red">Advisory Services</a></li>
-                                            <li><a href="#" class="Red">Managed Services</a></li>
-                                            <li><a href="#" class="Red">Compromise Assessment</a></li>
-                                            <li><a href="#" class="Red">Cloud Security</a></li>
-                                            <li><a href="#" class="Red">CISO Advisory</a></li>
-                                            <li><a href="#" class="Red">Digital Forensic</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a class="list-child">
-                                            <img width="100%" height="100%" src="img/menu/services/Outsourcing.svg" alt="1" /> Outsourcing
-                                        </a>
-                                        <ul>
-                                            <li><a href="#" class="Yellow">Onsite outsourcing</a></li>
-                                            <li><a href="#" class="Yellow">Offshore outsourcing</a></li>
-                                            <li><a href="#" class="Yellow">Hybrid model outsourcing</a></li>
-
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a class="list-child">
-                                            <img width="100%" height="100%" src="img/menu/services/HW.svg" alt="1" /> H/W
-                                        </a>
-                                        <ul>
-                                            <li><a href="#" class="Red">Dell</a></li>
-                                            <li><a href="#" class="Red">Oracle</a></li>
-                                            <li><a href="#" class="Red">Nutanix</a></li>
-
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a class="list-child">
-                                            <img width="100%" height="100%" src="img/menu/services/Consultacy.svg" alt="1" /> Consultancy
-                                        </a>
-                                        <ul>
-                                            <li><a href="#" class="Blue">GRC Consultancy</a></li>
-                                            <li><a href="#" class="Blue">Business Continuity and Disaster recovery planning</a></li>
-                                            <li><a href="#" class="Blue">IT Strategy consultancy</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><a href="news.html" class="header__menu-link body-2" style="display: none">News</a></li>
-                        <li><a href="about.html" class="header__menu-link body-2" style="display: none">Partners</a></li>
-                        <li><a href="contacts.html" class="header__menu-link body-2" style="display: none">Contacts</a></li>
+    <div class="perspective effect-rotate-left">
+        <div class="outer-nav--return"></div>
+        <div id="viewport" class="l-viewport">
+            <div class="l-wrapper">
+                <nav class="l-side-nav">
+                    <ul class="side-nav">
+                        <li class="is-active"><span>Main</span></li>
+                        <li class=""><span>Video</span></li>
+                        <li class=""><span>Features</span></li>
+                        <li class=""><span>Why origami?</span></li>
+                        <li class=""><span>End</span></li>
                     </ul>
                 </nav>
-                <div class="header__menu_mobile">
-                    <div class="menu__icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!--main-->
+                <main class="main l-main-content main-content">
+                    <section class="ProductMain l-section section section--is-active ">
+                        <!--header-->
+                        <header class="header">
+                            <div class="container">
+                                <div class="header__wrapper">
+                                    <a href="#" class="header-logo">
+                                        <img width="100%" height="100%" src="img/logo.svg" alt="logo" />
+                                    </a>
+                                    <nav class="header__menu">
+                                        <span class="slide2"></span>
+                                        <ul>
+                                            <li><a href="index.html" class="header__menu-link body-2 ">Home </a></li>
+                                            <li class="has-child"><a href="products.html" class="header__menu-link body-2 active">Origami ® </a>
+                                                <div class="child">
+                                                    <ul class="container">
+                                                        <li>
+                                                            <a href="products.html" class="single-child">
+                                                                <img width="100%" height="100%" src="img/menu/origami/1.svg" alt="1" /> Origami
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" class="single-child">
+                                                                <img width="100%" height="100%" src="img/menu/origami/2.svg" alt="1" /> Lorem ipsum dolor 1
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" class="single-child">
+                                                                <img width="100%" height="100%" src="img/menu/origami/3.svg" alt="1" /> Lorem ipsum dolor 2
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" class="single-child">
+                                                                <img width="100%" height="100%" src="img/menu/origami/4.svg" alt="1" /> Lorem ipsum dolor 3
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" class="single-child">
+                                                                <img width="100%" height="100%" src="img/menu/origami/5.svg" alt="1" /> Lorem ipsum dolor 4
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                            </li>
+                                            <li class="has-child"><a href="service.html" class="header__menu-link body-2" style="display: none">Services</a>
+                                                <div class="child">
+                                                    <ul class="container">
+                                                        <li>
+                                                            <a class="list-child">
+                                                                <img width="100%" height="100%" src="img/menu/services/Digital.svg" alt="1" /> Digital
+                                                            </a>
+                                                            <ul>
+                                                                <li><a href="#" class="Yellow">Origami</a></li>
+                                                                <li><a href="#" class="Yellow">DMS</a></li>
+                                                                <li><a href="#" class="Yellow">RPA</a></li>
+                                                                <li><a href="#" class="Yellow">Analytics</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a class="list-child">
+                                                                <img width="100%" height="100%" src="img/menu/services/Cloud.svg" alt="1" /> Cloud
+                                                            </a>
+                                                            <ul>
+                                                                <li><a href="#" class="Blue">IT Managed Services</a></li>
+                                                                <li><a href="#" class="Blue">Continuous Compliance</a></li>
+                                                                <li><a href="#" class="Blue">Container Enablement</a></li>
+                                                                <li><a href="#" class="Blue">Cloud Application Services</a></li>
+                                                                <li><a href="#" class="Blue">Cloud Optimization</a></li>
+                                                                <li><a href="#" class="Blue">Cloud Transformation</a></li>
+                                                                <li><a href="#" class="Blue">AWS, Azure, Google</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a class="list-child">
+                                                                <img width="100%" height="100%" src="img/menu/services/Data.svg" alt="1" /> Data
+                                                            </a>
+                                                            <ul>
+                                                                <li><a href="#" class="Blue">Data Collection & Processing</a></li>
+                                                                <li><a href="#" class="Blue">Analytics & Visualization</a></li>
+                                                                <li><a href="#" class="Blue">Data Operations</a></li>
+                                                                <li><a href="#" class="Blue">Data Tech. Transformation</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a class="list-child">
+                                                                <img width="100%" height="100%" src="img/menu/services/SW.svg" alt="1" /> S/W
+                                                            </a>
+                                                            <ul>
+                                                                <li><a href="#" class="Red">Mobile apps</a></li>
+                                                                <li><a href="#" class="Red">Web development</a></li>
+                                                                <li><a href="#" class="Red">Ecommerce solutions</a></li>
+                                                                <li><a href="#" class="Red">ERP solutions</a></li>
+                                                                <li><a href="#" class="Red">Customized development services</a></li>
+                                                            </ul>
+                                                        </li>
+
+                                                        <li>
+                                                            <a class="list-child">
+                                                                <img width="100%" height="100%" src="img/menu/services/SI.svg" alt="1" /> System Integration
+                                                            </a>
+                                                            <ul>
+                                                                <li><a href="#" class="Blue">Oracle</a></li>
+                                                                <li><a href="#" class="Blue">SAP</a></li>
+                                                                <li><a href="#" class="Blue">Microsoft</a></li>
+                                                                <li><a href="#" class="Blue">CODOO</a></li>
+                                                                <li><a href="#" class="Blue">Zoho</a></li>
+                                                                <li><a href="#" class="Blue">OpenText</a></li>
+                                                                <li><a href="#" class="Blue">Cloudera</a></li>
+                                                                <li><a href="#" class="Blue">Qlik</a></li>
+                                                                <li><a href="#" class="Blue">Salesforce</a></li>
+                                                                <li><a href="#" class="Blue">Fortinet</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a class="list-child">
+                                                                <img width="100%" height="100%" src="img/menu/services/Security.svg" alt="1" /> Security
+                                                            </a>
+                                                            <ul>
+                                                                <li><a href="#" class="Red">Penetration Testing</a></li>
+                                                                <li><a href="#" class="Red">Advisory Services</a></li>
+                                                                <li><a href="#" class="Red">Managed Services</a></li>
+                                                                <li><a href="#" class="Red">Compromise Assessment</a></li>
+                                                                <li><a href="#" class="Red">Cloud Security</a></li>
+                                                                <li><a href="#" class="Red">CISO Advisory</a></li>
+                                                                <li><a href="#" class="Red">Digital Forensic</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a class="list-child">
+                                                                <img width="100%" height="100%" src="img/menu/services/Outsourcing.svg" alt="1" /> Outsourcing
+                                                            </a>
+                                                            <ul>
+                                                                <li><a href="#" class="Yellow">Onsite outsourcing</a></li>
+                                                                <li><a href="#" class="Yellow">Offshore outsourcing</a></li>
+                                                                <li><a href="#" class="Yellow">Hybrid model outsourcing</a></li>
+
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a class="list-child">
+                                                                <img width="100%" height="100%" src="img/menu/services/HW.svg" alt="1" /> H/W
+                                                            </a>
+                                                            <ul>
+                                                                <li><a href="#" class="Red">Dell</a></li>
+                                                                <li><a href="#" class="Red">Oracle</a></li>
+                                                                <li><a href="#" class="Red">Nutanix</a></li>
+
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            <a class="list-child">
+                                                                <img width="100%" height="100%" src="img/menu/services/Consultacy.svg" alt="1" /> Consultancy
+                                                            </a>
+                                                            <ul>
+                                                                <li><a href="#" class="Blue">GRC Consultancy</a></li>
+                                                                <li><a href="#" class="Blue">Business Continuity and Disaster recovery planning</a></li>
+                                                                <li><a href="#" class="Blue">IT Strategy consultancy</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li><a href="news.html" class="header__menu-link body-2" style="display: none">News</a></li>
+                                            <li><a href="about.html" class="header__menu-link body-2" style="display: none">Partners</a></li>
+                                            <li><a href="contacts.html" class="header__menu-link body-2" style="display: none">Contacts</a></li>
+                                        </ul>
+                                    </nav>
+                                    <div class="header__menu_mobile">
+                                        <div class="menu__icon">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="6" y="6" width="16" height="2" rx="1" fill="white" />
                 <rect x="9" y="11" width="13" height="2" rx="1" fill="white" />
                 <rect x="2" y="16" width="20" height="2" rx="1" fill="white" />
               </svg>
-                    </div>
+                                        </div>
 
-                    <div class="hamburger-menu">
-                        <div class="hamburger-menu_wrapper">
-                            <div class="hamburger-menu_top">
-                                <button class="hamburger-menu__close">
+                                        <div class="hamburger-menu">
+                                            <div class="hamburger-menu_wrapper">
+                                                <div class="hamburger-menu_top">
+                                                    <button class="hamburger-menu__close">
                     <svg
                       width="24"
                       height="24"
@@ -264,427 +284,429 @@
                       />
                     </svg>
                   </button>
+                                                </div>
+
+                                                <div class="hamburger-menu__content">
+                                                    <nav class="hamburger-menu__nav">
+                                                        <ul>
+                                                            <li><a href="index.html">Home</a></li>
+                                                            <li class="has-child mobile-child"><a class="active" href="products.html">Products</a>
+                                                                <div class="child">
+                                                                    <div class="mobile-child"><svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <line x1="1" y1="-1" x2="32.9412" y2="-1" transform="matrix(0.707119 0.707095 -0.707119 0.707095 1 1)" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                                    <line x1="1" y1="-1" x2="32.9412" y2="-1" transform="matrix(-0.707107 0.707107 0.707107 0.707107 25 1)" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                                    </svg>
+                                                                    </div>
+                                                                    <div class="child-title">Products</div>
+                                                                    <ul class="container">
+                                                                        <li>
+                                                                            <a href="#" class="single-child">
+                                                                                <img width="100%" height="100%" src="img/menu/origami/1.svg" alt="1" /> Origami
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#" class="single-child">
+                                                                                <img width="100%" height="100%" src="img/menu/origami/2.svg" alt="1" /> Lorem ipsum dolor 1
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#" class="single-child">
+                                                                                <img width="100%" height="100%" src="img/menu/origami/3.svg" alt="1" /> Lorem ipsum dolor 2
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#" class="single-child">
+                                                                                <img width="100%" height="100%" src="img/menu/origami/4.svg" alt="1" /> Lorem ipsum dolor 3
+                                                                            </a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#" class="single-child">
+                                                                                <img width="100%" height="100%" src="img/menu/origami/5.svg" alt="1" /> Lorem ipsum dolor 4
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                            <li class="has-child mobile-child"><a href="service.html" style="display: none">Services</a>
+                                                                <div class="child">
+                                                                    <div class="mobile-child"><svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <line x1="1" y1="-1" x2="32.9412" y2="-1" transform="matrix(0.707119 0.707095 -0.707119 0.707095 1 1)" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                                    <line x1="1" y1="-1" x2="32.9412" y2="-1" transform="matrix(-0.707107 0.707107 0.707107 0.707107 25 1)" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                                                    </svg>
+                                                                    </div>
+                                                                    <div class="child-title">Services</div>
+                                                                    <ul class="container">
+                                                                        <li>
+                                                                            <a class="list-child">
+                                                                                <img width="100%" height="100%" src="img/menu/services/Digital.svg" alt="1" /> Digital
+                                                                            </a>
+                                                                            <ul>
+                                                                                <li><a href="#" class="Yellow">Origami</a></li>
+                                                                                <li><a href="#" class="Yellow">DMS</a></li>
+                                                                                <li><a href="#" class="Yellow">RPA</a></li>
+                                                                                <li><a href="#" class="Yellow">Analytics</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a class="list-child">
+                                                                                <img width="100%" height="100%" src="img/menu/services/Cloud.svg" alt="1" /> Cloud
+                                                                            </a>
+                                                                            <ul>
+                                                                                <li><a href="#" class="Blue">IT Managed Services</a></li>
+                                                                                <li><a href="#" class="Blue">Continuous Compliance</a></li>
+                                                                                <li><a href="#" class="Blue">Container Enablement</a></li>
+                                                                                <li><a href="#" class="Blue">Cloud Application Services</a></li>
+                                                                                <li><a href="#" class="Blue">Cloud Optimization</a></li>
+                                                                                <li><a href="#" class="Blue">Cloud Transformation</a></li>
+                                                                                <li><a href="#" class="Blue">AWS, Azure, Google</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a class="list-child">
+                                                                                <img width="100%" height="100%" src="img/menu/services/Data.svg" alt="1" /> Data
+                                                                            </a>
+                                                                            <ul>
+                                                                                <li><a href="#" class="Blue">Data Collection & Processing</a></li>
+                                                                                <li><a href="#" class="Blue">Analytics & Visualization</a></li>
+                                                                                <li><a href="#" class="Blue">Data Operations</a></li>
+                                                                                <li><a href="#" class="Blue">Data Tech. Transformation</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a class="list-child">
+                                                                                <img width="100%" height="100%" src="img/menu/services/SW.svg" alt="1" /> S/W
+                                                                            </a>
+                                                                            <ul>
+                                                                                <li><a href="#" class="Red">Mobile apps</a></li>
+                                                                                <li><a href="#" class="Red">Web development</a></li>
+                                                                                <li><a href="#" class="Red">Ecommerce solutions</a></li>
+                                                                                <li><a href="#" class="Red">ERP solutions</a></li>
+                                                                                <li><a href="#" class="Red">Customized development services</a></li>
+                                                                            </ul>
+                                                                        </li>
+
+                                                                        <li>
+                                                                            <a class="list-child">
+                                                                                <img width="100%" height="100%" src="img/menu/services/SI.svg" alt="1" /> System Integration
+                                                                            </a>
+                                                                            <ul>
+                                                                                <li><a href="#" class="Blue">Oracle</a></li>
+                                                                                <li><a href="#" class="Blue">SAP</a></li>
+                                                                                <li><a href="#" class="Blue">Microsoft</a></li>
+                                                                                <li><a href="#" class="Blue">CODOO</a></li>
+                                                                                <li><a href="#" class="Blue">Zoho</a></li>
+                                                                                <li><a href="#" class="Blue">OpenText</a></li>
+                                                                                <li><a href="#" class="Blue">Cloudera</a></li>
+                                                                                <li><a href="#" class="Blue">Qlik</a></li>
+                                                                                <li><a href="#" class="Blue">Salesforce</a></li>
+                                                                                <li><a href="#" class="Blue">Fortinet</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a class="list-child">
+                                                                                <img width="100%" height="100%" src="img/menu/services/Security.svg" alt="1" /> Security
+                                                                            </a>
+                                                                            <ul>
+                                                                                <li><a href="#" class="Red">Penetration Testing</a></li>
+                                                                                <li><a href="#" class="Red">Advisory Services</a></li>
+                                                                                <li><a href="#" class="Red">Managed Services</a></li>
+                                                                                <li><a href="#" class="Red">Compromise Assessment</a></li>
+                                                                                <li><a href="#" class="Red">Cloud Security</a></li>
+                                                                                <li><a href="#" class="Red">CISO Advisory</a></li>
+                                                                                <li><a href="#" class="Red">Digital Forensic</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a class="list-child">
+                                                                                <img width="100%" height="100%" src="img/menu/services/Outsourcing.svg" alt="1" /> Outsourcing
+                                                                            </a>
+                                                                            <ul>
+                                                                                <li><a href="#" class="Yellow">Onsite outsourcing</a></li>
+                                                                                <li><a href="#" class="Yellow">Offshore outsourcing</a></li>
+                                                                                <li><a href="#" class="Yellow">Hybrid model outsourcing</a></li>
+
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a class="list-child">
+                                                                                <img width="100%" height="100%" src="img/menu/services/HW.svg" alt="1" /> H/W
+                                                                            </a>
+                                                                            <ul>
+                                                                                <li><a href="#" class="Red">Dell</a></li>
+                                                                                <li><a href="#" class="Red">Oracle</a></li>
+                                                                                <li><a href="#" class="Red">Nutanix</a></li>
+
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a class="list-child">
+                                                                                <img width="100%" height="100%" src="img/menu/services/Consultacy.svg" alt="1" /> Consultancy
+                                                                            </a>
+                                                                            <ul>
+                                                                                <li><a href="#" class="Blue">GRC Consultancy</a></li>
+                                                                                <li><a href="#" class="Blue">Business Continuity and Disaster recovery planning</a></li>
+                                                                                <li><a href="#" class="Blue">IT Strategy consultancy</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </li>
+                                                            <li><a href="news.html" style="display: none">News</a></li>
+                                                            <li><a href="contacts.html" style="display: none">Contacts</a></li>
+                                                        </ul>
+                                                    </nav>
+
+                                                    <a href="#callback__form" class="popup-modal Btn header-btn header-btn-mobile">
+                                                        <p>Contact us <span></span></p>
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a href="#callback__form" class="popup-modal Btn header-btn">
+                                        <p>Contact us <span></span></p>
+                                    </a>
+                                </div>
                             </div>
+                        </header>
+                        <div class="container">
+                            <div class="ProductMain__wrapper">
+                                <div class="ProductMain__col">
+                                    <img src="img/origami/logo.svg" alt="Logo" class="ProductMain-logo" width="auto" height="auto" />
+                                    <div class="ProductMain-title">Ditch paperwork, welcome the digital-powered efficiency </div>
+                                    <a href="#" class="ProductMain-btn Btn mobile-off">
+                                        <p>Sign up<span></span></p>
+                                    </a>
 
-                            <div class="hamburger-menu__content">
-                                <nav class="hamburger-menu__nav">
-                                    <ul>
-                                        <li><a href="index.html">Home</a></li>
-                                        <li class="has-child mobile-child"><a class="active" href="products.html">Products</a>
-                                            <div class="child">
-                                                <div class="mobile-child"><svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <line x1="1" y1="-1" x2="32.9412" y2="-1" transform="matrix(0.707119 0.707095 -0.707119 0.707095 1 1)" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                                                    <line x1="1" y1="-1" x2="32.9412" y2="-1" transform="matrix(-0.707107 0.707107 0.707107 0.707107 25 1)" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                                                    </svg>
-                                                </div>
-                                                <div class="child-title">Products</div>
-                                                <ul class="container">
-                                                    <li>
-                                                        <a href="#" class="single-child">
-                                                            <img width="100%" height="100%" src="img/menu/origami/1.svg" alt="1" /> Origami
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" class="single-child">
-                                                            <img width="100%" height="100%" src="img/menu/origami/2.svg" alt="1" /> Lorem ipsum dolor 1
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" class="single-child">
-                                                            <img width="100%" height="100%" src="img/menu/origami/3.svg" alt="1" /> Lorem ipsum dolor 2
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" class="single-child">
-                                                            <img width="100%" height="100%" src="img/menu/origami/4.svg" alt="1" /> Lorem ipsum dolor 3
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#" class="single-child">
-                                                            <img width="100%" height="100%" src="img/menu/origami/5.svg" alt="1" /> Lorem ipsum dolor 4
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li class="has-child mobile-child"><a href="service.html" style="display: none">Services</a>
-                                            <div class="child">
-                                                <div class="mobile-child"><svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <line x1="1" y1="-1" x2="32.9412" y2="-1" transform="matrix(0.707119 0.707095 -0.707119 0.707095 1 1)" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                                                    <line x1="1" y1="-1" x2="32.9412" y2="-1" transform="matrix(-0.707107 0.707107 0.707107 0.707107 25 1)" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                                                    </svg>
-                                                </div>
-                                                <div class="child-title">Services</div>
-                                                <ul class="container">
-                                                    <li>
-                                                        <a class="list-child">
-                                                            <img width="100%" height="100%" src="img/menu/services/Digital.svg" alt="1" /> Digital
-                                                        </a>
-                                                        <ul>
-                                                            <li><a href="#" class="Yellow">Origami</a></li>
-                                                            <li><a href="#" class="Yellow">DMS</a></li>
-                                                            <li><a href="#" class="Yellow">RPA</a></li>
-                                                            <li><a href="#" class="Yellow">Analytics</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a class="list-child">
-                                                            <img width="100%" height="100%" src="img/menu/services/Cloud.svg" alt="1" /> Cloud
-                                                        </a>
-                                                        <ul>
-                                                            <li><a href="#" class="Blue">IT Managed Services</a></li>
-                                                            <li><a href="#" class="Blue">Continuous Compliance</a></li>
-                                                            <li><a href="#" class="Blue">Container Enablement</a></li>
-                                                            <li><a href="#" class="Blue">Cloud Application Services</a></li>
-                                                            <li><a href="#" class="Blue">Cloud Optimization</a></li>
-                                                            <li><a href="#" class="Blue">Cloud Transformation</a></li>
-                                                            <li><a href="#" class="Blue">AWS, Azure, Google</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a class="list-child">
-                                                            <img width="100%" height="100%" src="img/menu/services/Data.svg" alt="1" /> Data
-                                                        </a>
-                                                        <ul>
-                                                            <li><a href="#" class="Blue">Data Collection & Processing</a></li>
-                                                            <li><a href="#" class="Blue">Analytics & Visualization</a></li>
-                                                            <li><a href="#" class="Blue">Data Operations</a></li>
-                                                            <li><a href="#" class="Blue">Data Tech. Transformation</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a class="list-child">
-                                                            <img width="100%" height="100%" src="img/menu/services/SW.svg" alt="1" /> S/W
-                                                        </a>
-                                                        <ul>
-                                                            <li><a href="#" class="Red">Mobile apps</a></li>
-                                                            <li><a href="#" class="Red">Web development</a></li>
-                                                            <li><a href="#" class="Red">Ecommerce solutions</a></li>
-                                                            <li><a href="#" class="Red">ERP solutions</a></li>
-                                                            <li><a href="#" class="Red">Customized development services</a></li>
-                                                        </ul>
-                                                    </li>
+                                </div>
+                                <div class="ProductMain__col">
+                                    <a href="img/Origami.pdf" class="ProductMain__present" download>
+                                        <div class="ProductMain__present_item ProductMain__present_item-2 parallax">
+                                            <img src="img/products/present2.svg" data-depth="0.40" alt="" />
+                                        </div>
+                                        <div class="ProductMain__present_item ProductMain__present_item-1 parallax">
+                                            <img src="img/products/present1.svg" data-depth="0.10" alt="" />
+                                        </div>
 
-                                                    <li>
-                                                        <a class="list-child">
-                                                            <img width="100%" height="100%" src="img/menu/services/SI.svg" alt="1" /> System Integration
-                                                        </a>
-                                                        <ul>
-                                                            <li><a href="#" class="Blue">Oracle</a></li>
-                                                            <li><a href="#" class="Blue">SAP</a></li>
-                                                            <li><a href="#" class="Blue">Microsoft</a></li>
-                                                            <li><a href="#" class="Blue">CODOO</a></li>
-                                                            <li><a href="#" class="Blue">Zoho</a></li>
-                                                            <li><a href="#" class="Blue">OpenText</a></li>
-                                                            <li><a href="#" class="Blue">Cloudera</a></li>
-                                                            <li><a href="#" class="Blue">Qlik</a></li>
-                                                            <li><a href="#" class="Blue">Salesforce</a></li>
-                                                            <li><a href="#" class="Blue">Fortinet</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a class="list-child">
-                                                            <img width="100%" height="100%" src="img/menu/services/Security.svg" alt="1" /> Security
-                                                        </a>
-                                                        <ul>
-                                                            <li><a href="#" class="Red">Penetration Testing</a></li>
-                                                            <li><a href="#" class="Red">Advisory Services</a></li>
-                                                            <li><a href="#" class="Red">Managed Services</a></li>
-                                                            <li><a href="#" class="Red">Compromise Assessment</a></li>
-                                                            <li><a href="#" class="Red">Cloud Security</a></li>
-                                                            <li><a href="#" class="Red">CISO Advisory</a></li>
-                                                            <li><a href="#" class="Red">Digital Forensic</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a class="list-child">
-                                                            <img width="100%" height="100%" src="img/menu/services/Outsourcing.svg" alt="1" /> Outsourcing
-                                                        </a>
-                                                        <ul>
-                                                            <li><a href="#" class="Yellow">Onsite outsourcing</a></li>
-                                                            <li><a href="#" class="Yellow">Offshore outsourcing</a></li>
-                                                            <li><a href="#" class="Yellow">Hybrid model outsourcing</a></li>
+                                        <div class="ProductMain__present_item ProductMain__present_item-3 parallax">
+                                            <img src="img/products/present3.svg" data-depth="0.30" alt="" />
+                                        </div>
+                                    </a>
+                                    <div class="ProductMain-text">
+                                        Origami is one solution replacing all paper work within your business, turning them into automated digital version, boosting their efficiencies to new levels. </div>
+                                    <a href="#" class="ProductMain-btn Btn mobile-on">
+                                        <p>Request Your Free Demo<span></span></p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="ProductVideo l-section section">
+                        <div class="container">
+                            <div class="ProductVideo__wrapper">
+                                <div class="ProductVideo-title">Take a 2-minute tour into how Origami can change your business
+                                </div>
+                                <div class="ProductVideo__container">
+                                    <div class="ProductVideo__player">
+                                        <iframe title="Replay: New Shepard Mission NS-19 Webcast" width="100%" height="auto" src="https://www.youtube.com/embed/sR0s-ou5GyM?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                    <div class="ProductVideo__cover">
+                                        <img src="img/products/play.svg" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="ProductFeatures  l-section section">
+                        <div class="vantage-title content__text title title-yellow h3 container">FEATURES</div>
+                        <div class="container">
+                            <div class="ProductFeatures__wrapper">
+                                <div class="ProductFeatures__item hiddeText_container">
+                                    <img src="img/checks/yellow.svg" class="ProductFeatures__item-icon" alt="red" />
+                                    <div class="ProductFeatures__item-title">Full-automated electronic signatures</div>
+                                    <p class="ProductFeatures__item-text">Electronic signature is a secure alternative to traditional signature that offers great reliability and time saving, without compromising security. </p>
+                                    <p class="ProductFeatures__item-text hidden">Electronic signature is a secure alternative to traditional signature that offers great reliability and time saving, without compromising security. </p>
+                                </div>
+                                <div class="ProductFeatures__item hiddeText_container">
+                                    <img src="img/checks/red.svg" class="ProductFeatures__item-icon" alt="red" />
+                                    <div class="ProductFeatures__item-title">Comprehensive document Recognition and handling </div>
+                                    <p class="ProductFeatures__item-text">Origami automatically detects and categorizes scanned papers with support to receipts, legal documents and other types. All of this happens without any intervention or data entry.
+                                    </p>
+                                    <p class="ProductFeatures__item-text hidden">Origami automatically detects and categorizes scanned papers with support to receipts, legal documents and other types. All of this happens without any intervention or data entry.
+                                    </p>
+                                </div>
+                                <div class="ProductFeatures__item hiddeText_container">
+                                    <img src="img/checks/blue.svg" class="ProductFeatures__item-icon" alt="red" />
+                                    <div class="ProductFeatures__item-title">Customizable workflows</div>
+                                    <p class="ProductFeatures__item-text">Design your own workflows and create paths visually for documents to be sent and collaborated on by the right people automatically, without having to send emails or even push buttons. </p>
+                                    <p class="ProductFeatures__item-text hidden">Design your own workflows and create paths visually for documents to be sent and collaborated on by the right people automatically, without having to send emails or even push buttons. </p>
+                                </div>
+                                <div class="ProductFeatures__item hiddeText_container">
+                                    <img src="img/checks/red.svg" class="ProductFeatures__item-icon" alt="red" />
+                                    <div class="ProductFeatures__item-title">Role management</div>
+                                    <p class="ProductFeatures__item-text">Set specific roles for everyone of your employees, making your files more safe and secure from any leaks, led by intruders or mistakes. </p>
+                                    <p class="ProductFeatures__item-text hidden">Set specific roles for everyone of your employees, making your files more safe and secure from any leaks, led by intruders or mistakes. </p>
+                                </div>
+                                <div class="ProductFeatures__item hiddeText_container">
+                                    <img src="img/checks/blue.svg" class="ProductFeatures__item-icon" alt="red" />
+                                    <div class="ProductFeatures__item-title">Limitless integrations </div>
+                                    <p class="ProductFeatures__item-text">Origami is friendly integrable with REST API and SOAP, allowing it to be scaled with more features and tools whenever your business needs it. </p>
+                                    <p class="ProductFeatures__item-text hidden">Origami is friendly integrable with REST API and SOAP, allowing it to be scaled with more features and tools whenever your business needs it. </p>
+                                </div>
+                                <div class="ProductFeatures__item hiddeText_container">
+                                    <img src="img/checks/blue.svg" class="ProductFeatures__item-icon" alt="red" />
+                                    <div class="ProductFeatures__item-title">Optical character recognition</div>
+                                    <p class="ProductFeatures__item-text">Origami uses a smart optical character recognition technology to scan images automatically and read the text in them, helping you extract data easily and find documents by text in images. </p>
+                                    <p class="ProductFeatures__item-text hidden">Origami uses a smart optical character recognition technology to scan images automatically and read the text in them, helping you extract data easily and find documents by text in images. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="ProductWhy  l-section section">
+                        <div class="vantage-title content__text title title-blue h3 container">WHY ORIGAMI?</div>
 
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a class="list-child">
-                                                            <img width="100%" height="100%" src="img/menu/services/HW.svg" alt="1" /> H/W
-                                                        </a>
-                                                        <ul>
-                                                            <li><a href="#" class="Red">Dell</a></li>
-                                                            <li><a href="#" class="Red">Oracle</a></li>
-                                                            <li><a href="#" class="Red">Nutanix</a></li>
+                        <div class="container">
+                            <div class="ProductWhy__wrapper">
+                                <div class="ProductWhy_item hiddeText_container">
+                                    <div class="ProductWhy_item-icon">
+                                        <img src="img/products/why1.svg" alt="" />
+                                    </div>
+                                    <div class="ProductWhy_item_content">
+                                        <div class="ProductWhy_item-title">Higher efficiency</div>
+                                        <p class="ProductWhy_item-text">Boosting the efficiency of your business processes and paper workflows with Origami comes as a result of faster, more organized processes, making your employees more focused and productive than ever.
+                                        </p>
+                                        <p class="ProductWhy_item-text hidden">Boosting the efficiency of your business processes and paper workflows with Origami comes as a result of faster, more organized processes, making your employees more focused and productive than ever.
+                                        </p>
+                                    </div>
 
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a class="list-child">
-                                                            <img width="100%" height="100%" src="img/menu/services/Consultacy.svg" alt="1" /> Consultancy
-                                                        </a>
-                                                        <ul>
-                                                            <li><a href="#" class="Blue">GRC Consultancy</a></li>
-                                                            <li><a href="#" class="Blue">Business Continuity and Disaster recovery planning</a></li>
-                                                            <li><a href="#" class="Blue">IT Strategy consultancy</a></li>
-                                                        </ul>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </li>
-                                        <li><a href="news.html" style="display: none">News</a></li>
-                                        <li><a href="contacts.html" style="display: none">Contacts</a></li>
-                                    </ul>
-                                </nav>
+                                </div>
+                                <div class="ProductWhy_item hiddeText_container">
+                                    <div class="ProductWhy_item-icon">
+                                        <img src="img/products/why2.svg" alt="" />
+                                    </div>
+                                    <div class="ProductWhy_item_content">
+                                        <div class="ProductWhy_item-title">Huge Direct and indirect costs saving</div>
+                                        <p class="ProductWhy_item-text">
+                                            Comparing the costs of paperwork to Origami will give you a very clear winner. With less resources (papers, Inks, printers, maintenance, archiving, transporting etc..) , and impressive ROI.
+                                        </p>
+                                        <p class="ProductWhy_item-text hidden"> Comparing the costs of paperwork to Origami will give you a very clear winner. With less resources (papers, Inks, printers, maintenance, archiving, transporting etc..) , and impressive ROI.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="ProductWhy_item hiddeText_container">
+                                    <div class="ProductWhy_item-icon">
+                                        <img src="img/products/why3.svg" alt="" />
+                                    </div>
+                                    <div class="ProductWhy_item_content">
+                                        <div class="ProductWhy_item-title">Prestigious Brand Image, unique customer experience </div>
+                                        <p class="ProductWhy_item-text">Polish the organization with a unique prestigious modern touch. Satisfying customers can start by making your operations more organized, more digitalized and more faster. This is typically what happens with Origami.
+                                        </p>
+                                        <p class="ProductWhy_item-text hidden">Polish the organization with a unique prestigious modern touch. Satisfying customers can start by making your operations more organized, more digitalized and more faster. This is typically what happens with Origami.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="ProductWhy_item hiddeText_container">
+                                    <div class="ProductWhy_item-icon">
+                                        <img src="img/products/why4.svg" alt="" />
+                                    </div>
+                                    <div class="ProductWhy_item_content">
+                                        <div class="ProductWhy_item-title">Real-time data </div>
+                                        <p class="ProductWhy_item-text">Give yourself full visibility into your business with useful analytics you would never access with paperwork. Origami gives you data that helps you make informed decisions and understand what matters most about
+                                            your business.
+                                        </p>
+                                        <p class="ProductWhy_item-text hidden">Give yourself full visibility into your business with useful analytics you would never access with paperwork. Origami gives you data that helps you make informed decisions and understand what matters most about
+                                            your business.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="ProductWhy_item hiddeText_container">
+                                    <div class="ProductWhy_item-icon">
+                                        <img src="img/products/why5.svg" alt="" />
+                                    </div>
+                                    <div class="ProductWhy_item_content">
+                                        <div class="ProductWhy_item-title">Risk mitigation</div>
+                                        <p class="ProductWhy_item-text">Lowering and mitigating risks that relate to Compliance, Finance , Legal , HR and other departments processes can be reduced with less paperwork by converting papers into Password-protected digital version.
+                                        </p>
+                                        <p class="ProductWhy_item-text hidden">Lowering and mitigating risks that relate to Compliance, Finance , Legal , HR and other departments processes can be reduced with less paperwork by converting papers into Password-protected digital version.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="ProductWhy_item hiddeText_container">
+                                    <div class="ProductWhy_item-icon">
+                                        <img src="img/products/why6.svg" alt="" />
+                                    </div>
+                                    <div class="ProductWhy_item_content">
+                                        <div class="ProductWhy_item-title">More about Origami </div>
+                                        <p class="ProductWhy_item-text">Discover more about Origami by downloading Origami brochure
+                                        </p>
+                                        <p class="ProductWhy_item-text hidden">Discover more about Origami by downloading Origami brochure
+                                        </p>
+                                    </div>
+                                </div>
 
-                                <a href="#callback__form" class="popup-modal Btn header-btn header-btn-mobile">
-                                    <p>Contact us <span></span></p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="ProductDemo l-section section">
+                        <div class="container">
+                            <div class="ProductDemo__wrapper">
+                                <div class="ProductDemo-title">Culture does not change because we desire to change it. Culture changes when the organization is transformed</div>
+                                <div class="ProductDemo-subtitle">Digital transformation is not an option, it is a necessity and it is closer than ever, and that’s start with Origami.</div>
+                                <a href="#callback__form" class="popup-modal ProductDemo-btn Btn">
+                                    <p>Contact us</p>
                                 </a>
                             </div>
-
                         </div>
-                    </div>
-                </div>
-                <a href="#callback__form" class="popup-modal Btn header-btn">
-                    <p>Contact us <span></span></p>
-                </a>
-            </div>
-        </div>
-    </header>
 
-
-    <!--main-->
-    <main class="main">
-        <section class="ProductMain mainblock">
-            <div class="container">
-                <div class="ProductMain__wrapper">
-                    <div class="ProductMain__col">
-                        <img src="img/origami/logo.svg" alt="Logo" class="ProductMain-logo" width="auto" height="auto" />
-                        <div class="ProductMain-title">Ditch paperwork, welcome the digital-powered efficiency </div>
-                        <a href="#" class="ProductMain-btn Btn mobile-off">
-                            <p>Sign up<span></span></p>
-                        </a>
-
-                    </div>
-                    <div class="ProductMain__col">
-                        <a href="img/Origami.pdf" class="ProductMain__present" download>
-                            <div class="ProductMain__present_item ProductMain__present_item-2 parallax">
-                                <img src="img/products/present2.svg" data-depth="0.40" alt="" />
+                        <div class="ProductDemo__bg ">
+                            <div class="ProductDemo__bg-1 parallax"><img src="img/products/demo2.svg" alt="wave" data-depth="0.20" /></div>
+                            <div class="ProductDemo__bg-2 parallax"><img src="img/products/demo1.svg" alt="wave" data-depth="0.30" /></div>
+                        </div>
+                        <footer class="footer">
+                            <div class="container">
+                                <div class="footer__wrapper">
+                                    <div class="footer__wrapper_top">
+                                        <a class="footer-logo">
+                                            <img width="100%" height="auto" src="img/logo.svg" alt="footer-logo" />
+                                        </a>
+                                        <nav class="footer__nav">
+                                            <a href="index.html" class="footer__nav-link body-2 active">Home</a>
+                                            <a href="products.html" class="footer__nav-link body-2"> Origami®</a>
+                                            <a href="service.html" class="footer__nav-link body-2" style="display: none"> Services</a>
+                                            <a href="news.html" class="footer__nav-link body-2" style="display: none"> News</a>
+                                            <a href="about.html" class="footer__nav-link body-2" style="display: none"> Partners</a>
+                                            <a href="contacts.html" class="footer__nav-link body-2" style="display: none"> Contacts</a>
+                                        </nav>
+                                        <div class="footer__contacts">
+                                            <div class="footer__contacts-title body-2">Contacts</div>
+                                            <a href="tel:96522207227" class="footer__contacts-tel body-2">+965 2220 7227</a
+                                    >
+                                    <a href="tel:96522207337" class="footer__contacts-tel body-2"
+                                      >+965 2220 7337</a
+                                    >
+                                    <div class="footer__contacts_socials">
+                                      <a href="#"
+                                        ><img width="100%" height="auto" src="img/socials/LinkedIN_white.svg" alt="LinkedIn"
+                                      /></a>
+                                            <a href="#"><img width="100%" height="auto" src="img/socials/Gmail_white.svg" alt="Gmail" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="footer__wrapper_bottom">
+                                    Copyright 2022 «Maxbit» Co. All rights reserved. Full or partial copying is forbidden.
+                                </div>
                             </div>
-                            <div class="ProductMain__present_item ProductMain__present_item-1 parallax">
-                                <img src="img/products/present1.svg" data-depth="0.10" alt="" />
-                            </div>
-
-                            <div class="ProductMain__present_item ProductMain__present_item-3 parallax">
-                                <img src="img/products/present3.svg" data-depth="0.30" alt="" />
-                            </div>
-                        </a>
-                        <div class="ProductMain-text">
-                            Origami is one solution replacing all paper work within your business, turning them into automated digital version, boosting their efficiencies to new levels. </div>
-                        <a href="#" class="ProductMain-btn Btn mobile-on">
-                            <p>Request Your Free Demo<span></span></p>
-                        </a>
-                    </div>
-                </div>
             </div>
-        </section>
-        <section class="ProductVideo mainblock">
-            <div class="container">
-                <div class="ProductVideo__wrapper">
-                    <div class="ProductVideo-title">Take a 2-minute tour into how Origami can change your business
-                    </div>
-                    <div class="ProductVideo__container">
-                        <div class="ProductVideo__player">
-                            <iframe title="Replay: New Shepard Mission NS-19 Webcast" width="100%" height="auto" src="https://www.youtube.com/embed/sR0s-ou5GyM?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                        </div>
-                        <div class="ProductVideo__cover">
-                            <img src="img/products/play.svg" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="ProductFeatures content__section">
-            <div class="vantage-title content__text title title-yellow h3 container">FEATURES</div>
-            <div class="container">
-                <div class="ProductFeatures__wrapper">
-                    <div class="ProductFeatures__item hiddeText_container">
-                        <img src="img/checks/yellow.svg" class="ProductFeatures__item-icon" alt="red" />
-                        <div class="ProductFeatures__item-title">Full-automated electronic signatures</div>
-                        <p class="ProductFeatures__item-text">Electronic signature is a secure alternative to traditional signature that offers great reliability and time saving, without compromising security. </p>
-                        <p class="ProductFeatures__item-text hidden">Electronic signature is a secure alternative to traditional signature that offers great reliability and time saving, without compromising security. </p>
-                    </div>
-                    <div class="ProductFeatures__item hiddeText_container">
-                        <img src="img/checks/red.svg" class="ProductFeatures__item-icon" alt="red" />
-                        <div class="ProductFeatures__item-title">Comprehensive document Recognition and handling </div>
-                        <p class="ProductFeatures__item-text">Origami automatically detects and categorizes scanned papers with support to receipts, legal documents and other types. All of this happens without any intervention or data entry.
-                        </p>
-                        <p class="ProductFeatures__item-text hidden">Origami automatically detects and categorizes scanned papers with support to receipts, legal documents and other types. All of this happens without any intervention or data entry.
-                        </p>
-                    </div>
-                    <div class="ProductFeatures__item hiddeText_container">
-                        <img src="img/checks/blue.svg" class="ProductFeatures__item-icon" alt="red" />
-                        <div class="ProductFeatures__item-title">Customizable workflows</div>
-                        <p class="ProductFeatures__item-text">Design your own workflows and create paths visually for documents to be sent and collaborated on by the right people automatically, without having to send emails or even push buttons. </p>
-                        <p class="ProductFeatures__item-text hidden">Design your own workflows and create paths visually for documents to be sent and collaborated on by the right people automatically, without having to send emails or even push buttons. </p>
-                    </div>
-                    <div class="ProductFeatures__item hiddeText_container">
-                        <img src="img/checks/red.svg" class="ProductFeatures__item-icon" alt="red" />
-                        <div class="ProductFeatures__item-title">Role management</div>
-                        <p class="ProductFeatures__item-text">Set specific roles for everyone of your employees, making your files more safe and secure from any leaks, led by intruders or mistakes. </p>
-                        <p class="ProductFeatures__item-text hidden">Set specific roles for everyone of your employees, making your files more safe and secure from any leaks, led by intruders or mistakes. </p>
-                    </div>
-                    <div class="ProductFeatures__item hiddeText_container">
-                        <img src="img/checks/blue.svg" class="ProductFeatures__item-icon" alt="red" />
-                        <div class="ProductFeatures__item-title">Limitless integrations </div>
-                        <p class="ProductFeatures__item-text">Origami is friendly integrable with REST API and SOAP, allowing it to be scaled with more features and tools whenever your business needs it. </p>
-                        <p class="ProductFeatures__item-text hidden">Origami is friendly integrable with REST API and SOAP, allowing it to be scaled with more features and tools whenever your business needs it. </p>
-                    </div>
-                    <div class="ProductFeatures__item hiddeText_container">
-                        <img src="img/checks/blue.svg" class="ProductFeatures__item-icon" alt="red" />
-                        <div class="ProductFeatures__item-title">Optical character recognition</div>
-                        <p class="ProductFeatures__item-text">Origami uses a smart optical character recognition technology to scan images automatically and read the text in them, helping you extract data easily and find documents by text in images. </p>
-                        <p class="ProductFeatures__item-text hidden">Origami uses a smart optical character recognition technology to scan images automatically and read the text in them, helping you extract data easily and find documents by text in images. </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="ProductWhy content__section">
-            <div class="vantage-title content__text title title-blue h3 container">WHY ORIGAMI?</div>
-
-            <div class="container">
-                <div class="ProductWhy__wrapper">
-                    <div class="ProductWhy_item hiddeText_container">
-                        <div class="ProductWhy_item-icon">
-                            <img src="img/products/why1.svg" alt="" />
-                        </div>
-                        <div class="ProductWhy_item_content">
-                            <div class="ProductWhy_item-title">Higher efficiency</div>
-                            <p class="ProductWhy_item-text">Boosting the efficiency of your business processes and paper workflows with Origami comes as a result of faster, more organized processes, making your employees more focused and productive than ever.
-                            </p>
-                            <p class="ProductWhy_item-text hidden">Boosting the efficiency of your business processes and paper workflows with Origami comes as a result of faster, more organized processes, making your employees more focused and productive than ever.
-                            </p>
-                        </div>
-
-                    </div>
-                    <div class="ProductWhy_item hiddeText_container">
-                        <div class="ProductWhy_item-icon">
-                            <img src="img/products/why2.svg" alt="" />
-                        </div>
-                        <div class="ProductWhy_item_content">
-                            <div class="ProductWhy_item-title">Huge Direct and indirect costs saving</div>
-                            <p class="ProductWhy_item-text">
-                                Comparing the costs of paperwork to Origami will give you a very clear winner. With less resources (papers, Inks, printers, maintenance, archiving, transporting etc..) , and impressive ROI.
-                            </p>
-                            <p class="ProductWhy_item-text hidden"> Comparing the costs of paperwork to Origami will give you a very clear winner. With less resources (papers, Inks, printers, maintenance, archiving, transporting etc..) , and impressive ROI.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="ProductWhy_item hiddeText_container">
-                        <div class="ProductWhy_item-icon">
-                            <img src="img/products/why3.svg" alt="" />
-                        </div>
-                        <div class="ProductWhy_item_content">
-                            <div class="ProductWhy_item-title">Prestigious Brand Image, unique customer experience </div>
-                            <p class="ProductWhy_item-text">Polish the organization with a unique prestigious modern touch. Satisfying customers can start by making your operations more organized, more digitalized and more faster. This is typically what happens with Origami.
-                            </p>
-                            <p class="ProductWhy_item-text hidden">Polish the organization with a unique prestigious modern touch. Satisfying customers can start by making your operations more organized, more digitalized and more faster. This is typically what happens with Origami.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="ProductWhy_item hiddeText_container">
-                        <div class="ProductWhy_item-icon">
-                            <img src="img/products/why4.svg" alt="" />
-                        </div>
-                        <div class="ProductWhy_item_content">
-                            <div class="ProductWhy_item-title">Real-time data </div>
-                            <p class="ProductWhy_item-text">Give yourself full visibility into your business with useful analytics you would never access with paperwork. Origami gives you data that helps you make informed decisions and understand what matters most about your business.
-                            </p>
-                            <p class="ProductWhy_item-text hidden">Give yourself full visibility into your business with useful analytics you would never access with paperwork. Origami gives you data that helps you make informed decisions and understand what matters most about your business.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="ProductWhy_item hiddeText_container">
-                        <div class="ProductWhy_item-icon">
-                            <img src="img/products/why5.svg" alt="" />
-                        </div>
-                        <div class="ProductWhy_item_content">
-                            <div class="ProductWhy_item-title">Risk mitigation</div>
-                            <p class="ProductWhy_item-text">Lowering and mitigating risks that relate to Compliance, Finance , Legal , HR and other departments processes can be reduced with less paperwork by converting papers into Password-protected digital version.
-                            </p>
-                            <p class="ProductWhy_item-text hidden">Lowering and mitigating risks that relate to Compliance, Finance , Legal , HR and other departments processes can be reduced with less paperwork by converting papers into Password-protected digital version.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="ProductWhy_item hiddeText_container">
-                        <div class="ProductWhy_item-icon">
-                            <img src="img/products/why6.svg" alt="" />
-                        </div>
-                        <div class="ProductWhy_item_content">
-                            <div class="ProductWhy_item-title">More about Origami </div>
-                            <p class="ProductWhy_item-text">Discover more about Origami by downloading Origami brochure
-                            </p>
-                            <p class="ProductWhy_item-text hidden">Discover more about Origami by downloading Origami brochure
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-        <section class="ProductDemo mainblock">
-            <div class="container">
-                <div class="ProductDemo__wrapper">
-                    <div class="ProductDemo-title">Culture does not change because we desire to change it. Culture changes when the organization is transformed</div>
-                    <div class="ProductDemo-subtitle">Digital transformation is not an option, it is a necessity and it is closer than ever, and that’s start with Origami.</div>
-                    <a href="#callback__form" class="popup-modal ProductDemo-btn Btn">
-                        <p>Contact us</p>
-                    </a>
-                </div>
-            </div>
-
-            <div class="ProductDemo__bg ">
-                <div class="ProductDemo__bg-1 parallax"><img src="img/products/demo2.svg" alt="wave" data-depth="0.20" /></div>
-                <div class="ProductDemo__bg-2 parallax"><img src="img/products/demo1.svg" alt="wave" data-depth="0.30" /></div>
-            </div>
-        </section>
-    </main>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__wrapper">
-                <div class="footer__wrapper_top">
-                    <a class="footer-logo">
-                        <img width="100%" height="auto" src="img/logo.svg" alt="footer-logo" />
-                    </a>
-                    <nav class="footer__nav">
-                        <a href="index.html" class="footer__nav-link body-2 active">Home</a>
-                        <a href="products.html" class="footer__nav-link body-2"> Origami®</a>
-                        <a href="service.html" class="footer__nav-link body-2" style="display: none"> Services</a>
-                        <a href="news.html" class="footer__nav-link body-2" style="display: none"> News</a>
-                        <a href="about.html" class="footer__nav-link body-2" style="display: none"> Partners</a>
-                        <a href="contacts.html" class="footer__nav-link body-2" style="display: none"> Contacts</a>
-                    </nav>
-                    <div class="footer__contacts">
-                        <div class="footer__contacts-title body-2">Contacts</div>
-                        <a href="tel:96522207227" class="footer__contacts-tel body-2">+965 2220 7227</a
-                >
-                <a href="tel:96522207337" class="footer__contacts-tel body-2"
-                  >+965 2220 7337</a
-                >
-                <div class="footer__contacts_socials">
-                  <a href="#"
-                    ><img width="100%" height="auto" src="img/socials/LinkedIN_white.svg" alt="LinkedIn"
-                  /></a>
-                        <a href="#"><img width="100%" height="auto" src="img/socials/Gmail_white.svg" alt="Gmail" /></a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer__wrapper_bottom">
-                Copyright 2022 «Maxbit» Co. All rights reserved. Full or partial copying is forbidden.
-            </div>
+            </footer>
+            </section>
+            </main>
         </div>
-        </div>
-    </footer>
+    </div>
+    </div>
+
+
     <form id="callback__form" class="callback mfp-hide" name="form">
         <button title="Close (Esc)" type="button" class="mfp-close">x
         </button>

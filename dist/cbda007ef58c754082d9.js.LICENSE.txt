@@ -1,1 +1,0 @@
-/*! Real Shadow v1.4.1 http://indamix.github.io/real-shadow | https://raw.github.com/Indamix/real-shadow/master/license.txt */

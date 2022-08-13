@@ -489,6 +489,38 @@ body.scroll_disabled {
 		z-index: -1 */
 }
 
+#successForm {
+  display: block;
+  max-width: 500px;
+  margin: 0 auto;
+  height: 110px;
+  position: relative;
+  background: #fff;
+  padding: 30px;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 99999;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#successForm strong {
+  margin-top: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  color: green;
+}
+
 .callback {
   background: linear-gradient(121.06deg, #421F81 0%, #2A2564 100.68%);
   border-radius: 20px;
@@ -3370,7 +3402,6 @@ body.scroll_disabled {
   background: url("../img/products/video_bg.png") no-repeat center;
   background-size: cover;
   padding: 150px 0;
-  display: none;
 }
 
 @media (max-width: 1200px) {
