@@ -541,6 +541,7 @@ header {
   padding: 0;
   list-style-position: inside;
   z-index: 10;
+  display: none;
 }
 
 .side-nav > li {
@@ -619,6 +620,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: none;
 }
 
 .l-side-nav::before {
@@ -674,6 +676,10 @@ header {
   }
 }
 
+.ProductFeatures__item {
+  padding: 0 10px;
+}
+
 .ProductFeatures__item-icon {
   max-width: 80px;
 }
@@ -725,6 +731,10 @@ header {
   line-height: 18px;
 }
 
+.ProductWhy_item-icon {
+  width: 87px;
+}
+
 .ProductDemo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -747,7 +757,78 @@ header {
   line-height: 40px;
 }
 
-.ProductDemo__bg {
-  bottom: 227px;
+.footer {
+  max-height: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 770px) {
+  .ProductMain__present {
+    height: 100%;
+  }
+  .ProductMain__present_item {
+    height: 100%;
+  }
+  .ProductMain__present_item-1 {
+    top: 0;
+  }
+  .ProductMain__present_item-2 {
+    right: 140px;
+  }
+  .ProductMain__present_item-3 {
+    right: 50px;
+    top: 0;
+  }
+}
+
+@media (max-width: 550px) {
+  .ProductMain__present {
+    height: 30%;
+  }
+  .ProductMain-logo {
+    max-width: 90px;
+  }
+  .ProductMain-title {
+    margin: 10px 0;
+  }
+  .ProductMain__col {
+    height: 60%;
+  }
+  .ProductMain__col:first-of-type {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 30%;
+  }
+  .ProductMain__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 440px) {
+  .ProductMain__present {
+    height: 40%;
+  }
+  .ProductMain__present_item-3 {
+    max-width: 150px;
+  }
+}
+
+@media (max-height: 550px) {
+  .ProductMain__present {
+    height: 20%;
+    max-width: 320px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

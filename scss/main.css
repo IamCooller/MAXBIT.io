@@ -449,6 +449,10 @@ circle.Pin-front {
   background-color: #8c00cd40;
 }
 
+main {
+  overflow: hidden;
+}
+
 body {
   font-family: 'Proxima Nova';
   font-weight: 400;
@@ -1044,7 +1048,7 @@ body.scroll_disabled {
 }
 
 .has-child .child {
-  visibility: hidden !important;
+  visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;
