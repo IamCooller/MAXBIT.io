@@ -644,6 +644,26 @@ header {
   }
 }
 
+.ProductMain-logo {
+  max-width: 300px;
+}
+
+.ProductMain__wrapper {
+  height: 80%;
+}
+
+.ProductMain__col:first-of-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
 .ProductMain__present {
   height: 80%;
 }
@@ -654,6 +674,13 @@ header {
 
 .ProductMain__present_item-1 {
   top: 50px;
+}
+
+@media (min-height: 660px) and (min-width: 770px) {
+  .ProductMain__present_item {
+    height: auto;
+    top: 30%;
+  }
 }
 
 .ProductVideo__wrapper {

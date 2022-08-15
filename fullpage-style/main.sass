@@ -213,13 +213,25 @@ header
   @media (max-width: 992px)
     display: none
 .ProductMain
+  &-logo
+    max-width: 300px
+  &__wrapper
+    height: 80%
+  &__col:first-of-type
+    display: flex
+    flex-direction: column
+    justify-content: space-around
   &__present
     height: 80%
     &_item
       height: 100%
       &-1
         top: 50px
-
+  @media (min-height: 660px) and (min-width: 770px)
+    &__present
+      &_item
+        height: auto
+        top: 30%
 .ProductVideo
   &__wrapper
     padding: 50px 0
