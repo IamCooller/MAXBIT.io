@@ -644,6 +644,18 @@ header {
   }
 }
 
+.ProductMain__present {
+  height: 80%;
+}
+
+.ProductMain__present_item {
+  height: 100%;
+}
+
+.ProductMain__present_item-1 {
+  top: 50px;
+}
+
 .ProductVideo__wrapper {
   padding: 50px 0;
 }
@@ -825,7 +837,7 @@ header {
   }
 }
 
-@media (max-height: 550px) {
+@media (max-height: 550px) and (max-width: 770px) {
   .ProductMain__present {
     height: 20%;
     max-width: 320px;

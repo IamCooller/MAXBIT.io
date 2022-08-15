@@ -212,7 +212,13 @@ header
 
   @media (max-width: 992px)
     display: none
-
+.ProductMain
+  &__present
+    height: 80%
+    &_item
+      height: 100%
+      &-1
+        top: 50px
 
 .ProductVideo
   &__wrapper
@@ -319,8 +325,7 @@ header
       &_item
         &-3
           max-width: 150px
-
-@media (max-height: 550px)
+@media (max-height: 550px) and (max-width: 770px)
   .ProductMain__present
     height: 20%
     max-width: 320px
